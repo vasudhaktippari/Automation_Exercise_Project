@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-01T00:43:15 IST" name="Suite" finished-at="2025-09-01T00:45:47 IST" duration-ms="152116">
+    <groups>
+      <group name="functional">
+        <method signature="LoginTest.verifyUserRegistration()[pri:3, instance:com.automationexercise.tests.LoginTest@4c309d4d]" name="verifyUserRegistration" class="com.automationexercise.tests.LoginTest"/>
+        <method signature="LoginTest.verifyLogin(java.lang.String,java.lang.String)[pri:5, instance:com.automationexercise.tests.LoginTest@4c309d4d]" name="verifyLogin" class="com.automationexercise.tests.LoginTest"/>
+        <method signature="LoginTest.verifyLogout(java.lang.String,java.lang.String)[pri:6, instance:com.automationexercise.tests.LoginTest@4c309d4d]" name="verifyLogout" class="com.automationexercise.tests.LoginTest"/>
+        <method signature="HomePageTest.verifyHomePageTitle()[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8]" name="verifyHomePageTitle" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyLogoIsDisplayed()[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8]" name="verifyLogoIsDisplayed" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="LoginTest.registerUserFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.automationexercise.tests.LoginTest@4c309d4d]" name="registerUserFromExcel" class="com.automationexercise.tests.LoginTest"/>
+      </group> <!-- functional -->
+      <group name="tc01">
+        <method signature="LoginTest.verifyUserRegistration()[pri:3, instance:com.automationexercise.tests.LoginTest@4c309d4d]" name="verifyUserRegistration" class="com.automationexercise.tests.LoginTest"/>
+      </group> <!-- tc01 -->
+      <group name="tc02">
+        <method signature="LoginTest.registerUserFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.automationexercise.tests.LoginTest@4c309d4d]" name="registerUserFromExcel" class="com.automationexercise.tests.LoginTest"/>
+      </group> <!-- tc02 -->
+      <group name="smoke">
+        <method signature="LoginTest.verifyLoginPageIsDisplayed()[pri:1, instance:com.automationexercise.tests.LoginTest@4c309d4d]" name="verifyLoginPageIsDisplayed" class="com.automationexercise.tests.LoginTest"/>
+        <method signature="LoginTest.verifySignUpSectionIsDisplayed()[pri:2, instance:com.automationexercise.tests.LoginTest@4c309d4d]" name="verifySignUpSectionIsDisplayed" class="com.automationexercise.tests.LoginTest"/>
+        <method signature="LoginTest.verifyUserRegistration()[pri:3, instance:com.automationexercise.tests.LoginTest@4c309d4d]" name="verifyUserRegistration" class="com.automationexercise.tests.LoginTest"/>
+        <method signature="LoginTest.verifyLogin(java.lang.String,java.lang.String)[pri:5, instance:com.automationexercise.tests.LoginTest@4c309d4d]" name="verifyLogin" class="com.automationexercise.tests.LoginTest"/>
+        <method signature="LoginTest.verifyLogout(java.lang.String,java.lang.String)[pri:6, instance:com.automationexercise.tests.LoginTest@4c309d4d]" name="verifyLogout" class="com.automationexercise.tests.LoginTest"/>
+        <method signature="HomePageTest.verifyHomePageTitle()[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8]" name="verifyHomePageTitle" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="LoginTest.registerUserFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.automationexercise.tests.LoginTest@4c309d4d]" name="registerUserFromExcel" class="com.automationexercise.tests.LoginTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2025-09-01T00:43:15 IST" name="Chrome - Smoke+Functional" finished-at="2025-09-01T00:45:47 IST" duration-ms="152116">
+      <class name="com.automationexercise.tests.LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:43:36 IST" name="setup" finished-at="2025-09-01T00:43:36 IST" duration-ms="818" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.LoginTest.verifyLoginPageIsDisplayed() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@71e5f61d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLoginPageIsDisplayed()[pri:1, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:43:36 IST" name="verifyLoginPageIsDisplayed" finished-at="2025-09-01T00:43:40 IST" duration-ms="3089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageIsDisplayed -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:43:40 IST" name="teardown" finished-at="2025-09-01T00:43:40 IST" duration-ms="203" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginPageIsDisplayed status=SUCCESS method=LoginTest.verifyLoginPageIsDisplayed()[pri:1, instance:com.automationexercise.tests.LoginTest@4c309d4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:43:40 IST" name="setup" finished-at="2025-09-01T00:43:41 IST" duration-ms="824" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.LoginTest.verifySignUpSectionIsDisplayed() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@2ce86164]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifySignUpSectionIsDisplayed()[pri:2, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:43:41 IST" name="verifySignUpSectionIsDisplayed" finished-at="2025-09-01T00:43:45 IST" duration-ms="4562" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpSectionIsDisplayed -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:43:45 IST" name="teardown" finished-at="2025-09-01T00:43:45 IST" duration-ms="226" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySignUpSectionIsDisplayed status=SUCCESS method=LoginTest.verifySignUpSectionIsDisplayed()[pri:2, instance:com.automationexercise.tests.LoginTest@4c309d4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:43:45 IST" name="setup" finished-at="2025-09-01T00:43:46 IST" duration-ms="774" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.LoginTest.verifyUserRegistration() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@5e8f9e2d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserRegistration()[pri:3, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:43:46 IST" name="verifyUserRegistration" finished-at="2025-09-01T00:44:21 IST" duration-ms="34672" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserRegistration -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:44:21 IST" name="teardown" finished-at="2025-09-01T00:44:21 IST" duration-ms="253" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserRegistration status=SUCCESS method=LoginTest.verifyUserRegistration()[pri:3, instance:com.automationexercise.tests.LoginTest@4c309d4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:44:23 IST" name="setup" finished-at="2025-09-01T00:44:23 IST" duration-ms="755" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.LoginTest.registerUserFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@55795845]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="registerUserFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:44:23 IST" name="registerUserFromExcel" data-provider="registrationData" finished-at="2025-09-01T00:44:34 IST" duration-ms="10278" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TestUser1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[user1_{{unique}}@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Password123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[May]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1995]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TRUE]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[FALSE]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[John]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Doe]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[TestCompany]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[123 Main Street]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Apt 1]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[United States]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[California]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Los Angeles]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[90001]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerUserFromExcel -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:44:34 IST" name="teardown" finished-at="2025-09-01T00:44:34 IST" duration-ms="230" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registerUserFromExcel status=SUCCESS method=LoginTest.registerUserFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.automationexercise.tests.LoginTest@4c309d4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:44:34 IST" name="setup" finished-at="2025-09-01T00:44:35 IST" duration-ms="779" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.LoginTest.registerUserFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@3d08f3f5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="registerUserFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:44:35 IST" name="registerUserFromExcel" data-provider="registrationData" finished-at="2025-09-01T00:45:05 IST" duration-ms="30548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TestUser2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[user2_{{unique}}@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Secret456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[25]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[June]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1990]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Alice]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Smith]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[TechCorp]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[456 Second Ave]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Suite 200]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Canada]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Ontario]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Toronto]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[M5H 2N2]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[14165550123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerUserFromExcel -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:45:05 IST" name="teardown" finished-at="2025-09-01T00:45:05 IST" duration-ms="296" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registerUserFromExcel status=SUCCESS method=LoginTest.registerUserFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.automationexercise.tests.LoginTest@4c309d4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:45:05 IST" name="setup" finished-at="2025-09-01T00:45:06 IST" duration-ms="781" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.LoginTest.registerUserFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@119f1f2a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="registerUserFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:45:06 IST" name="registerUserFromExcel" data-provider="registrationData" finished-at="2025-09-01T00:45:17 IST" duration-ms="10280" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TestUser3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[user3_{{unique}}@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MyPass789]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[January]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[no]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[TRUE]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Bob]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Williams]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[GlobalInc]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[789 Third Blvd]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Australia]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Victoria]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Melbourne]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[3000]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[61390123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerUserFromExcel -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:45:17 IST" name="teardown" finished-at="2025-09-01T00:45:17 IST" duration-ms="217" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registerUserFromExcel status=SUCCESS method=LoginTest.registerUserFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.automationexercise.tests.LoginTest@4c309d4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:45:17 IST" name="setup" finished-at="2025-09-01T00:45:18 IST" duration-ms="766" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.LoginTest.verifyLogin(java.lang.String,java.lang.String) throws java.io.IOException]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@1a1da881]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:5, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:45:18 IST" name="verifyLogin" data-provider="logindata" finished-at="2025-09-01T00:45:37 IST" duration-ms="19030" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[akashmangond6656@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[NrXqTP9VxF@Yt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:45:37 IST" name="teardown" finished-at="2025-09-01T00:45:37 IST" duration-ms="349" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLogin status=SUCCESS method=LoginTest.verifyLogin(java.lang.String,java.lang.String)[pri:5, instance:com.automationexercise.tests.LoginTest@4c309d4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:45:37 IST" name="setup" finished-at="2025-09-01T00:45:38 IST" duration-ms="775" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.LoginTest.verifyLogout(java.lang.String,java.lang.String) throws java.io.IOException]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@5b970f7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLogout(java.lang.String,java.lang.String)[pri:6, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:45:38 IST" name="verifyLogout" data-provider="logindata" finished-at="2025-09-01T00:45:47 IST" depends-on-methods="com.automationexercise.tests.LoginTest.verifyLogin" duration-ms="8951" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[akashmangond6656@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[NrXqTP9VxF@Yt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogout -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.LoginTest@4c309d4d]" started-at="2025-09-01T00:45:47 IST" name="teardown" finished-at="2025-09-01T00:45:47 IST" duration-ms="237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLogout status=SUCCESS method=LoginTest.verifyLogout(java.lang.String,java.lang.String)[pri:6, instance:com.automationexercise.tests.LoginTest@4c309d4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.automationexercise.tests.LoginTest -->
+      <class name="com.automationexercise.tests.HomePageTest">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8]" started-at="2025-09-01T00:43:14 IST" name="setupReport" finished-at="2025-09-01T00:43:15 IST" duration-ms="413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8]" started-at="2025-09-01T00:43:15 IST" name="setup" finished-at="2025-09-01T00:43:17 IST" duration-ms="2088" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifyHomePageTitle() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@51df223b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyHomePageTitle()[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8]" started-at="2025-09-01T00:43:17 IST" name="verifyHomePageTitle" finished-at="2025-09-01T00:43:23 IST" duration-ms="5601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageTitle -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8]" started-at="2025-09-01T00:43:23 IST" name="teardown" finished-at="2025-09-01T00:43:23 IST" duration-ms="237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHomePageTitle status=SUCCESS method=HomePageTest.verifyHomePageTitle()[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8]" started-at="2025-09-01T00:43:23 IST" name="setup" finished-at="2025-09-01T00:43:24 IST" duration-ms="792" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifyLogoIsDisplayed() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@fd46303]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLogoIsDisplayed()[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8]" started-at="2025-09-01T00:43:24 IST" name="verifyLogoIsDisplayed" finished-at="2025-09-01T00:43:35 IST" duration-ms="11799" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogoIsDisplayed -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8]" started-at="2025-09-01T00:43:35 IST" name="teardown" finished-at="2025-09-01T00:43:36 IST" duration-ms="237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLogoIsDisplayed status=SUCCESS method=HomePageTest.verifyLogoIsDisplayed()[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.automationexercise.tests.HomePageTest@687e99d8]" started-at="2025-09-01T00:45:47 IST" name="flushReport" finished-at="2025-09-01T00:45:47 IST" duration-ms="461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
+      </class> <!-- com.automationexercise.tests.HomePageTest -->
+    </test> <!-- Chrome - Smoke+Functional -->
+  </suite> <!-- Suite -->
+</testng-results>

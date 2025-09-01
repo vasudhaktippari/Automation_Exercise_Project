@@ -1,0 +1,1329 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Automation Report</title>
+<link rel="apple-touch-icon" href="spark/logo.png">
+<link rel="shortcut icon" href="spark/logo.png">
+<link rel="stylesheet" href="spark/spark-style.css">
+<link rel="stylesheet" href="spark/font-awesome.min.css">
+<script src="spark/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('spark/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Automation Exercise - AutomationExercise_TestSuite</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Sept 1, 2025 12:43:15 am</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('device-view')">
+<a id="nav-device" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tablet"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Sept 1, 2025 12:43:15 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Sept 1, 2025 12:45:47 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>10</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>10</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='92%'><b>23</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>2</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"[chrome] [functional] verifyHomePageTitle":5.612,"[chrome] [functional] verifyLogoIsDisplayed":11.801,"[chrome] [smoke] verifyLoginPageIsDisplayed":3.093,"[chrome] [smoke] verifySignUpSectionIsDisplayed":4.564,"[chrome] [smoke] verifyUserRegistration":34.672,"[chrome] [smoke] registerUserFromExcel [TestUser1]":10.28,"[chrome] [smoke] registerUserFromExcel [TestUser2]":30.553,"[chrome] [smoke] registerUserFromExcel [TestUser3]":10.281,"[chrome] [smoke] verifyLogin [akashmangond6656@gmail.com]":19.036,"[chrome] [smoke] verifyLogout [akashmangond6656@gmail.com]":8.951
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>smoke</td>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>tc02</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>functional</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>tc01</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 device-container">
+<div class="card">
+<div class="card-header"><p>Device</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>chrome</td>
+<td>10</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Project Name</td>
+<td>Automation Exercise</td>
+</tr>
+<tr>
+<td>Suite</td>
+<td>AutomationExercise_TestSuite</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>Tester</td>
+<td>AKASH</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>OS Version</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Java Version</td>
+<td>21.0.8</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 10,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 23,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 2
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">smoke</a><a class="dropdown-item" href="#">tc02</a><a class="dropdown-item" href="#">functional</a><a class="dropdown-item" href="#">tc01</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tablet"></i></a>
+<ul id="device-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">chrome</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag="smoke functional"
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">[chrome] [functional] verifyHomePageTitle</p>
+            <p class="text-sm">
+              <span>12:43:17 am</span> / <span>00:00:05:612</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[chrome] [functional] verifyHomePageTitle</h5>
+<span class='badge badge-success'>09.01.2025 12:43:17 am</span>
+<span class='badge badge-danger'>09.01.2025 12:43:23 am</span>
+<span class='badge badge-default'>00:00:05:612</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">functional</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/HomePageTitle_20250901_004322.png' src="C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/HomePageTitle_20250901_004322.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:43:22 am</td>
+        <td>
+          Expected Title: Automation Exercise
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:43:22 am</td>
+        <td>
+          Actual Title: Automation Exercise
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:43:22 am</td>
+        <td>
+          Home Page title verified successfully: Automation Exercise
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:43:23 am</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag="functional"
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">[chrome] [functional] verifyLogoIsDisplayed</p>
+            <p class="text-sm">
+              <span>12:43:24 am</span> / <span>00:00:11:801</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[chrome] [functional] verifyLogoIsDisplayed</h5>
+<span class='badge badge-success'>09.01.2025 12:43:24 am</span>
+<span class='badge badge-danger'>09.01.2025 12:43:35 am</span>
+<span class='badge badge-default'>00:00:11:801</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">functional</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/HomePageLogo_20250901_004335.png' src="C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/HomePageLogo_20250901_004335.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:43:35 am</td>
+        <td>
+          Logo is displayed successfully on Home Page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:43:35 am</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag="smoke"
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">[chrome] [smoke] verifyLoginPageIsDisplayed</p>
+            <p class="text-sm">
+              <span>12:43:36 am</span> / <span>00:00:03:093</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[chrome] [smoke] verifyLoginPageIsDisplayed</h5>
+<span class='badge badge-success'>09.01.2025 12:43:36 am</span>
+<span class='badge badge-danger'>09.01.2025 12:43:40 am</span>
+<span class='badge badge-default'>00:00:03:093</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/LoginPageDisplayed_20250901_004339.png' src="C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/LoginPageDisplayed_20250901_004339.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:43:39 am</td>
+        <td>
+          Login page loaded and displayed successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:43:40 am</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag="smoke"
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">[chrome] [smoke] verifySignUpSectionIsDisplayed</p>
+            <p class="text-sm">
+              <span>12:43:41 am</span> / <span>00:00:04:564</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[chrome] [smoke] verifySignUpSectionIsDisplayed</h5>
+<span class='badge badge-success'>09.01.2025 12:43:41 am</span>
+<span class='badge badge-danger'>09.01.2025 12:43:45 am</span>
+<span class='badge badge-default'>00:00:04:564</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/SignUpSectionDisplayed_20250901_004345.png' src="C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/SignUpSectionDisplayed_20250901_004345.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:43:45 am</td>
+        <td>
+          Sign Up section is displayed with Name, Email fields and Sign Up button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:43:45 am</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag="smoke tc01 functional"
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">[chrome] [smoke] verifyUserRegistration</p>
+            <p class="text-sm">
+              <span>12:43:46 am</span> / <span>00:00:34:672</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[chrome] [smoke] verifyUserRegistration</h5>
+<span class='badge badge-success'>09.01.2025 12:43:46 am</span>
+<span class='badge badge-danger'>09.01.2025 12:44:21 am</span>
+<span class='badge badge-default'>00:00:34:672</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">tc01</span>
+<span class="badge badge-pill badge-default">functional</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/SignUp_TestUser_20250901_004420.png' src="C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/SignUp_TestUser_20250901_004420.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:44:20 am</td>
+        <td>
+          Sign Up started successfully with name: TestUser and email: user_1756667659160@example.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:44:21 am</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag="tc02 smoke functional"
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">[chrome] [smoke] registerUserFromExcel [TestUser1]</p>
+            <p class="text-sm">
+              <span>12:44:23 am</span> / <span>00:00:10:280</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[chrome] [smoke] registerUserFromExcel [TestUser1]</h5>
+<span class='badge badge-success'>09.01.2025 12:44:23 am</span>
+<span class='badge badge-danger'>09.01.2025 12:44:34 am</span>
+<span class='badge badge-default'>00:00:10:280</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">tc02</span>
+<span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">functional</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/Registered_TestUser1_20250901_004431.png' src="C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/Registered_TestUser1_20250901_004431.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:44:31 am</td>
+        <td>
+          Account registered successfully with email: testuser1_1756667665723@example.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:44:34 am</td>
+        <td>
+          Newly registered user is logged in successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:44:34 am</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag="tc02 smoke functional"
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">[chrome] [smoke] registerUserFromExcel [TestUser2]</p>
+            <p class="text-sm">
+              <span>12:44:35 am</span> / <span>00:00:30:553</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[chrome] [smoke] registerUserFromExcel [TestUser2]</h5>
+<span class='badge badge-success'>09.01.2025 12:44:35 am</span>
+<span class='badge badge-danger'>09.01.2025 12:45:05 am</span>
+<span class='badge badge-default'>00:00:30:553</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">tc02</span>
+<span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">functional</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/Registered_TestUser2_20250901_004502.png' src="C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/Registered_TestUser2_20250901_004502.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:45:02 am</td>
+        <td>
+          Account registered successfully with email: testuser2_1756667692869@example.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:45:05 am</td>
+        <td>
+          Newly registered user is logged in successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:45:05 am</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag="tc02 smoke functional"
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">[chrome] [smoke] registerUserFromExcel [TestUser3]</p>
+            <p class="text-sm">
+              <span>12:45:06 am</span> / <span>00:00:10:281</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[chrome] [smoke] registerUserFromExcel [TestUser3]</h5>
+<span class='badge badge-success'>09.01.2025 12:45:06 am</span>
+<span class='badge badge-danger'>09.01.2025 12:45:17 am</span>
+<span class='badge badge-default'>00:00:10:281</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">tc02</span>
+<span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">functional</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/Registered_TestUser3_20250901_004514.png' src="C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/Registered_TestUser3_20250901_004514.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:45:14 am</td>
+        <td>
+          Account registered successfully with email: testuser3_1756667709283@example.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:45:17 am</td>
+        <td>
+          Newly registered user is logged in successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:45:17 am</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag="smoke functional"
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">[chrome] [smoke] verifyLogin [akashmangond6656@gmail.com]</p>
+            <p class="text-sm">
+              <span>12:45:18 am</span> / <span>00:00:19:036</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[chrome] [smoke] verifyLogin [akashmangond6656@gmail.com]</h5>
+<span class='badge badge-success'>09.01.2025 12:45:18 am</span>
+<span class='badge badge-danger'>09.01.2025 12:45:37 am</span>
+<span class='badge badge-default'>00:00:19:036</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">functional</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/LoginSuccess_akashmangond6656@gmail.com_20250901_004536.png' src="C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/LoginSuccess_akashmangond6656@gmail.com_20250901_004536.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:45:36 am</td>
+        <td>
+          Login successful for user: akashmangond6656@gmail.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:45:37 am</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author=""
+          tag="smoke functional"
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">[chrome] [smoke] verifyLogout [akashmangond6656@gmail.com]</p>
+            <p class="text-sm">
+              <span>12:45:38 am</span> / <span>00:00:08:951</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[chrome] [smoke] verifyLogout [akashmangond6656@gmail.com]</h5>
+<span class='badge badge-success'>09.01.2025 12:45:38 am</span>
+<span class='badge badge-danger'>09.01.2025 12:45:47 am</span>
+<span class='badge badge-default'>00:00:08:951</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">functional</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/LogoutSuccess_akashmangond6656@gmail.com_20250901_004546.png' src="C:\Users\AKASH\eclipse-workspace\atomation_ecercise/src/test/resources/Screenshots/LogoutSuccess_akashmangond6656@gmail.com_20250901_004546.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:45:46 am</td>
+        <td>
+          Logout successful for user: akashmangond6656@gmail.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:45:47 am</td>
+        <td>
+          Test passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">4</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>9</span>
+</span>
+<p class="name">smoke</p>
+<p class="duration text-sm">9 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>smoke</h4>
+<span status="pass" class='badge log pass-bg'>9 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:17 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>[chrome] [functional] verifyHomePageTitle</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:36 am</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>[chrome] [smoke] verifyLoginPageIsDisplayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:41 am</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>[chrome] [smoke] verifySignUpSectionIsDisplayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:46 am</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>[chrome] [smoke] verifyUserRegistration</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:44:23 am</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>[chrome] [smoke] registerUserFromExcel [TestUser1]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:44:35 am</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>[chrome] [smoke] registerUserFromExcel [TestUser2]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:45:06 am</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>[chrome] [smoke] registerUserFromExcel [TestUser3]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:45:18 am</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>[chrome] [smoke] verifyLogin [akashmangond6656@gmail.com]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:45:38 am</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>[chrome] [smoke] verifyLogout [akashmangond6656@gmail.com]</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">tc02</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>tc02</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:44:23 am</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>[chrome] [smoke] registerUserFromExcel [TestUser1]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:44:35 am</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>[chrome] [smoke] registerUserFromExcel [TestUser2]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:45:06 am</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>[chrome] [smoke] registerUserFromExcel [TestUser3]</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>8</span>
+</span>
+<p class="name">functional</p>
+<p class="duration text-sm">8 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>functional</h4>
+<span status="pass" class='badge log pass-bg'>8 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:17 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>[chrome] [functional] verifyHomePageTitle</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:24 am</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>[chrome] [functional] verifyLogoIsDisplayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:46 am</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>[chrome] [smoke] verifyUserRegistration</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:44:23 am</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>[chrome] [smoke] registerUserFromExcel [TestUser1]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:44:35 am</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>[chrome] [smoke] registerUserFromExcel [TestUser2]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:45:06 am</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>[chrome] [smoke] registerUserFromExcel [TestUser3]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:45:18 am</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>[chrome] [smoke] verifyLogin [akashmangond6656@gmail.com]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:45:38 am</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>[chrome] [smoke] verifyLogout [akashmangond6656@gmail.com]</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">tc01</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>tc01</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:46 am</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>[chrome] [smoke] verifyUserRegistration</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view device-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Device</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>10</span>
+</span>
+<p class="name">chrome</p>
+<p class="duration text-sm">10 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>chrome</h4>
+<span status="pass" class='badge log pass-bg'>10 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:17 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>[chrome] [functional] verifyHomePageTitle</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:24 am</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>[chrome] [functional] verifyLogoIsDisplayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:36 am</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>[chrome] [smoke] verifyLoginPageIsDisplayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:41 am</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>[chrome] [smoke] verifySignUpSectionIsDisplayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:43:46 am</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>[chrome] [smoke] verifyUserRegistration</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:44:23 am</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>[chrome] [smoke] registerUserFromExcel [TestUser1]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:44:35 am</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>[chrome] [smoke] registerUserFromExcel [TestUser2]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:45:06 am</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>[chrome] [smoke] registerUserFromExcel [TestUser3]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:45:18 am</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>[chrome] [smoke] verifyLogin [akashmangond6656@gmail.com]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:45:38 am</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>[chrome] [smoke] verifyLogout [akashmangond6656@gmail.com]</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="spark/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
