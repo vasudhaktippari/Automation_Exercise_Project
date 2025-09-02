@@ -2,22 +2,18 @@ package com.automationexercise.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-//=== Add these imports ===
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import java.time.Duration;
 
 public class LoginPage {
     WebDriver driver;
 
-    // Locators login tc01
+    // Locators login verificaion
     By emailField    = By.xpath("//input[@data-qa='login-email']");
     By passwordField = By.xpath("//input[@data-qa='login-password']");
     By loginButton   = By.xpath("//button[@data-qa='login-button']");
     By loggedInUser  = By.xpath("//i[@class='fa fa-user']/..");  // success locator (shows username in header)
     By errorMessage  = By.xpath("//p[contains(text(),'Your email or password is incorrect!')]"); // error locator
     
-   // Locators login
+   // Locators signup section
     
     By signupHeader     = By.xpath("//h2[text()='New User Signup!']");
     By signupNameField  = By.xpath("//input[@data-qa='signup-name']");
@@ -26,7 +22,7 @@ public class LoginPage {
     
     
 
-    // locators logout tc02
+    // locator logout button
     By logoutbtn     = By.xpath("//a[@href='/logout']");
 
     // Page constants

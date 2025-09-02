@@ -97,14 +97,39 @@ public class LoginTest extends BaseTest {
         getTest().addScreenCaptureFromPath(screenshotPath);
     }
 
-    
+ // Verify "ADDRESS INFORMATION" header is visible
+    @Test(groups = {"smoke"}, priority = 5)
+    public void verifyAddressInformationHeaderIsDisplayed() throws Exception {
+        LoginPage loginPage = new LoginPage(getDriver()).open();
+
+        // Use a unique email to reach Account Information page
+        String uniqueEmail = "addr_" + System.currentTimeMillis() + "@example.com";
+        String name = "AddressCheckUser";
+
+        // Perform sign up
+        loginPage.signUp(name, uniqueEmail);
+
+        // Land on Account Information page
+        AccountInformationPage accountPage = new AccountInformationPage(getDriver());
+
+        Assert.assertTrue(
+            accountPage.isAddressInformationVisible(),
+            "'ADDRESS INFORMATION' header was not displayed"
+        );
+
+        getTest().pass("'ADDRESS INFORMATION' header is displayed successfully");
+
+        String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "AddressInformationHeader");
+        getTest().addScreenCaptureFromPath(screenshotPath);
+    }
+
     
     
     //verify user successfully registers
     @Test(
     	    dataProvider = "registrationData",
     	    groups = {"smoke","functional"},
-    	    priority = 5
+    	    priority = 6
     	)
     	public void registerUserFromExcel(
     	        String name,
@@ -186,7 +211,7 @@ public class LoginTest extends BaseTest {
     	    getTest().pass("Newly registered user is logged in successfully");
     	}
     //verify login
-    @Test(dataProvider = "logindata", groups = {"smoke", "functional"},priority = 6)
+    @Test(dataProvider = "logindata", groups = {"smoke", "functional"},priority = 7)
     public void verifyLogin(String username, String password) throws IOException {
         LoginPage loginPage = new LoginPage(getDriver()).open();
 

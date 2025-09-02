@@ -10,15 +10,22 @@ public class AccountInformationPage {
     // --- Page title check ---
     String ACCOUNT_INFO_TITLE = "Automation Exercise - Signup";
     
- // --- Locators: headers ---
+ // --- Locators:Enter Account Information header ---
     By enterAccountInfoHeader = By.xpath(
         "//*[self::h1 or self::h2 or self::b]" +
         "[contains(translate(normalize-space(.),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')," +
         "'ENTER ACCOUNT INFORMATION')]"
     );
 
+ // --- Locators: Address info header ---
+    By addressInformationHeader = By.xpath(
+        "//*[self::h1 or self::h2 or self::b]" +
+        "[contains(translate(normalize-space(.),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')," +
+        "'ADDRESS INFORMATION')]"
+    );
 
-    // --- Locators: Account Information (Step 2) ---
+
+    // --- Locators: Account Information  ---
     By titleMrRadio        = By.id("id_gender1");
     By titleMrsRadio       = By.id("id_gender2");
     By passwordField       = By.id("password");
@@ -52,6 +59,10 @@ public class AccountInformationPage {
     // Header verification after continue
     By loggedInAs         = By.xpath("//a[.//i[contains(@class,'fa-user')]]");
 
+    
+    
+    
+    
     public AccountInformationPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -82,6 +93,17 @@ public class AccountInformationPage {
         try {
             String txt = driver.findElement(enterAccountInfoHeader).getText().trim();
             return "ENTER ACCOUNT INFORMATION".equalsIgnoreCase(txt);
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isAddressInformationVisible() {
+        try {
+            new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(10))
+                    .until(org.openqa.selenium.support.ui.ExpectedConditions
+                            .visibilityOfElementLocated(addressInformationHeader));
+            return driver.findElement(addressInformationHeader).isDisplayed();
         } catch (Exception e) {
             return false;
         }
