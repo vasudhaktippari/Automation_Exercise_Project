@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-02T11:29:54 IST" name="Suite" finished-at="2025-09-02T11:30:38 IST" duration-ms="43618">
+    <groups>
+      <group name="functional">
+        <method signature="HomePageTest.verifyHomePageTitle()[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2]" name="verifyHomePageTitle" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyLogoIsDisplayed()[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2]" name="verifyLogoIsDisplayed" class="com.automationexercise.tests.HomePageTest"/>
+      </group> <!-- functional -->
+      <group name="smoke">
+        <method signature="HomePageTest.verifyHomePageTitle()[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2]" name="verifyHomePageTitle" class="com.automationexercise.tests.HomePageTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2025-09-02T11:29:54 IST" name="Chrome - Smoke+Functional" finished-at="2025-09-02T11:30:38 IST" duration-ms="43618">
+      <class name="com.automationexercise.tests.HomePageTest">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2]" started-at="2025-09-02T11:29:54 IST" name="setupReport" finished-at="2025-09-02T11:29:54 IST" duration-ms="320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2]" started-at="2025-09-02T11:29:54 IST" name="setup" finished-at="2025-09-02T11:29:57 IST" duration-ms="2437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifyHomePageTitle() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@60921b21]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyHomePageTitle()[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2]" started-at="2025-09-02T11:29:57 IST" name="verifyHomePageTitle" finished-at="2025-09-02T11:30:32 IST" duration-ms="34902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageTitle -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2]" started-at="2025-09-02T11:30:32 IST" name="teardown" finished-at="2025-09-02T11:30:32 IST" duration-ms="341" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHomePageTitle status=SUCCESS method=HomePageTest.verifyHomePageTitle()[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2]" started-at="2025-09-02T11:30:32 IST" name="setup" finished-at="2025-09-02T11:30:33 IST" duration-ms="924" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifyLogoIsDisplayed() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@bd2f5a9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLogoIsDisplayed()[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2]" started-at="2025-09-02T11:30:33 IST" name="verifyLogoIsDisplayed" finished-at="2025-09-02T11:30:38 IST" duration-ms="4722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogoIsDisplayed -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2]" started-at="2025-09-02T11:30:38 IST" name="teardown" finished-at="2025-09-02T11:30:38 IST" duration-ms="235" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLogoIsDisplayed status=SUCCESS method=HomePageTest.verifyLogoIsDisplayed()[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.automationexercise.tests.HomePageTest@5674e1f2]" started-at="2025-09-02T11:30:38 IST" name="flushReport" finished-at="2025-09-02T11:30:39 IST" duration-ms="601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
+      </class> <!-- com.automationexercise.tests.HomePageTest -->
+    </test> <!-- Chrome - Smoke+Functional -->
+  </suite> <!-- Suite -->
+</testng-results>
