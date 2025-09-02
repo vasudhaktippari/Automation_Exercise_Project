@@ -41,56 +41,10 @@ public class LoginTest extends BaseTest {
     }
     
     
-    //verify login
-    @Test(dataProvider = "logindata", groups = {"smoke", "functional"},priority = 5)
-    public void verifyLogin(String username, String password) throws IOException {
-        LoginPage loginPage = new LoginPage(getDriver()).open();
+   
 
-        loginPage.login(username, password);
-
-        if (loginPage.isLoginSuccessful()) {
-            getTest().pass("Login successful for user: " + username);
-            String successShot = ScreenshotUtilities.captureScreen(getDriver(), "LoginSuccess_" + username);
-            getTest().addScreenCaptureFromPath(successShot);
-        } else {
-            String error = loginPage.getErrorMessage();
-            getTest().fail("Login failed for user: " + username + " | Error: " + error);
-            String failShot = ScreenshotUtilities.captureScreen(getDriver(), "LoginFail_" + username);
-            getTest().addScreenCaptureFromPath(failShot);
-            Assert.fail("Login failed for user: " + username + " | Error: " + error);
-        }
-    }
-
-      //verify logout 
-    @Test(
-        dataProvider = "logindata",
-        priority = 6,
-        groups = {"smoke", "functional"},
-        dependsOnMethods = "verifyLogin"
-    )
-    public void verifyLogout(String username, String password) throws IOException {
-        LoginPage loginPage = new LoginPage(getDriver()).open();
-        loginPage.login(username, password);
-
-        Assert.assertTrue(
-            loginPage.isLoginSuccessful(),
-            "Precondition failed: Login was not successful for user: " + username
-        );
-
-        loginPage.logout();
-
-        if (loginPage.isLogoutSuccessful()) {
-            getTest().pass("Logout successful for user: " + username);
-            String successShot = ScreenshotUtilities.captureScreen(getDriver(), "LogoutSuccess_" + username);
-            getTest().addScreenCaptureFromPath(successShot);
-        } else {
-            getTest().fail("Logout failed for user: " + username);
-            String failShot = ScreenshotUtilities.captureScreen(getDriver(), "LogoutFail_" + username);
-            getTest().addScreenCaptureFromPath(failShot);
-            Assert.fail("Logout verification failed for user: " + username);
-        }
-    }
     
+ 
     
     //Verify a user sign/up 
     @Test(groups = {"smoke","functional"},priority = 3)
@@ -117,11 +71,40 @@ public class LoginTest extends BaseTest {
         getTest().addScreenCaptureFromPath(screenshotPath);
     }
     
+ // Verify "ENTER ACCOUNT INFORMATION" header is visible
+    @Test(groups = {"smoke"}, priority = 4)
+    public void verifyEnterAccountInformationHeaderIsDisplayed() throws Exception {
+        LoginPage loginPage = new LoginPage(getDriver()).open();
+
+        // Use a unique email for registration
+        String uniqueEmail = "user_" + System.currentTimeMillis() + "@example.com";
+        String name = "HeaderCheckUser";
+
+        // Perform sign up step
+        loginPage.signUp(name, uniqueEmail);
+
+        // Land on Account Information page
+        AccountInformationPage accountPage = new AccountInformationPage(getDriver());
+
+        Assert.assertTrue(
+            accountPage.isEnterAccountInformationVisible(),
+            "'ENTER ACCOUNT INFORMATION' header was not displayed"
+        );
+
+        getTest().pass("'ENTER ACCOUNT INFORMATION' header is displayed successfully");
+
+        String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "EnterAccountInformationHeader");
+        getTest().addScreenCaptureFromPath(screenshotPath);
+    }
+
+    
+    
+    
     //verify user successfully registers
     @Test(
     	    dataProvider = "registrationData",
     	    groups = {"smoke","functional"},
-    	    priority = 4
+    	    priority = 5
     	)
     	public void registerUserFromExcel(
     	        String name,
@@ -202,7 +185,55 @@ public class LoginTest extends BaseTest {
 
     	    getTest().pass("Newly registered user is logged in successfully");
     	}
+    //verify login
+    @Test(dataProvider = "logindata", groups = {"smoke", "functional"},priority = 6)
+    public void verifyLogin(String username, String password) throws IOException {
+        LoginPage loginPage = new LoginPage(getDriver()).open();
 
+        loginPage.login(username, password);
+
+        if (loginPage.isLoginSuccessful()) {
+            getTest().pass("Login successful for user: " + username);
+            String successShot = ScreenshotUtilities.captureScreen(getDriver(), "LoginSuccess_" + username);
+            getTest().addScreenCaptureFromPath(successShot);
+        } else {
+            String error = loginPage.getErrorMessage();
+            getTest().fail("Login failed for user: " + username + " | Error: " + error);
+            String failShot = ScreenshotUtilities.captureScreen(getDriver(), "LoginFail_" + username);
+            getTest().addScreenCaptureFromPath(failShot);
+            Assert.fail("Login failed for user: " + username + " | Error: " + error);
+        }
+    }
+    
+    //verify logout 
+    @Test(
+        dataProvider = "logindata",
+        priority = 8,
+        groups = {"smoke", "functional"},
+        dependsOnMethods = "verifyLogin"
+    )
+    public void verifyLogout(String username, String password) throws IOException {
+        LoginPage loginPage = new LoginPage(getDriver()).open();
+        loginPage.login(username, password);
+
+        Assert.assertTrue(
+            loginPage.isLoginSuccessful(),
+            "Precondition failed: Login was not successful for user: " + username
+        );
+
+        loginPage.logout();
+
+        if (loginPage.isLogoutSuccessful()) {
+            getTest().pass("Logout successful for user: " + username);
+            String successShot = ScreenshotUtilities.captureScreen(getDriver(), "LogoutSuccess_" + username);
+            getTest().addScreenCaptureFromPath(successShot);
+        } else {
+            getTest().fail("Logout failed for user: " + username);
+            String failShot = ScreenshotUtilities.captureScreen(getDriver(), "LogoutFail_" + username);
+            getTest().addScreenCaptureFromPath(failShot);
+            Assert.fail("Logout verification failed for user: " + username);
+        }
+    }
     	/**
     	 * Helper to interpret flexible boolean strings from Excel.
     	 * Accepts: true/false, yes/no, y/n, 1/0 (case-insensitive).

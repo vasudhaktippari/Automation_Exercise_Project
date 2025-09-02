@@ -9,6 +9,14 @@ public class AccountInformationPage {
 
     // --- Page title check ---
     String ACCOUNT_INFO_TITLE = "Automation Exercise - Signup";
+    
+ // --- Locators: headers ---
+    By enterAccountInfoHeader = By.xpath(
+        "//*[self::h1 or self::h2 or self::b]" +
+        "[contains(translate(normalize-space(.),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')," +
+        "'ENTER ACCOUNT INFORMATION')]"
+    );
+
 
     // --- Locators: Account Information (Step 2) ---
     By titleMrRadio        = By.id("id_gender1");
@@ -57,6 +65,30 @@ public class AccountInformationPage {
         }
     }
 
+ // --- Checks ---
+    public boolean isEnterAccountInformationVisible() {
+        try {
+            new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(10))
+                    .until(org.openqa.selenium.support.ui.ExpectedConditions
+                            .visibilityOfElementLocated(enterAccountInfoHeader));
+            return driver.findElement(enterAccountInfoHeader).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /** (Optional) Assert text exactly, ignoring case/extra spaces */
+    public boolean doesEnterAccountInformationHaveExactText() {
+        try {
+            String txt = driver.findElement(enterAccountInfoHeader).getText().trim();
+            return "ENTER ACCOUNT INFORMATION".equalsIgnoreCase(txt);
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    
+    
     // --- Fillers ---
     public AccountInformationPage selectTitleMr() {
         driver.findElement(titleMrRadio).click();
