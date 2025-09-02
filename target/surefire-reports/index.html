@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">16 methods, 1 failed,   15 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="registerUserFromExcel(TestUser3, user3_{{unique}}@example.com, MyPass789, 5, January, 2000, no, TRUE, Bob, Williams, Globa...)">registerUserFromExcel(TestUser3, user3_{{unique}}@example.com, MyPass789, 5, January, 2000, no, TRUE, Bob, Williams, Globa...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +117,77 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="registerUserFromExcel(TestUser2, user2_{{unique}}@example.com, Secret456, 25, June, 1990, yes, yes, Alice, Smith, TechCorp...)">registerUserFromExcel(TestUser2, user2_{{unique}}@example.com, Secret456, 25, June, 1990, yes, yes, Alice, Smith, TechCorp...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="registerUserFromExcel(TestUser1, user1_{{unique}}@example.com, Password123, 10, May, 1995, TRUE, FALSE, John, Doe, TestCom...)">registerUserFromExcel(TestUser1, user1_{{unique}}@example.com, Password123, 10, May, 1995, TRUE, FALSE, John, Doe, TestCom...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="verifyAddressInformationHeaderIsDisplayed">verifyAddressInformationHeaderIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="verifyEnterAccountInformationHeaderIsDisplayed">verifyEnterAccountInformationHeaderIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.HomePageTest" class="method navigator-link" hash-for-method="verifyHomePageTitle">verifyHomePageTitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="verifyLogin(user2_@example.com, Secret456)">verifyLogin(user2_@example.com, Secret456)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="verifyLogin(akashmangond6656@gmail.com, NrXqTP9VxF@Yt)">verifyLogin(akashmangond6656@gmail.com, NrXqTP9VxF@Yt)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="verifyLogin(user3_@example.com, MyPass789)">verifyLogin(user3_@example.com, MyPass789)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="verifyLoginPageIsDisplayed">verifyLoginPageIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.HomePageTest" class="method navigator-link" hash-for-method="verifyLogoIsDisplayed">verifyLogoIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="verifyLogout(user3_@example.com, MyPass789)">verifyLogout(user3_@example.com, MyPass789)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="verifyLogout(akashmangond6656@gmail.com, NrXqTP9VxF@Yt)">verifyLogout(akashmangond6656@gmail.com, NrXqTP9VxF@Yt)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="verifyLogout(user2_@example.com, Secret456)">verifyLogout(user2_@example.com, Secret456)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="verifySignUpSectionIsDisplayed">verifySignUpSectionIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.automationexercise.tests.LoginTest" class="method navigator-link" hash-for-method="verifyUserRegistration">verifyUserRegistration</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -123,6 +202,49 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.automationexercise.tests.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerUserFromExcel(TestUser3, user3_{{unique}}@example.com, MyPass789, 5, January, 2000, no, TRUE, Bob, Williams, Globa...)">
+                  </a> <!-- registerUserFromExcel(TestUser3, user3_{{unique}}@example.com, MyPass789, 5, January, 2000, no, TRUE, Bob, Williams, Globa...) -->
+                  <span class="method-name">registerUserFromExcel</span>
+                  <span class="parameters">(TestUser3,user3_{{unique}}@example.com,MyPass789,5,January,2000,no,TRUE,Bob,Williams,GlobalInc,789 Third Blvd,,Australia,Victoria,Melbourne,3000,61390123456)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;checkbox&quot; name=&quot;optin&quot; id=&quot;optin&quot; value=&quot;1&quot;&gt; is not clickable at point (295, 705). Other element would receive the click: &lt;div id=&quot;aswift_1_host&quot; style=&quot;border: none !important; height: 90px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=139.0.7258.155)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.15&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0c7c2d8b0b27721dfebb6ebc13b357f3, clickElement {id=f.376904A31C7125A2ECCA7FF2DC318EDE.d.18BF0CC9AB639BAB592DC58AF8719F87.e.54}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\AKASH\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61188}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61188/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (0c7c2d8b0b27721dfebb6ebc13b357f3)] -&gt; id: optin]
+Session ID: 0c7c2d8b0b27721dfebb6ebc13b357f3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at com.automationexercise.pages.AccountInformationPage.toggleOffers(AccountInformationPage.java:147)
+	at com.automationexercise.tests.LoginTest.registerUserFromExcel(LoginTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -141,6 +263,113 @@
                   <a name="verifyLogoIsDisplayed">
                   </a> <!-- verifyLogoIsDisplayed -->
                   <span class="method-name">verifyLogoIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.automationexercise.tests.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerUserFromExcel(TestUser2, user2_{{unique}}@example.com, Secret456, 25, June, 1990, yes, yes, Alice, Smith, TechCorp...)">
+                  </a> <!-- registerUserFromExcel(TestUser2, user2_{{unique}}@example.com, Secret456, 25, June, 1990, yes, yes, Alice, Smith, TechCorp...) -->
+                  <span class="method-name">registerUserFromExcel</span>
+                  <span class="parameters">(TestUser2,user2_{{unique}}@example.com,Secret456,25,June,1990,yes,yes,Alice,Smith,TechCorp,456 Second Ave,Suite 200,Canada,Ontario,Toronto,M5H 2N2,14165550123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerUserFromExcel(TestUser1, user1_{{unique}}@example.com, Password123, 10, May, 1995, TRUE, FALSE, John, Doe, TestCom...)">
+                  </a> <!-- registerUserFromExcel(TestUser1, user1_{{unique}}@example.com, Password123, 10, May, 1995, TRUE, FALSE, John, Doe, TestCom...) -->
+                  <span class="method-name">registerUserFromExcel</span>
+                  <span class="parameters">(TestUser1,user1_{{unique}}@example.com,Password123,10,May,1995,TRUE,FALSE,John,Doe,TestCompany,123 Main Street,Apt 1,United States,California,Los Angeles,90001,1234567890)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddressInformationHeaderIsDisplayed">
+                  </a> <!-- verifyAddressInformationHeaderIsDisplayed -->
+                  <span class="method-name">verifyAddressInformationHeaderIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEnterAccountInformationHeaderIsDisplayed">
+                  </a> <!-- verifyEnterAccountInformationHeaderIsDisplayed -->
+                  <span class="method-name">verifyEnterAccountInformationHeaderIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogin(user2_@example.com, Secret456)">
+                  </a> <!-- verifyLogin(user2_@example.com, Secret456) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(user2_@example.com,Secret456)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogin(akashmangond6656@gmail.com, NrXqTP9VxF@Yt)">
+                  </a> <!-- verifyLogin(akashmangond6656@gmail.com, NrXqTP9VxF@Yt) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(akashmangond6656@gmail.com,NrXqTP9VxF@Yt)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogin(user3_@example.com, MyPass789)">
+                  </a> <!-- verifyLogin(user3_@example.com, MyPass789) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(user3_@example.com,MyPass789)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginPageIsDisplayed">
+                  </a> <!-- verifyLoginPageIsDisplayed -->
+                  <span class="method-name">verifyLoginPageIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogout(user3_@example.com, MyPass789)">
+                  </a> <!-- verifyLogout(user3_@example.com, MyPass789) -->
+                  <span class="method-name">verifyLogout</span>
+                  <span class="parameters">(user3_@example.com,MyPass789)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogout(akashmangond6656@gmail.com, NrXqTP9VxF@Yt)">
+                  </a> <!-- verifyLogout(akashmangond6656@gmail.com, NrXqTP9VxF@Yt) -->
+                  <span class="method-name">verifyLogout</span>
+                  <span class="parameters">(akashmangond6656@gmail.com,NrXqTP9VxF@Yt)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogout(user2_@example.com, Secret456)">
+                  </a> <!-- verifyLogout(user2_@example.com, Secret456) -->
+                  <span class="method-name">verifyLogout</span>
+                  <span class="parameters">(user2_@example.com,Secret456)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySignUpSectionIsDisplayed">
+                  </a> <!-- verifySignUpSectionIsDisplayed -->
+                  <span class="method-name">verifySignUpSectionIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserRegistration">
+                  </a> <!-- verifyUserRegistration -->
+                  <span class="method-name">verifyUserRegistration</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -165,6 +394,7 @@
     &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.automationexercise.tests.HomePageTest&quot;/&gt;
+      &lt;class name=&quot;com.automationexercise.tests.LoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Chrome - Smoke+Functional --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -178,7 +408,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Chrome - Smoke+Functional (1 class)</span>
+                <span class="test-name">Chrome - Smoke+Functional (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,11 +422,27 @@
               <span class="test-group-name">functional</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">registerUserFromExcel</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">verifyHomePageTitle</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
+                <span class="method-in-group-name">verifyLogin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">verifyLogoIsDisplayed</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyLogout</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyUserRegistration</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -204,7 +450,39 @@
               <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">registerUserFromExcel</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddressInformationHeaderIsDisplayed</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyEnterAccountInformationHeaderIsDisplayed</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">verifyHomePageTitle</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyLogin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyLoginPageIsDisplayed</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyLogout</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifySignUpSectionIsDisplayed</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyUserRegistration</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -224,20 +502,76 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(16);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyHomePageTitle')
-data.setCell(0, 2, 'com.automationexercise.tests.HomePageTest')
-data.setCell(0, 3, 34902);
+data.setCell(0, 1, 'verifyLogin')
+data.setCell(0, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(0, 3, 39290);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyLogoIsDisplayed')
 data.setCell(1, 2, 'com.automationexercise.tests.HomePageTest')
-data.setCell(1, 3, 4722);
+data.setCell(1, 3, 35816);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'registerUserFromExcel')
+data.setCell(2, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(2, 3, 22921);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyLogout')
+data.setCell(3, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(3, 3, 22914);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'registerUserFromExcel')
+data.setCell(4, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(4, 3, 18026);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'registerUserFromExcel')
+data.setCell(5, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(5, 3, 16756);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyUserRegistration')
+data.setCell(6, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(6, 3, 16188);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyLogout')
+data.setCell(7, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(7, 3, 11224);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyLogin')
+data.setCell(8, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(8, 3, 10549);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifyLogout')
+data.setCell(9, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(9, 3, 10110);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyLogin')
+data.setCell(10, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(10, 3, 10042);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyAddressInformationHeaderIsDisplayed')
+data.setCell(11, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(11, 3, 7708);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyEnterAccountInformationHeaderIsDisplayed')
+data.setCell(12, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(12, 3, 7425);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyHomePageTitle')
+data.setCell(13, 2, 'com.automationexercise.tests.HomePageTest')
+data.setCell(13, 3, 6138);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'verifySignUpSectionIsDisplayed')
+data.setCell(14, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(14, 3, 4356);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifyLoginPageIsDisplayed')
+data.setCell(15, 2, 'com.automationexercise.tests.LoginTest')
+data.setCell(15, 3, 4281);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 43 seconds</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -252,9 +586,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.automationexercise.tests.LoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setupReport</span>
+                <br/>
+                <span class="ignored-method-name">flushReport</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -270,31 +613,207 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.HomePageTest.verifyHomePageTitle() throws ja...)</span>
-                <span class="method-start">372 ms</span>
+                <span class="method-start">332 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyHomePageTitle</span>
-                <span class="method-start">2810 ms</span>
+                <span class="method-start">2385 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown([TestResult name=verifyHomePageTitle status=SUCCESS method=HomePageTest.verifyHomePageTitle()[pri:0,...)</span>
-                <span class="method-start">37716 ms</span>
+                <span class="method-start">8527 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.HomePageTest.verifyLogoIsDisplayed() throws ...)</span>
-                <span class="method-start">38061 ms</span>
+                <span class="method-start">8801 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLogoIsDisplayed</span>
-                <span class="method-start">38985 ms</span>
+                <span class="method-start">9625 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown([TestResult name=verifyLogoIsDisplayed status=SUCCESS method=HomePageTest.verifyLogoIsDisplayed()[pr...)</span>
-                <span class="method-start">43708 ms</span>
+                <span class="method-start">45442 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.automationexercise.tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.verifyLoginPageIsDisplayed() throw...)</span>
+                <span class="method-start">45797 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginPageIsDisplayed</span>
+                <span class="method-start">46735 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=verifyLoginPageIsDisplayed status=SUCCESS method=LoginTest.verifyLoginPageIsDisplay...)</span>
+                <span class="method-start">51016 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.verifySignUpSectionIsDisplayed() t...)</span>
+                <span class="method-start">51229 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySignUpSectionIsDisplayed</span>
+                <span class="method-start">52113 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=verifySignUpSectionIsDisplayed status=SUCCESS method=LoginTest.verifySignUpSectionI...)</span>
+                <span class="method-start">56470 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.verifyUserRegistration() throws ja...)</span>
+                <span class="method-start">56696 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserRegistration</span>
+                <span class="method-start">57573 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=verifyUserRegistration status=SUCCESS method=LoginTest.verifyUserRegistration()[pri...)</span>
+                <span class="method-start">73762 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.verifyEnterAccountInformationHeade...)</span>
+                <span class="method-start">74029 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyEnterAccountInformationHeaderIsDisplayed</span>
+                <span class="method-start">74881 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=verifyEnterAccountInformationHeaderIsDisplayed status=SUCCESS method=LoginTest.veri...)</span>
+                <span class="method-start">82307 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.verifyAddressInformationHeaderIsDi...)</span>
+                <span class="method-start">82559 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddressInformationHeaderIsDisplayed</span>
+                <span class="method-start">83417 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=verifyAddressInformationHeaderIsDisplayed status=SUCCESS method=LoginTest.verifyAdd...)</span>
+                <span class="method-start">91126 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.registerUserFromExcel(java.lang.St...)</span>
+                <span class="method-start">92277 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">registerUserFromExcel(TestUser1, user1_{{unique}}@example.com, Password123, 10, May, 1995, TRUE, FALSE, John, Doe, TestCom...)</span>
+                <span class="method-start">93153 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=registerUserFromExcel status=SUCCESS method=LoginTest.registerUserFromExcel(java.la...)</span>
+                <span class="method-start">109910 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.registerUserFromExcel(java.lang.St...)</span>
+                <span class="method-start">110210 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">registerUserFromExcel(TestUser2, user2_{{unique}}@example.com, Secret456, 25, June, 1990, yes, yes, Alice, Smith, TechCorp...)</span>
+                <span class="method-start">111031 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=registerUserFromExcel status=SUCCESS method=LoginTest.registerUserFromExcel(java.la...)</span>
+                <span class="method-start">129057 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.registerUserFromExcel(java.lang.St...)</span>
+                <span class="method-start">129337 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">registerUserFromExcel(TestUser3, user3_{{unique}}@example.com, MyPass789, 5, January, 2000, no, TRUE, Bob, Williams, Globa...)</span>
+                <span class="method-start">130216 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=registerUserFromExcel status=FAILURE method=LoginTest.registerUserFromExcel(java.la...)</span>
+                <span class="method-start">153144 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.verifyLogin(java.lang.String,java....)</span>
+                <span class="method-start">153873 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogin(akashmangond6656@gmail.com, NrXqTP9VxF@Yt)</span>
+                <span class="method-start">154685 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=verifyLogin status=SUCCESS method=LoginTest.verifyLogin(java.lang.String,java.lang....)</span>
+                <span class="method-start">193976 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.verifyLogin(java.lang.String,java....)</span>
+                <span class="method-start">194260 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogin(user2_@example.com, Secret456)</span>
+                <span class="method-start">195017 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=verifyLogin status=SUCCESS method=LoginTest.verifyLogin(java.lang.String,java.lang....)</span>
+                <span class="method-start">205567 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.verifyLogin(java.lang.String,java....)</span>
+                <span class="method-start">205854 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogin(user3_@example.com, MyPass789)</span>
+                <span class="method-start">206793 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=verifyLogin status=SUCCESS method=LoginTest.verifyLogin(java.lang.String,java.lang....)</span>
+                <span class="method-start">216836 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.verifyLogout(java.lang.String,java...)</span>
+                <span class="method-start">217144 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogout(akashmangond6656@gmail.com, NrXqTP9VxF@Yt)</span>
+                <span class="method-start">217987 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=verifyLogout status=SUCCESS method=LoginTest.verifyLogout(java.lang.String,java.lan...)</span>
+                <span class="method-start">228097 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.verifyLogout(java.lang.String,java...)</span>
+                <span class="method-start">228377 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogout(user2_@example.com, Secret456)</span>
+                <span class="method-start">229230 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=verifyLogout status=SUCCESS method=LoginTest.verifyLogout(java.lang.String,java.lan...)</span>
+                <span class="method-start">240454 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, false, public void com.automationexercise.tests.LoginTest.verifyLogout(java.lang.String,java...)</span>
+                <span class="method-start">240719 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogout(user3_@example.com, MyPass789)</span>
+                <span class="method-start">241607 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=verifyLogout status=SUCCESS method=LoginTest.verifyLogout(java.lang.String,java.lan...)</span>
+                <span class="method-start">264522 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.automationexercise.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">flushReport</span>
-                <span class="method-start">43967 ms</span>
+                <span class="method-start">264890 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

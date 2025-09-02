@@ -24,6 +24,12 @@ public class LoginPage {
 
     // locator logout button
     By logoutbtn     = By.xpath("//a[@href='/logout']");
+    
+    // Header: "Login to your account"
+    By loginHeader = By.xpath("//h2[normalize-space()='Login to your account']");
+    
+     // Header: "New User Signup!"
+    By newUserSignupHeader = By.xpath("//h2[normalize-space()='New User Signup!']");
 
     // Page constants
     String LOGIN_URL   = "https://automationexercise.com/login";
@@ -39,7 +45,32 @@ public class LoginPage {
         driver.get(LOGIN_URL);
         return this;
     }
+    
+    
+    // Header: "Login to your account"
 
+    public boolean isLoginHeaderVisible() {
+        try {
+            return driver.findElement(loginHeader).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    // Header: "New User Signup!"
+
+    
+    public boolean isNewUserSignupHeaderVisible() {
+        try {
+            return driver.findElement(newUserSignupHeader).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    
+    
+    
     public boolean isLoginPageDisplayed() {
         try {
             return driver.getTitle().equalsIgnoreCase(LOGIN_TITLE);
@@ -106,7 +137,7 @@ public class LoginPage {
         }
     }
     
- // === Action: Sign Up (basic) ===
+ // === Action: Sign Up ===
     public void signUp(String name, String email) {
         driver.findElement(signupNameField).clear();
         driver.findElement(signupNameField).sendKeys(name);

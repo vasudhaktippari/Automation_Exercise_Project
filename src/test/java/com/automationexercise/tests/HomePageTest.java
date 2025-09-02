@@ -9,7 +9,7 @@ import com.automationexercise.utilities.ScreenshotUtilities;
 
 public class HomePageTest extends BaseTest {
 
-    @Test(groups = {"functional","smoke"})
+    @Test(groups = {"functional","smoke","Regression","ui"})
     public void verifyHomePageTitle() throws Exception {
         getDriver().get("https://automationexercise.com/");
         HomePage homePage = new HomePage(getDriver());
@@ -28,7 +28,7 @@ public class HomePageTest extends BaseTest {
         getTest().addScreenCaptureFromPath(screenshotPath);
     }
 
-    @Test(groups = {"functional"})
+    @Test(groups = {"ui","smoke","Regression"})
     public void verifyLogoIsDisplayed() throws Exception {
         getDriver().get("https://automationexercise.com/");
         HomePage homePage = new HomePage(getDriver());
