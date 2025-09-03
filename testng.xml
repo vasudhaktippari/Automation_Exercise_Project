@@ -28,6 +28,8 @@
       <class name="com.automationexercise.tests.ContactUsTest"/>
       <class name="com.automationexercise.tests.TC_ECOM_Tests"/>
       <class name="com.automationexercise.tests.TC_VideoTutorialsTest"/>
+      <class name="com.automationexercise.tests.SubscriptionTest"/>
+      
     </classes>
     
 >>>>>>> d65a3702c59899a6b25ba2d637ce2a507229ec4f
