@@ -2,6 +2,7 @@ package com.automationexercise.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class LoginPage {
     WebDriver driver;
@@ -78,6 +79,27 @@ public class LoginPage {
             return false;
         }
     }
+    
+ // Check if Login button is visible and enabled
+    public boolean isLoginButtonVisibleAndClickable() {
+        try {
+            return driver.findElement(loginButton).isDisplayed() &&
+                   driver.findElement(loginButton).isEnabled();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    // Check if Sign Up button is visible and enabled
+    public boolean isSignUpButtonVisibleAndClickable() {
+        try {
+            return driver.findElement(signupButton).isDisplayed() &&
+                   driver.findElement(signupButton).isEnabled();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 
     // === Actions ===
     public void login(String email, String password) {
@@ -156,6 +178,51 @@ public class LoginPage {
         }
     }
     
-    
+    // ===== New helpers for Sign Up (granular actions) =====
+    public LoginPage typeSignUpName(String name) {
+        driver.findElement(signupNameField).clear();
+        driver.findElement(signupNameField).sendKeys(name);
+        return this;
+    }
+
+    public LoginPage typeSignUpEmail(String email) {
+        driver.findElement(signupEmailField).clear();
+        driver.findElement(signupEmailField).sendKeys(email);
+        return this;
+    }
+
+    public LoginPage clickSignUp() {
+        driver.findElement(signupButton).click();
+        return this;
+    }
+
+    /** Check HTML5 validity of the email field (works for type="email") */
+    public boolean isSignUpEmailValid() {
+        try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            Object valid = js.executeScript(
+                "return arguments[0].checkValidity();",
+                driver.findElement(signupEmailField)
+            );
+            return valid instanceof Boolean && (Boolean) valid;
+        } catch (Exception e) {
+            // If JS isn't available, be conservative
+            return true;
+        }
+    }
+
+    /** Get the browser-native validation bubble text for the email field */
+    public String getSignUpEmailValidationMessage() {
+        try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            Object msg = js.executeScript(
+                "return arguments[0].validationMessage;",
+                driver.findElement(signupEmailField)
+            );
+            return msg == null ? null : msg.toString();
+        } catch (Exception e) {
+            return null;
+        }
+    }
 
 }

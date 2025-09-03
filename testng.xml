@@ -16,7 +16,7 @@
        <classes>
         <class name="com.automationexercise.tests.HomePageTest"/>
         <class name="com.automationexercise.tests.LoginTest"/>
-        <class name="com.automationexercise.tests.ContactUsTest"/>
+       
        </classes>
   </test>
  

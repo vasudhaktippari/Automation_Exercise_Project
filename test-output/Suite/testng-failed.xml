@@ -13,16 +13,23 @@
       </run>
     </groups>
     <classes>
-      <class name="com.automationexercise.tests.LoginTest">
+      <class name="com.automationexercise.tests.ContactUsTest">
         <methods>
-          <include name="verifyLogout"/>
           <include name="setupReport"/>
           <include name="teardown"/>
-          <include name="registerUserFromExcel"/>
-          <include name="verifyEnterAccountInformationHeaderIsDisplayed"/>
           <include name="setup"/>
           <include name="flushReport"/>
-          <include name="verifyAddressInformationHeaderIsDisplayed"/>
+          <include name="testContactUsForm" invocation-numbers="2 3"/>
+        </methods>
+      </class> <!-- com.automationexercise.tests.ContactUsTest -->
+      <class name="com.automationexercise.tests.LoginTest">
+        <methods>
+          <include name="setupReport"/>
+          <include name="verifyLogout"/>
+          <include name="registerUserFromExcel"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="flushReport"/>
           <include name="verifyLogin"/>
         </methods>
       </class> <!-- com.automationexercise.tests.LoginTest -->
