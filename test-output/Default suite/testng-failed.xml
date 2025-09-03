@@ -9,7 +9,7 @@
           <include name="teardown"/>
           <include name="setup"/>
           <include name="flushReport"/>
-          <include name="testContactUsForm" invocation-numbers="2 3"/>
+          <include name="testContactUsForm" invocation-numbers="5"/>
         </methods>
       </class> <!-- com.automationexercise.tests.ContactUsTest -->
     </classes>
