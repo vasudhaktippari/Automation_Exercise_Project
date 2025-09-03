@@ -12,6 +12,7 @@
         <include name="ui"/>
         <include name="Regression"/>
         <include name="Data-Driven"/>
+         <include name="negative"/>
       </run>
     </groups>
 
