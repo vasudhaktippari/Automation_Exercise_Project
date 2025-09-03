@@ -5,6 +5,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -30,7 +31,6 @@ public class ContactUsTest extends BaseTest {
             getDriver().get("https://automationexercise.com/contact_us");
             getTest().info("Opened Contact Us page");
 
-            // Locate form fields
             WebElement nameField = getDriver().findElement(By.name("name"));
             WebElement emailField = getDriver().findElement(By.name("email"));
             WebElement subjectField = getDriver().findElement(By.name("subject"));
@@ -40,50 +40,91 @@ public class ContactUsTest extends BaseTest {
             // Fill form
             nameField.clear();
             nameField.sendKeys(name);
-            getTest().info("Entered Name: " + name);
-
             emailField.clear();
             emailField.sendKeys(email);
-            getTest().info("Entered Email: " + email);
-
             subjectField.clear();
             subjectField.sendKeys(subject);
-            getTest().info("Entered Subject: " + subject);
-
             messageField.clear();
             messageField.sendKeys(message);
-            getTest().info("Entered Message: " + message);
 
-            // Click Submit
+            getTest().info(String.format("Filled form -> name: %s | email: %s | subject: %s | message: %s",
+                    name, email, subject, message));
+
+            // Submit
             submitBtn.click();
-            getTest().info("Clicked Submit button");
+            getTest().info("Clicked Submit");
 
-            // ------------------- Handle unexpected alert -------------------
+            // ---------- INVALID NAME CASE ----------
+            boolean invalidNameCase = expectedMessage.equalsIgnoreCase("INVALID_NAME");
+            if (invalidNameCase) {
+                // Wait for banner (success or error)
+                By bannerLocator = By.cssSelector(".status.alert-success, .status.alert, .error");
+                WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+                WebElement banner = wait.until(ExpectedConditions.visibilityOfElementLocated(bannerLocator));
+                String actualMessage = banner.getText().trim();
+
+                if (actualMessage.toLowerCase().contains("success") || actualMessage.toLowerCase().contains("sent")) {
+                    // ❌ App wrongly accepted invalid name
+                    String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "InvalidName_UnexpectedSuccess");
+                    getTest().fail("App accepted invalid name! Expected rejection, but got success: " + actualMessage)
+                            .addScreenCaptureFromPath(screenshotPath);
+                    assert false : "App wrongly accepted invalid name input.";
+                } else {
+                    getTest().pass("Application correctly rejected invalid name. Message: " + actualMessage);
+                }
+                return; // stop here for invalid name case
+            }
+
+            // ---------- INVALID / BLANK EMAIL ----------
+            String expLower = expectedMessage == null ? "" : expectedMessage.toLowerCase();
+            if (email.trim().isEmpty() || !email.contains("@")) {
+                JavascriptExecutor js = (JavascriptExecutor) getDriver();
+                String validationMessage = (String) js.executeScript("return arguments[0].validationMessage;", emailField);
+                String vmLower = validationMessage == null ? "" : validationMessage.toLowerCase();
+                getTest().info("Browser validation message: " + validationMessage);
+
+                boolean matches;
+                if (email.trim().isEmpty()) {
+                    matches = vmLower.contains("fill out this field") || vmLower.contains("please fill");
+                } else {
+                    matches = vmLower.contains("include an '@'") || vmLower.contains("valid email");
+                }
+
+                if (matches) {
+                    getTest().pass("Validation message matched expectation for invalid/blank email.");
+                } else {
+                    String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "InvalidOrBlankEmail");
+                    getTest().fail("Validation mismatch. Expected hint: [" + expectedMessage + "], Actual: [" + validationMessage + "]")
+                            .addScreenCaptureFromPath(screenshotPath);
+                }
+                assert matches : "Expected: [" + expectedMessage + "], Actual: [" + validationMessage + "]";
+                return;
+            }
+
+            // ---------- VALID CASE ----------
             try {
-                WebDriverWait waitAlert = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
+                WebDriverWait waitAlert = new WebDriverWait(getDriver(), Duration.ofSeconds(8));
                 waitAlert.until(ExpectedConditions.alertIsPresent());
-                Alert alertBox = getDriver().switchTo().alert();
-                getTest().info("Unexpected alert detected: " + alertBox.getText());
-                alertBox.accept();
+                Alert confirmAlert = getDriver().switchTo().alert();
+                getTest().info("Confirmation alert: " + confirmAlert.getText());
+                confirmAlert.accept();
                 getTest().info("Alert accepted");
             } catch (Exception e) {
-                getTest().info("No alert appeared after submit");
+                getTest().info("No confirmation alert appeared.");
             }
 
-            // ------------------- Verify success/error message -------------------
-            WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-            WebElement alertMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".status.alert")));
-            String actualMessage = alertMsg.getText().trim();
-            getTest().info("Actual message displayed: " + actualMessage);
+            By successBanner = By.cssSelector(".status.alert-success, .status.alert");
+            WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
+            WebElement banner = wait.until(ExpectedConditions.visibilityOfElementLocated(successBanner));
+            String actualMessage = banner.getText().trim();
 
             if (actualMessage.equalsIgnoreCase(expectedMessage)) {
-                getTest().pass("Message matched expected: " + expectedMessage);
+                getTest().pass("Success message matched expected: " + expectedMessage);
             } else {
-                String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), name + "_ContactUs");
-                getTest().fail("Message did not match. Expected: [" + expectedMessage + "], Actual: [" + actualMessage + "]")
+                String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), name + "_ContactUs_SuccessMismatch");
+                getTest().fail("Success message mismatch. Expected: [" + expectedMessage + "], Actual: [" + actualMessage + "]")
                         .addScreenCaptureFromPath(screenshotPath);
             }
-
             assert actualMessage.equalsIgnoreCase(expectedMessage)
                     : "Expected: [" + expectedMessage + "] but got: [" + actualMessage + "]";
 
@@ -99,7 +140,7 @@ public class ContactUsTest extends BaseTest {
         }
     }
 
-    // ------------------- UI Test 1: Verify Page Title -------------------
+    // ------------------- UI Tests -------------------
     @Test(groups = {"ui", "Regression","smoke"})
     public void verifyContactUsPageTitle() {
         getDriver().get("https://automationexercise.com/contact_us");
@@ -109,7 +150,6 @@ public class ContactUsTest extends BaseTest {
         getTest().pass("Contact Us page title verified successfully");
     }
 
-    // ------------------- UI Test 2: Verify Feedback Section Visible -------------------
     @Test(groups = {"ui", "Regression"})
     public void verifyFeedbackSectionVisible() {
         getDriver().get("https://automationexercise.com/contact_us");
@@ -118,7 +158,6 @@ public class ContactUsTest extends BaseTest {
         getTest().pass("Feedback section is visible");
     }
 
-    // ------------------- UI Test 3: Verify Page Loads Properly -------------------
     @Test(groups = {"ui", "Regression","smoke"})
     public void verifyContactUsPageLoadsProperly() {
         getDriver().get("https://automationexercise.com/contact_us");
@@ -128,7 +167,6 @@ public class ContactUsTest extends BaseTest {
         getTest().pass("Contact Us page loaded properly");
     }
 
-    // ------------------- UI Test 4: Verify All Input Fields Are Visible -------------------
     @Test(groups = {"ui", "Regression"})
     public void verifyAllInputFieldsVisible() {
         getDriver().get("https://automationexercise.com/contact_us");
@@ -148,7 +186,6 @@ public class ContactUsTest extends BaseTest {
         getTest().pass("All input fields are visible");
     }
 
-    // ------------------- UI Test 5: Verify Submit Button is Enabled -------------------
     @Test(groups = {"ui", "Regression"})
     public void verifySubmitButtonEnabled() {
         getDriver().get("https://automationexercise.com/contact_us");
@@ -156,7 +193,7 @@ public class ContactUsTest extends BaseTest {
         assert submitBtn.isEnabled() : "Submit button is not enabled";
         getTest().pass("Submit button is enabled");
     }
- // ------------------- UI Test 6: Verify Placeholder Texts -------------------
+
     @Test(groups = {"ui", "Regression"})
     public void verifyPlaceholderTexts() {
         getDriver().get("https://automationexercise.com/contact_us");
@@ -173,5 +210,4 @@ public class ContactUsTest extends BaseTest {
 
         getTest().pass("All placeholder texts are correct");
     }
-
 }

@@ -3,20 +3,25 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automationexercise.tests.LoginTest">
+<<<<<<< HEAD
+      <class name="com.automationexercise.tests.TC_ECOM_Tests">
+=======
+      <class name="com.automationexercise.tests.ContactUsTest">
+>>>>>>> 266c3619eab6a22af47713953d7b92a6d68eb094
         <methods>
-          <include name="verifyLogout"/>
           <include name="setupReport"/>
+          <include name="TC_ECOM_TestCase_002"/>
           <include name="teardown"/>
-          <include name="registerUserFromExcel" invocation-numbers="0"/>
           <include name="setup"/>
-          <include name="verifyLoginWithInvalidCredentialsFromExcel"/>
           <include name="flushReport"/>
-          <include name="verifySignUpWithInvalidEmailFormat_FromExcel"/>
-          <include name="verifyLoginWithValidEmailAndWrongPassword"/>
-          <include name="verifyLogin"/>
+<<<<<<< HEAD
         </methods>
-      </class> <!-- com.automationexercise.tests.LoginTest -->
+      </class> <!-- com.automationexercise.tests.TC_ECOM_Tests -->
+=======
+          <include name="testContactUsForm" invocation-numbers="5"/>
+        </methods>
+      </class> <!-- com.automationexercise.tests.ContactUsTest -->
+>>>>>>> 266c3619eab6a22af47713953d7b92a6d68eb094
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
