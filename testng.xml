@@ -4,6 +4,7 @@
 
   <test name="chrome - Smoke+Functional">
     <parameter name="browser" value="chrome"/>
+    
     <groups>
       <run>
         <include name="smoke"/>
@@ -12,20 +13,16 @@
         <include name="Regression"/>
         <include name="Data-Driven"/>
       </run>
-    </groups
+    </groups>
     
-  <classes>
-        <class name="com.automationexercise.tests.HomePageTest"/>
-        <class name="com.automationexercise.tests.LoginTest"/>
-        <class name="com.automationexercise.tests.ContactUsTest"/>
-       <class name="com.automationexercise.tests.TC_ECOM_Tests"/> 
-       <class name="com.automationexercise.tests.TC_VideoTutorialsTest"/>
-  </classes>
-
+    <classes>
+      <class name="com.automationexercise.tests.HomePageTest"/>
+      <class name="com.automationexercise.tests.LoginTest"/>
+      <class name="com.automationexercise.tests.ContactUsTest"/>
+      <class name="com.automationexercise.tests.TC_ECOM_Tests"/>
+      <class name="com.automationexercise.tests.TC_VideoTutorialsTest"/>
+    </classes>
+    
   </test>
- 
-  
-  
-  
 
 </suite>
