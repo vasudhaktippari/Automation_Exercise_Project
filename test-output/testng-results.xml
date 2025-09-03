@@ -1,123 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-03T11:52:10 IST" name="Suite" finished-at="2025-09-03T11:52:56 IST" duration-ms="46689">
+  <suite started-at="2025-09-03T19:07:35 IST" name="Default suite" finished-at="2025-09-03T19:09:21 IST" duration-ms="106175">
     <groups>
       <group name="functional">
-        <method signature="TC_ECOM_Tests.TC_ECOM_TestCase_001()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" name="TC_ECOM_TestCase_001" class="com.automationexercise.tests.TC_ECOM_Tests"/>
-        <method signature="TC_ECOM_Tests.TC_ECOM_TestCase_002()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" name="TC_ECOM_TestCase_002" class="com.automationexercise.tests.TC_ECOM_Tests"/>
-        <method signature="TC_ECOM_Tests.TC_ECOM_TestCase_003()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" name="TC_ECOM_TestCase_003" class="com.automationexercise.tests.TC_ECOM_Tests"/>
-        <method signature="TC_ECOM_Tests.TC_ECOM_TestCase_004()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" name="TC_ECOM_TestCase_004" class="com.automationexercise.tests.TC_ECOM_Tests"/>
-        <method signature="TC_ECOM_Tests.TC_ECOM_TestCase_005()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" name="TC_ECOM_TestCase_005" class="com.automationexercise.tests.TC_ECOM_Tests"/>
-        <method signature="TC_VideoTutorialsTest.TC_CheckVideoTutorialsIcon()[pri:0, instance:com.automationexercise.tests.TC_VideoTutorialsTest@732f29af]" name="TC_CheckVideoTutorialsIcon" class="com.automationexercise.tests.TC_VideoTutorialsTest"/>
+        <method signature="ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="testContactUsForm" class="com.automationexercise.tests.ContactUsTest"/>
       </group> <!-- functional -->
       <group name="ui">
-        <method signature="TC_ECOM_Tests.TC_ECOM_TestCase_001()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" name="TC_ECOM_TestCase_001" class="com.automationexercise.tests.TC_ECOM_Tests"/>
-        <method signature="TC_ECOM_Tests.TC_ECOM_TestCase_002()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" name="TC_ECOM_TestCase_002" class="com.automationexercise.tests.TC_ECOM_Tests"/>
-        <method signature="TC_ECOM_Tests.TC_ECOM_TestCase_003()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" name="TC_ECOM_TestCase_003" class="com.automationexercise.tests.TC_ECOM_Tests"/>
-        <method signature="TC_ECOM_Tests.TC_ECOM_TestCase_004()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" name="TC_ECOM_TestCase_004" class="com.automationexercise.tests.TC_ECOM_Tests"/>
-        <method signature="TC_ECOM_Tests.TC_ECOM_TestCase_005()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" name="TC_ECOM_TestCase_005" class="com.automationexercise.tests.TC_ECOM_Tests"/>
+        <method signature="ContactUsTest.verifyAllInputFieldsVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifyAllInputFieldsVisible" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.verifyContactUsPageLoadsProperly()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifyContactUsPageLoadsProperly" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.verifyContactUsPageTitle()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifyContactUsPageTitle" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.verifyFeedbackSectionVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifyFeedbackSectionVisible" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.verifyPlaceholderTexts()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifyPlaceholderTexts" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.verifySubmitButtonEnabled()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifySubmitButtonEnabled" class="com.automationexercise.tests.ContactUsTest"/>
       </group> <!-- ui -->
       <group name="smoke">
-        <method signature="TC_ECOM_Tests.TC_ECOM_TestCase_001()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" name="TC_ECOM_TestCase_001" class="com.automationexercise.tests.TC_ECOM_Tests"/>
-        <method signature="TC_VideoTutorialsTest.TC_CheckVideoTutorialsIcon()[pri:0, instance:com.automationexercise.tests.TC_VideoTutorialsTest@732f29af]" name="TC_CheckVideoTutorialsIcon" class="com.automationexercise.tests.TC_VideoTutorialsTest"/>
-=======
-<testng-results ignored="0" total="12" passed="11" failed="1" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2025-09-03T15:34:20 IST" name="Default suite" finished-at="2025-09-03T15:36:22 IST" duration-ms="121835">
-    <groups>
-      <group name="functional">
-        <method signature="ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="testContactUsForm" class="com.automationexercise.tests.ContactUsTest"/>
-      </group> <!-- functional -->
-      <group name="ui">
-        <method signature="ContactUsTest.verifyAllInputFieldsVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifyAllInputFieldsVisible" class="com.automationexercise.tests.ContactUsTest"/>
-        <method signature="ContactUsTest.verifyContactUsPageLoadsProperly()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifyContactUsPageLoadsProperly" class="com.automationexercise.tests.ContactUsTest"/>
-        <method signature="ContactUsTest.verifyContactUsPageTitle()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifyContactUsPageTitle" class="com.automationexercise.tests.ContactUsTest"/>
-        <method signature="ContactUsTest.verifyFeedbackSectionVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifyFeedbackSectionVisible" class="com.automationexercise.tests.ContactUsTest"/>
-        <method signature="ContactUsTest.verifyPlaceholderTexts()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifyPlaceholderTexts" class="com.automationexercise.tests.ContactUsTest"/>
-        <method signature="ContactUsTest.verifySubmitButtonEnabled()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifySubmitButtonEnabled" class="com.automationexercise.tests.ContactUsTest"/>
-      </group> <!-- ui -->
-      <group name="smoke">
-        <method signature="ContactUsTest.verifyContactUsPageLoadsProperly()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifyContactUsPageLoadsProperly" class="com.automationexercise.tests.ContactUsTest"/>
-        <method signature="ContactUsTest.verifyContactUsPageTitle()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifyContactUsPageTitle" class="com.automationexercise.tests.ContactUsTest"/>
->>>>>>> 266c3619eab6a22af47713953d7b92a6d68eb094
+        <method signature="ContactUsTest.verifyContactUsPageLoadsProperly()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifyContactUsPageLoadsProperly" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.verifyContactUsPageTitle()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifyContactUsPageTitle" class="com.automationexercise.tests.ContactUsTest"/>
       </group> <!-- smoke -->
       <group name="Regression">
-        <method signature="ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="testContactUsForm" class="com.automationexercise.tests.ContactUsTest"/>
-        <method signature="ContactUsTest.verifyAllInputFieldsVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifyAllInputFieldsVisible" class="com.automationexercise.tests.ContactUsTest"/>
-        <method signature="ContactUsTest.verifyContactUsPageLoadsProperly()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifyContactUsPageLoadsProperly" class="com.automationexercise.tests.ContactUsTest"/>
-        <method signature="ContactUsTest.verifyContactUsPageTitle()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifyContactUsPageTitle" class="com.automationexercise.tests.ContactUsTest"/>
-        <method signature="ContactUsTest.verifyFeedbackSectionVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifyFeedbackSectionVisible" class="com.automationexercise.tests.ContactUsTest"/>
-        <method signature="ContactUsTest.verifyPlaceholderTexts()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifyPlaceholderTexts" class="com.automationexercise.tests.ContactUsTest"/>
-        <method signature="ContactUsTest.verifySubmitButtonEnabled()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="verifySubmitButtonEnabled" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="testContactUsForm" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.verifyAllInputFieldsVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifyAllInputFieldsVisible" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.verifyContactUsPageLoadsProperly()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifyContactUsPageLoadsProperly" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.verifyContactUsPageTitle()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifyContactUsPageTitle" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.verifyFeedbackSectionVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifyFeedbackSectionVisible" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.verifyPlaceholderTexts()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifyPlaceholderTexts" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.verifySubmitButtonEnabled()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="verifySubmitButtonEnabled" class="com.automationexercise.tests.ContactUsTest"/>
       </group> <!-- Regression -->
       <group name="Data-driven">
-        <method signature="ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" name="testContactUsForm" class="com.automationexercise.tests.ContactUsTest"/>
+        <method signature="ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" name="testContactUsForm" class="com.automationexercise.tests.ContactUsTest"/>
       </group> <!-- Data-driven -->
     </groups>
-<<<<<<< HEAD
-    <test started-at="2025-09-03T11:52:10 IST" name="Chrome - Smoke+Functional" finished-at="2025-09-03T11:52:56 IST" duration-ms="46689">
-      <class name="com.automationexercise.tests.TC_VideoTutorialsTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.TC_VideoTutorialsTest@732f29af]" started-at="2025-09-03T11:52:43 IST" name="setup" finished-at="2025-09-03T11:52:44 IST" duration-ms="826" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[public void com.automationexercise.tests.TC_VideoTutorialsTest.TC_CheckVideoTutorialsIcon() throws java.lang.Exception]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@7f02251]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="TC_CheckVideoTutorialsIcon()[pri:0, instance:com.automationexercise.tests.TC_VideoTutorialsTest@732f29af]" started-at="2025-09-03T11:52:44 IST" name="TC_CheckVideoTutorialsIcon" finished-at="2025-09-03T11:52:56 IST" duration-ms="11857" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_CheckVideoTutorialsIcon -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.TC_VideoTutorialsTest@732f29af]" started-at="2025-09-03T11:52:56 IST" name="teardown" finished-at="2025-09-03T11:52:56 IST" duration-ms="349" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_CheckVideoTutorialsIcon status=SUCCESS method=TC_VideoTutorialsTest.TC_CheckVideoTutorialsIcon()[pri:0, instance:com.automationexercise.tests.TC_VideoTutorialsTest@732f29af] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.automationexercise.tests.TC_VideoTutorialsTest -->
-      <class name="com.automationexercise.tests.TC_ECOM_Tests">
-        <test-method is-config="true" signature="setupReport()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:09 IST" name="setupReport" finished-at="2025-09-03T11:52:10 IST" duration-ms="290" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupReport -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:10 IST" name="setup" finished-at="2025-09-03T11:52:12 IST" duration-ms="1899" status="PASS">
-=======
-    <test started-at="2025-09-03T15:34:20 IST" name="Default test" finished-at="2025-09-03T15:36:22 IST" duration-ms="121835">
+    <test started-at="2025-09-03T19:07:35 IST" name="Default test" finished-at="2025-09-03T19:09:21 IST" duration-ms="106175">
       <class name="com.automationexercise.tests.ContactUsTest">
-        <test-method is-config="true" signature="setupReport()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:34:20 IST" name="setupReport" finished-at="2025-09-03T15:34:20 IST" duration-ms="238" status="PASS">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:07:35 IST" name="setupReport" finished-at="2025-09-03T19:07:35 IST" duration-ms="279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupReport -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:34:21 IST" name="setup" finished-at="2025-09-03T15:34:24 IST" duration-ms="2647" status="PASS">
->>>>>>> 266c3619eab6a22af47713953d7b92a6d68eb094
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:07:36 IST" name="setup" finished-at="2025-09-03T19:07:38 IST" duration-ms="1772" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -131,54 +52,23 @@
             </param>
             <param index="2">
               <value>
-<<<<<<< HEAD
-                <![CDATA[public void com.automationexercise.tests.TC_ECOM_Tests.TC_ECOM_TestCase_001()]]>
-=======
                 <![CDATA[public void com.automationexercise.tests.ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
->>>>>>> 266c3619eab6a22af47713953d7b92a6d68eb094
               </value>
             </param>
             <param index="3">
               <value>
-<<<<<<< HEAD
-                <![CDATA[[Ljava.lang.Object;@dffa30b]]>
-=======
-                <![CDATA[[Ljava.lang.Object;@4fa8297b]]>
->>>>>>> 266c3619eab6a22af47713953d7b92a6d68eb094
+                <![CDATA[[Ljava.lang.Object;@459bf87c]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-<<<<<<< HEAD
-        <test-method signature="TC_ECOM_TestCase_001()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:12 IST" name="TC_ECOM_TestCase_001" finished-at="2025-09-03T11:52:14 IST" duration-ms="2223" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_TestCase_001 -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:14 IST" name="teardown" finished-at="2025-09-03T11:52:14 IST" duration-ms="255" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_TestCase_001 status=SUCCESS method=TC_ECOM_Tests.TC_ECOM_TestCase_001()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:14 IST" name="setup" finished-at="2025-09-03T11:52:15 IST" duration-ms="856" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-=======
-        <test-method signature="testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:34:24 IST" name="testContactUsForm" data-provider="contactUsData" finished-at="2025-09-03T15:34:43 IST" duration-ms="18975" status="PASS">
+        <test-method signature="testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:07:38 IST" name="testContactUsForm" data-provider="contactUsData" finished-at="2025-09-03T19:07:42 IST" duration-ms="4591" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[John Doe]]>
->>>>>>> 266c3619eab6a22af47713953d7b92a6d68eb094
               </value>
             </param>
             <param index="1">
@@ -188,156 +78,11 @@
             </param>
             <param index="2">
               <value>
-<<<<<<< HEAD
-                <![CDATA[public void com.automationexercise.tests.TC_ECOM_Tests.TC_ECOM_TestCase_002()]]>
-=======
                 <![CDATA[Test Subject 1]]>
->>>>>>> 266c3619eab6a22af47713953d7b92a6d68eb094
               </value>
             </param>
             <param index="3">
               <value>
-<<<<<<< HEAD
-                <![CDATA[[Ljava.lang.Object;@4d8126f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="TC_ECOM_TestCase_002()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:15 IST" name="TC_ECOM_TestCase_002" finished-at="2025-09-03T11:52:27 IST" duration-ms="12321" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_TestCase_002 -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:27 IST" name="teardown" finished-at="2025-09-03T11:52:29 IST" duration-ms="1797" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_TestCase_002 status=SUCCESS method=TC_ECOM_Tests.TC_ECOM_TestCase_002()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:29 IST" name="setup" finished-at="2025-09-03T11:52:30 IST" duration-ms="778" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[public void com.automationexercise.tests.TC_ECOM_Tests.TC_ECOM_TestCase_003()]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@6d3c232f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="TC_ECOM_TestCase_003()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:30 IST" name="TC_ECOM_TestCase_003" finished-at="2025-09-03T11:52:35 IST" duration-ms="5024" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_TestCase_003 -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:35 IST" name="teardown" finished-at="2025-09-03T11:52:35 IST" duration-ms="278" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_TestCase_003 status=SUCCESS method=TC_ECOM_Tests.TC_ECOM_TestCase_003()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:35 IST" name="setup" finished-at="2025-09-03T11:52:36 IST" duration-ms="853" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[public void com.automationexercise.tests.TC_ECOM_Tests.TC_ECOM_TestCase_004()]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@6b587673]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="TC_ECOM_TestCase_004()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:36 IST" name="TC_ECOM_TestCase_004" finished-at="2025-09-03T11:52:39 IST" duration-ms="2867" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_TestCase_004 -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:39 IST" name="teardown" finished-at="2025-09-03T11:52:39 IST" duration-ms="270" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_TestCase_004 status=SUCCESS method=TC_ECOM_Tests.TC_ECOM_TestCase_004()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:39 IST" name="setup" finished-at="2025-09-03T11:52:40 IST" duration-ms="732" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[public void com.automationexercise.tests.TC_ECOM_Tests.TC_ECOM_TestCase_005()]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@1bcf67e8]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="TC_ECOM_TestCase_005()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:40 IST" name="TC_ECOM_TestCase_005" finished-at="2025-09-03T11:52:43 IST" duration-ms="3195" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_TestCase_005 -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:43 IST" name="teardown" finished-at="2025-09-03T11:52:43 IST" duration-ms="242" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_TestCase_005 status=SUCCESS method=TC_ECOM_Tests.TC_ECOM_TestCase_005()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c] output={null}]]]>
-=======
                 <![CDATA[This is a test message.]]>
               </value>
             </param>
@@ -350,28 +95,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContactUsForm -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:34:43 IST" name="teardown" finished-at="2025-09-03T15:34:43 IST" duration-ms="379" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:07:42 IST" name="teardown" finished-at="2025-09-03T19:07:42 IST" duration-ms="230" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testContactUsForm status=SUCCESS method=ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb] output={null}]]]>
->>>>>>> 266c3619eab6a22af47713953d7b92a6d68eb094
+                <![CDATA[[TestResult name=testContactUsForm status=SUCCESS method=ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.automationexercise.tests.TC_ECOM_Tests@35a9782c]" started-at="2025-09-03T11:52:56 IST" name="flushReport" finished-at="2025-09-03T11:52:57 IST" duration-ms="440" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- flushReport -->
-      </class> <!-- com.automationexercise.tests.TC_ECOM_Tests -->
-    </test> <!-- Chrome - Smoke+Functional -->
-  </suite> <!-- Suite -->
-=======
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:34:43 IST" name="setup" finished-at="2025-09-03T15:34:44 IST" duration-ms="1292" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:07:42 IST" name="setup" finished-at="2025-09-03T19:07:43 IST" duration-ms="757" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -390,14 +125,14 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@6644bdf5]]>
+                <![CDATA[[Ljava.lang.Object;@5ae66c98]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:34:44 IST" name="testContactUsForm" data-provider="contactUsData" finished-at="2025-09-03T15:35:16 IST" duration-ms="31741" status="PASS">
+        <test-method signature="testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:07:43 IST" name="testContactUsForm" data-provider="contactUsData" finished-at="2025-09-03T19:07:48 IST" duration-ms="4379" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -428,18 +163,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContactUsForm -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:16 IST" name="teardown" finished-at="2025-09-03T15:35:16 IST" duration-ms="434" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:07:48 IST" name="teardown" finished-at="2025-09-03T19:07:48 IST" duration-ms="227" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testContactUsForm status=SUCCESS method=ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=testContactUsForm status=SUCCESS method=ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:16 IST" name="setup" finished-at="2025-09-03T15:35:18 IST" duration-ms="1293" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:07:48 IST" name="setup" finished-at="2025-09-03T19:07:49 IST" duration-ms="854" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -458,14 +193,14 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@13cf5f8a]]>
+                <![CDATA[[Ljava.lang.Object;@1aaf46e6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:18 IST" name="testContactUsForm" data-provider="contactUsData" finished-at="2025-09-03T15:35:21 IST" duration-ms="3634" status="PASS">
+        <test-method signature="testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:07:49 IST" name="testContactUsForm" data-provider="contactUsData" finished-at="2025-09-03T19:08:05 IST" duration-ms="16072" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -496,18 +231,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContactUsForm -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:21 IST" name="teardown" finished-at="2025-09-03T15:35:22 IST" duration-ms="783" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:05 IST" name="teardown" finished-at="2025-09-03T19:08:05 IST" duration-ms="240" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testContactUsForm status=SUCCESS method=ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=testContactUsForm status=SUCCESS method=ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:22 IST" name="setup" finished-at="2025-09-03T15:35:23 IST" duration-ms="1196" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:05 IST" name="setup" finished-at="2025-09-03T19:08:06 IST" duration-ms="785" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -526,14 +261,14 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@7c9ea1d0]]>
+                <![CDATA[[Ljava.lang.Object;@391d28ea]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:23 IST" name="testContactUsForm" data-provider="contactUsData" finished-at="2025-09-03T15:35:27 IST" duration-ms="3268" status="PASS">
+        <test-method signature="testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:06 IST" name="testContactUsForm" data-provider="contactUsData" finished-at="2025-09-03T19:08:20 IST" duration-ms="14232" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -557,25 +292,25 @@
             </param>
             <param index="4">
               <value>
-                <![CDATA[Please fill out this field.]]>
+                <![CDATA[Email is required.]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContactUsForm -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:27 IST" name="teardown" finished-at="2025-09-03T15:35:27 IST" duration-ms="354" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:20 IST" name="teardown" finished-at="2025-09-03T19:08:20 IST" duration-ms="261" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testContactUsForm status=SUCCESS method=ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=testContactUsForm status=SUCCESS method=ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:27 IST" name="setup" finished-at="2025-09-03T15:35:28 IST" duration-ms="1355" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:20 IST" name="setup" finished-at="2025-09-03T19:08:21 IST" duration-ms="782" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -594,14 +329,14 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@72f3acc9]]>
+                <![CDATA[[Ljava.lang.Object;@23df7fad]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:28 IST" name="testContactUsForm" data-provider="contactUsData" finished-at="2025-09-03T15:35:32 IST" duration-ms="3886" status="PASS">
+        <test-method signature="testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:21 IST" name="testContactUsForm" data-provider="contactUsData" finished-at="2025-09-03T19:08:26 IST" duration-ms="4702" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -632,159 +367,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContactUsForm -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:32 IST" name="teardown" finished-at="2025-09-03T15:35:33 IST" duration-ms="1084" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:26 IST" name="teardown" finished-at="2025-09-03T19:08:26 IST" duration-ms="205" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testContactUsForm status=SUCCESS method=ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=testContactUsForm status=SUCCESS method=ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:33 IST" name="setup" finished-at="2025-09-03T15:35:35 IST" duration-ms="1278" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[public void com.automationexercise.tests.ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@319b1c77]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:35 IST" name="testContactUsForm" data-provider="contactUsData" finished-at="2025-09-03T15:35:40 IST" duration-ms="4999" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[John@123#]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[validemail@example.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Invalid Name TC]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Testing invalid characters.]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[INVALID_NAME]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Press OK to proceed!}
-  (Session info: chrome=139.0.7258.155): Press OK to proceed!
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [02e14b1fdd1443457887b73ac833c87c, findElement {using=css selector, value=.status.alert-success, .status.alert, .error}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\91951\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51737}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51737/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 02e14b1fdd1443457887b73ac833c87c]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Press OK to proceed!}
-  (Session info: chrome=139.0.7258.155): Press OK to proceed!
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [02e14b1fdd1443457887b73ac833c87c, findElement {using=css selector, value=.status.alert-success, .status.alert, .error}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\91951\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51737}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51737/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 02e14b1fdd1443457887b73ac833c87c
-at com.automationexercise.tests.ContactUsTest.testContactUsForm(ContactUsTest.java:139)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Press OK to proceed!}
-  (Session info: chrome=139.0.7258.155): Press OK to proceed!
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [02e14b1fdd1443457887b73ac833c87c, findElement {using=css selector, value=.status.alert-success, .status.alert, .error}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\91951\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51737}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51737/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 02e14b1fdd1443457887b73ac833c87c
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-at com.automationexercise.tests.ContactUsTest.testContactUsForm(ContactUsTest.java:63)
-... 26 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testContactUsForm -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:40 IST" name="teardown" finished-at="2025-09-03T15:35:40 IST" duration-ms="870" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testContactUsForm status=FAILURE method=ContactUsTest.testContactUsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:40 IST" name="setup" finished-at="2025-09-03T15:35:42 IST" duration-ms="1339" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:26 IST" name="setup" finished-at="2025-09-03T19:08:27 IST" duration-ms="748" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -803,29 +397,29 @@ at com.automationexercise.tests.ContactUsTest.testContactUsForm(ContactUsTest.ja
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@6fbc7853]]>
+                <![CDATA[[Ljava.lang.Object;@d7055be]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyAllInputFieldsVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:42 IST" name="verifyAllInputFieldsVisible" finished-at="2025-09-03T15:35:45 IST" duration-ms="3587" status="PASS">
+        <test-method signature="verifyAllInputFieldsVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:27 IST" name="verifyAllInputFieldsVisible" finished-at="2025-09-03T19:08:30 IST" duration-ms="3311" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAllInputFieldsVisible -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:45 IST" name="teardown" finished-at="2025-09-03T15:35:46 IST" duration-ms="369" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:30 IST" name="teardown" finished-at="2025-09-03T19:08:30 IST" duration-ms="216" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAllInputFieldsVisible status=SUCCESS method=ContactUsTest.verifyAllInputFieldsVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=verifyAllInputFieldsVisible status=SUCCESS method=ContactUsTest.verifyAllInputFieldsVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:46 IST" name="setup" finished-at="2025-09-03T15:35:47 IST" duration-ms="1225" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:30 IST" name="setup" finished-at="2025-09-03T19:08:31 IST" duration-ms="725" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -844,29 +438,29 @@ at com.automationexercise.tests.ContactUsTest.testContactUsForm(ContactUsTest.ja
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@733fa95c]]>
+                <![CDATA[[Ljava.lang.Object;@768f4b42]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyContactUsPageLoadsProperly()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:47 IST" name="verifyContactUsPageLoadsProperly" finished-at="2025-09-03T15:35:49 IST" duration-ms="2202" status="PASS">
+        <test-method signature="verifyContactUsPageLoadsProperly()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:31 IST" name="verifyContactUsPageLoadsProperly" finished-at="2025-09-03T19:08:34 IST" duration-ms="3272" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyContactUsPageLoadsProperly -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:49 IST" name="teardown" finished-at="2025-09-03T15:35:50 IST" duration-ms="386" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:34 IST" name="teardown" finished-at="2025-09-03T19:08:34 IST" duration-ms="177" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyContactUsPageLoadsProperly status=SUCCESS method=ContactUsTest.verifyContactUsPageLoadsProperly()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=verifyContactUsPageLoadsProperly status=SUCCESS method=ContactUsTest.verifyContactUsPageLoadsProperly()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:50 IST" name="setup" finished-at="2025-09-03T15:35:51 IST" duration-ms="1603" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:34 IST" name="setup" finished-at="2025-09-03T19:08:35 IST" duration-ms="730" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -885,29 +479,29 @@ at com.automationexercise.tests.ContactUsTest.testContactUsForm(ContactUsTest.ja
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@3b2c8bda]]>
+                <![CDATA[[Ljava.lang.Object;@12a6e8ed]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyContactUsPageTitle()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:35:51 IST" name="verifyContactUsPageTitle" finished-at="2025-09-03T15:36:08 IST" duration-ms="16780" status="PASS">
+        <test-method signature="verifyContactUsPageTitle()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:08:35 IST" name="verifyContactUsPageTitle" finished-at="2025-09-03T19:09:07 IST" duration-ms="31921" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyContactUsPageTitle -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:36:08 IST" name="teardown" finished-at="2025-09-03T15:36:08 IST" duration-ms="364" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:09:07 IST" name="teardown" finished-at="2025-09-03T19:09:07 IST" duration-ms="236" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyContactUsPageTitle status=SUCCESS method=ContactUsTest.verifyContactUsPageTitle()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=verifyContactUsPageTitle status=SUCCESS method=ContactUsTest.verifyContactUsPageTitle()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:36:08 IST" name="setup" finished-at="2025-09-03T15:36:10 IST" duration-ms="1153" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:09:07 IST" name="setup" finished-at="2025-09-03T19:09:08 IST" duration-ms="738" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -926,29 +520,29 @@ at com.automationexercise.tests.ContactUsTest.testContactUsForm(ContactUsTest.ja
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@688d619c]]>
+                <![CDATA[[Ljava.lang.Object;@63b4b9c6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyFeedbackSectionVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:36:10 IST" name="verifyFeedbackSectionVisible" finished-at="2025-09-03T15:36:12 IST" duration-ms="2283" status="PASS">
+        <test-method signature="verifyFeedbackSectionVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:09:08 IST" name="verifyFeedbackSectionVisible" finished-at="2025-09-03T19:09:11 IST" duration-ms="3169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFeedbackSectionVisible -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:36:12 IST" name="teardown" finished-at="2025-09-03T15:36:12 IST" duration-ms="288" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:09:11 IST" name="teardown" finished-at="2025-09-03T19:09:11 IST" duration-ms="180" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyFeedbackSectionVisible status=SUCCESS method=ContactUsTest.verifyFeedbackSectionVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=verifyFeedbackSectionVisible status=SUCCESS method=ContactUsTest.verifyFeedbackSectionVisible()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:36:12 IST" name="setup" finished-at="2025-09-03T15:36:13 IST" duration-ms="1203" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:09:11 IST" name="setup" finished-at="2025-09-03T19:09:12 IST" duration-ms="770" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -967,29 +561,29 @@ at com.automationexercise.tests.ContactUsTest.testContactUsForm(ContactUsTest.ja
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@647ff23e]]>
+                <![CDATA[[Ljava.lang.Object;@6c66ddab]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyPlaceholderTexts()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:36:13 IST" name="verifyPlaceholderTexts" finished-at="2025-09-03T15:36:18 IST" duration-ms="4262" status="PASS">
+        <test-method signature="verifyPlaceholderTexts()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:09:12 IST" name="verifyPlaceholderTexts" finished-at="2025-09-03T19:09:15 IST" duration-ms="3368" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPlaceholderTexts -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:36:18 IST" name="teardown" finished-at="2025-09-03T15:36:18 IST" duration-ms="262" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:09:16 IST" name="teardown" finished-at="2025-09-03T19:09:16 IST" duration-ms="209" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyPlaceholderTexts status=SUCCESS method=ContactUsTest.verifyPlaceholderTexts()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=verifyPlaceholderTexts status=SUCCESS method=ContactUsTest.verifyPlaceholderTexts()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:36:18 IST" name="setup" finished-at="2025-09-03T15:36:19 IST" duration-ms="1279" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:09:16 IST" name="setup" finished-at="2025-09-03T19:09:16 IST" duration-ms="734" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1008,34 +602,33 @@ at com.automationexercise.tests.ContactUsTest.testContactUsForm(ContactUsTest.ja
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@6a04d2a4]]>
+                <![CDATA[[Ljava.lang.Object;@603f4e3e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifySubmitButtonEnabled()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:36:19 IST" name="verifySubmitButtonEnabled" finished-at="2025-09-03T15:36:21 IST" duration-ms="2275" status="PASS">
+        <test-method signature="verifySubmitButtonEnabled()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:09:16 IST" name="verifySubmitButtonEnabled" finished-at="2025-09-03T19:09:21 IST" duration-ms="4373" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubmitButtonEnabled -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:36:21 IST" name="teardown" finished-at="2025-09-03T15:36:22 IST" duration-ms="274" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:09:21 IST" name="teardown" finished-at="2025-09-03T19:09:21 IST" duration-ms="199" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifySubmitButtonEnabled status=SUCCESS method=ContactUsTest.verifySubmitButtonEnabled()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=verifySubmitButtonEnabled status=SUCCESS method=ContactUsTest.verifySubmitButtonEnabled()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.automationexercise.tests.ContactUsTest@119020fb]" started-at="2025-09-03T15:36:22 IST" name="flushReport" finished-at="2025-09-03T15:36:22 IST" duration-ms="548" status="PASS">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.automationexercise.tests.ContactUsTest@25a6944c]" started-at="2025-09-03T19:09:21 IST" name="flushReport" finished-at="2025-09-03T19:09:22 IST" duration-ms="494" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
       </class> <!-- com.automationexercise.tests.ContactUsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
->>>>>>> 266c3619eab6a22af47713953d7b92a6d68eb094
 </testng-results>
