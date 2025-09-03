@@ -14,13 +14,8 @@
         <include name="Data-Driven"/>
       </run>
     </groups>
-<<<<<<< HEAD
-       <classes>
-        <class name="com.automationexercise.tests.HomePageTest"/>
-        <class name="com.automationexercise.tests.LoginTest"/>
-       
-       </classes>
-=======
+
+
     
     <classes>
       <class name="com.automationexercise.tests.HomePageTest"/>
@@ -32,7 +27,7 @@
       
     </classes>
     
->>>>>>> d65a3702c59899a6b25ba2d637ce2a507229ec4f
+
   </test>
 
 </suite>
