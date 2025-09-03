@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="2" parallel="tests" name="chrome - Smoke+Functional(failed)">
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
     <groups>
       <run>
         <include name="smoke"/>
@@ -15,12 +15,14 @@
     <classes>
       <class name="com.automationexercise.tests.LoginTest">
         <methods>
-          <include name="verifyLogout" invocation-numbers="0"/>
+          <include name="verifyLogout"/>
           <include name="setupReport"/>
           <include name="teardown"/>
-          <include name="registerUserFromExcel" invocation-numbers="2"/>
+          <include name="registerUserFromExcel"/>
+          <include name="verifyEnterAccountInformationHeaderIsDisplayed"/>
           <include name="setup"/>
           <include name="flushReport"/>
+          <include name="verifyAddressInformationHeaderIsDisplayed"/>
           <include name="verifyLogin"/>
         </methods>
       </class> <!-- com.automationexercise.tests.LoginTest -->
