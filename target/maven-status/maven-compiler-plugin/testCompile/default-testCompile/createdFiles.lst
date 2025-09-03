@@ -1,9 +1,9 @@
+com\automationexercise\tests\HomePageTest.class
 com\automationexercise\base\BaseTest.class
 com\automationexercise\pages\HomePage.class
-com\automationexercise\utilities\ExcelUtilities.class
-com\automationexercise\utilities\ExtentManager.class
-com\automationexercise\tests\HomePageTest.class
-com\automationexercise\pages\AccountInformationPage.class
-com\automationexercise\tests\LoginTest.class
 com\automationexercise\pages\LoginPage.class
+com\automationexercise\utilities\ExcelUtilities.class
 com\automationexercise\utilities\ScreenshotUtilities.class
+com\automationexercise\pages\AccountInformationPage.class
+com\automationexercise\utilities\ExtentManager.class
+com\automationexercise\tests\LoginTest.class

@@ -17,7 +17,7 @@ public class LoginTest extends BaseTest {
 	
     //  verifyLoginPageIsDisplayed  
 
-    @Test(groups = {"smoke"},priority = 1)
+    @Test(groups = {"smoke","ui"},priority = 1)
     public void verifyLoginPageIsDisplayed() throws Exception {
         LoginPage loginPage = new LoginPage(getDriver()).open();
 
@@ -27,9 +27,45 @@ public class LoginTest extends BaseTest {
         String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "LoginPageDisplayed");
         getTest().addScreenCaptureFromPath(screenshotPath);
     }
+    
+    // Header: "Login to your account"
+
+    
+    @Test(groups = {"smoke","ui"}, priority = 2)
+    public void verifyLoginHeaderVisible() throws Exception {
+        LoginPage loginPage = new LoginPage(getDriver()).open();
+
+        Assert.assertTrue(
+            loginPage.isLoginHeaderVisible(),
+            "'Login to your account' header is not visible"
+        );
+
+        getTest().pass("'Login to your account' header is visible");
+        String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "LoginHeaderVisible");
+        getTest().addScreenCaptureFromPath(screenshotPath);
+    }
+    
+    // Header: "New User Signup!"
+
+    
+    @Test(groups = {"smoke","ui"}, priority = 2)
+    public void verifyNewUserSignupHeaderVisible() throws Exception {
+        LoginPage loginPage = new LoginPage(getDriver()).open();
+
+        Assert.assertTrue(
+            loginPage.isNewUserSignupHeaderVisible(),   // or loginPage.waitUntilNewUserSignupHeaderVisible()
+            "'New User Signup!' header is not visible on the Login page"
+        );
+
+        getTest().pass("'New User Signup!' header is visible");
+        String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "NewUserSignupHeaderVisible");
+        getTest().addScreenCaptureFromPath(screenshotPath);
+    }
+
+
 
     // Verify Sign Up section is visible
-    @Test(groups = {"smoke"},priority = 2)
+    @Test(groups = {"smoke","ui"},priority = 3)
     public void verifySignUpSectionIsDisplayed() throws Exception {
         LoginPage loginPage = new LoginPage(getDriver()).open();
 
@@ -47,7 +83,7 @@ public class LoginTest extends BaseTest {
  
     
     //Verify a user sign/up 
-    @Test(groups = {"smoke","functional"},priority = 3)
+    @Test(groups = {"smoke","functional","Regression"},priority = 4)
     public void verifyUserRegistration() throws Exception {
         LoginPage loginPage = new LoginPage(getDriver()).open();
 
@@ -72,7 +108,7 @@ public class LoginTest extends BaseTest {
     }
     
  // Verify "ENTER ACCOUNT INFORMATION" header is visible
-    @Test(groups = {"smoke"}, priority = 4)
+    @Test(groups = {"smoke","ui"}, priority = 5)
     public void verifyEnterAccountInformationHeaderIsDisplayed() throws Exception {
         LoginPage loginPage = new LoginPage(getDriver()).open();
 
@@ -97,14 +133,39 @@ public class LoginTest extends BaseTest {
         getTest().addScreenCaptureFromPath(screenshotPath);
     }
 
-    
+ // Verify "ADDRESS INFORMATION" header is visible
+    @Test(groups = {"smoke","ui"}, priority = 6)
+    public void verifyAddressInformationHeaderIsDisplayed() throws Exception {
+        LoginPage loginPage = new LoginPage(getDriver()).open();
+
+        // Use a unique email to reach Account Information page
+        String uniqueEmail = "addr_" + System.currentTimeMillis() + "@example.com";
+        String name = "AddressCheckUser";
+
+        // Perform sign up
+        loginPage.signUp(name, uniqueEmail);
+
+        // Land on Account Information page
+        AccountInformationPage accountPage = new AccountInformationPage(getDriver());
+
+        Assert.assertTrue(
+            accountPage.isAddressInformationVisible(),
+            "'ADDRESS INFORMATION' header was not displayed"
+        );
+
+        getTest().pass("'ADDRESS INFORMATION' header is displayed successfully");
+
+        String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "AddressInformationHeader");
+        getTest().addScreenCaptureFromPath(screenshotPath);
+    }
+
     
     
     //verify user successfully registers
     @Test(
     	    dataProvider = "registrationData",
-    	    groups = {"smoke","functional"},
-    	    priority = 5
+    	    groups = {"smoke","functional","Regression","Data-Driven"},
+    	    priority = 7
     	)
     	public void registerUserFromExcel(
     	        String name,
@@ -186,7 +247,7 @@ public class LoginTest extends BaseTest {
     	    getTest().pass("Newly registered user is logged in successfully");
     	}
     //verify login
-    @Test(dataProvider = "logindata", groups = {"smoke", "functional"},priority = 6)
+    @Test(dataProvider = "logindata", groups = {"smoke", "functional","Regression"},priority = 8)
     public void verifyLogin(String username, String password) throws IOException {
         LoginPage loginPage = new LoginPage(getDriver()).open();
 
@@ -208,8 +269,8 @@ public class LoginTest extends BaseTest {
     //verify logout 
     @Test(
         dataProvider = "logindata",
-        priority = 8,
-        groups = {"smoke", "functional"},
+        priority = 9,
+        groups = {"smoke", "functional","Regression"},
         dependsOnMethods = "verifyLogin"
     )
     public void verifyLogout(String username, String password) throws IOException {
