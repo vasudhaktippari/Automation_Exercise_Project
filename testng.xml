@@ -12,20 +12,16 @@
         <include name="Regression"/>
         <include name="Data-Driven"/>
       </run>
-    </groups>
-<<<<<<< HEAD
-    <classes>
-  <class name="com.automationexercise.tests.TC_ECOM_Tests"/> 
-   <class name="com.automationexercise.tests.TC_VideoTutorialsTest"/>
-
-    </classes>
-=======
-       <classes>
+    </groups
+    
+  <classes>
         <class name="com.automationexercise.tests.HomePageTest"/>
         <class name="com.automationexercise.tests.LoginTest"/>
         <class name="com.automationexercise.tests.ContactUsTest"/>
-       </classes>
->>>>>>> 266c3619eab6a22af47713953d7b92a6d68eb094
+       <class name="com.automationexercise.tests.TC_ECOM_Tests"/> 
+       <class name="com.automationexercise.tests.TC_VideoTutorialsTest"/>
+  </classes>
+
   </test>
  
   
