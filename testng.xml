@@ -12,8 +12,8 @@
       </run>
     </groups>
     <classes>
-  <!-- --> <class name="com.automationexercise.tests.HomePageTest"/>
-   <class name="com.automationexercise.tests.LoginTest"/>
+  <class name="com.automationexercise.tests.TC_ECOM_Tests"/> 
+   <class name="com.automationexercise.tests.TC_VideoTutorialsTest"/>
 
     </classes>
   </test>

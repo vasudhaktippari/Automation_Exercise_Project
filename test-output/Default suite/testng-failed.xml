@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automationexercise.tests.LoginTest">
+      <class name="com.automationexercise.tests.TC_ECOM_Tests">
         <methods>
           <include name="setupReport"/>
+          <include name="TC_ECOM_TestCase_002"/>
           <include name="teardown"/>
           <include name="setup"/>
           <include name="flushReport"/>
-          <include name="verifyLogin"/>
         </methods>
-      </class> <!-- com.automationexercise.tests.LoginTest -->
+      </class> <!-- com.automationexercise.tests.TC_ECOM_Tests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
