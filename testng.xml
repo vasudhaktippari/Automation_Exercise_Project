@@ -31,4 +31,33 @@
 
   </test>
 
+   <test name="firefox - Smoke+Functional">
+    <parameter name="browser" value="firefox"/>
+    
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <include name="functional"/>
+        <include name="ui"/>
+        <include name="Regression"/>
+        <include name="Data-Driven"/>
+         <include name="negative"/>
+      </run>
+    </groups>
+
+
+    
+    <classes>
+      <class name="com.automationexercise.tests.HomePageTest"/>
+      <class name="com.automationexercise.tests.LoginTest"/>
+      <class name="com.automationexercise.tests.ContactUsTest"/>
+      <class name="com.automationexercise.tests.TC_ECOM_Tests"/>
+      <class name="com.automationexercise.tests.TC_VideoTutorialsTest"/>
+      <class name="com.automationexercise.tests.SubscriptionTest"/>
+      
+    </classes>
+    
+
+  </test>
+
 </suite>
