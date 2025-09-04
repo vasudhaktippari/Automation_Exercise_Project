@@ -2,9 +2,10 @@ package com.automationexercise.tests;
 
 import com.automationexercise.base.BaseTest;
 import com.automationexercise.pages.TestCasesPage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class TC_ECOM_Tests extends BaseTest {
 
     @Test(groups = {"functional", "ui"})
     public void TC_ECOM_TestCase_002() {
-        getTest().info("Starting TC_ECOM_TestCase_003");
+        getTest().info("Starting TC_ECOM_TestCase_002");
 
         TestCasesPage tcPage = new TestCasesPage(getDriver());
         tcPage.openTestCasesPage();
@@ -39,7 +40,7 @@ public class TC_ECOM_Tests extends BaseTest {
         getTest().info("Clicking first scenario");
         tcPage.clickScenario(0);
 
-        List<WebElement> links = getDriver().findElements(org.openqa.selenium.By.cssSelector(".panel-body a"));
+        List<WebElement> links = getDriver().findElements(By.cssSelector(".panel-body a"));
         getTest().info("Found " + links.size() + " links inside scenario");
 
         for (WebElement link : links) {
@@ -52,12 +53,12 @@ public class TC_ECOM_Tests extends BaseTest {
             getDriver().navigate().back();
         }
 
-        getTest().pass("TC_ECOM_TestCase_003 passed successfully!");
+        getTest().pass("TC_ECOM_TestCase_002 passed successfully!");
     }
 
     @Test(groups = {"functional", "ui"})
     public void TC_ECOM_TestCase_003() {
-        getTest().info("Starting TC_ECOM_TestCase_004");
+        getTest().info("Starting TC_ECOM_TestCase_003");
 
         TestCasesPage tcPage = new TestCasesPage(getDriver());
         tcPage.openTestCasesPage();
@@ -67,12 +68,12 @@ public class TC_ECOM_Tests extends BaseTest {
 
         Assert.assertTrue(getDriver().getTitle().contains("Contact"), "Feedback page not loaded.");
 
-        getTest().pass("TC_ECOM_TestCase_004 passed successfully!");
+        getTest().pass("TC_ECOM_TestCase_003 passed successfully!");
     }
 
     @Test(groups = {"functional", "ui"})
     public void TC_ECOM_TestCase_004() {
-        getTest().info("Starting TC_ECOM_TestCase_005");
+        getTest().info("Starting TC_ECOM_TestCase_004");
 
         TestCasesPage tcPage = new TestCasesPage(getDriver());
         tcPage.openTestCasesPage();
@@ -85,12 +86,12 @@ public class TC_ECOM_Tests extends BaseTest {
 
         Assert.assertTrue(tcPage.isSubscriptionSuccess(), "Subscription failed.");
 
-        getTest().pass("TC_ECOM_TestCase_005 passed successfully!");
+        getTest().pass("TC_ECOM_TestCase_004 passed successfully!");
     }
 
     @Test(groups = {"functional", "ui"})
     public void TC_ECOM_TestCase_005() {
-        getTest().info("Starting TC_ECOM_TestCase_006");
+        getTest().info("Starting TC_ECOM_TestCase_005");
 
         TestCasesPage tcPage = new TestCasesPage(getDriver());
         tcPage.openTestCasesPage();
@@ -103,6 +104,44 @@ public class TC_ECOM_Tests extends BaseTest {
 
         Assert.assertTrue(tcPage.isSubscriptionSuccess(), "Email not subscribed successfully.");
 
-        getTest().pass("TC_ECOM_TestCase_006 passed successfully!");
+        getTest().pass("TC_ECOM_TestCase_005 passed successfully!");
+    }
+
+    // ================= New Tests =================
+
+    @Test
+    public void TC_ECOM_TestCase_006_CheckProductsPage() {
+        TestCasesPage tcPage = new TestCasesPage(getDriver());
+        getDriver().get("https://automationexercise.com/");
+
+        Assert.assertTrue(tcPage.isProductsLinkVisible(), "Products link not visible");
+        tcPage.clickProductsLink();
+
+        Assert.assertTrue(getDriver().getCurrentUrl().contains("/products"), "Products page not opened");
+    }
+
+    @Test
+    public void TC_ECOM_TestCase_007_CheckCartPage() {
+        TestCasesPage tcPage = new TestCasesPage(getDriver());
+        getDriver().get("https://automationexercise.com/");
+
+        Assert.assertTrue(tcPage.isCartLinkVisible(), "Cart link not visible");
+        tcPage.clickCartLink();
+
+        Assert.assertTrue(getDriver().getCurrentUrl().contains("/view_cart"), "Cart page not opened");
+    }
+
+    @Test
+    public void TC_ECOM_TestCase_008_CheckAPITestingPage() {
+        TestCasesPage tcPage = new TestCasesPage(getDriver());
+        getDriver().get("https://automationexercise.com/");
+
+        Assert.assertTrue(tcPage.isAPITestingLinkVisible(), "API Testing link not visible");
+        tcPage.clickAPITestingLink();
+
+        Assert.assertTrue(tcPage.isAPITestingHeadingVisible(), "API Testing heading not visible");
+        Assert.assertTrue(tcPage.isAPI1Visible(), "API 1 link not visible");
+
+
     }
 }
