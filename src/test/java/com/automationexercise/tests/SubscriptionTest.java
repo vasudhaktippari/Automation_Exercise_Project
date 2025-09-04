@@ -2,11 +2,8 @@ package com.automationexercise.tests;
 
 import java.io.IOException;
 import java.time.Duration;
-
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -18,10 +15,24 @@ import com.automationexercise.utilities.ScreenshotUtilities;
 
 public class SubscriptionTest extends BaseTest {
 
-    // ------------------- Data Provider -------------------
+    // ------------------- Data Provider for emails -------------------
     @DataProvider(name = "subscriptionData")
     public Object[][] getSubscriptionData() throws IOException {
-        return ExcelUtilities.getData("Subscription"); // Excel sheet named "Subscription"
+        return ExcelUtilities.getData("Subscription"); 
+    }
+
+    // ------------------- Data Provider for pages -------------------
+    @DataProvider(name = "pagesToTest")
+    public Object[][] getPages() {
+        return new Object[][] {
+            {"https://automationexercise.com/"},
+            {"https://automationexercise.com/products"},
+            {"https://automationexercise.com/cart"},
+            {"https://automationexercise.com/contact_us"},
+            {"https://automationexercise.com/login"},
+            {"https://automationexercise.com/test_cases"},
+            {"https://automationexercise.com/api_list"}
+        };
     }
 
     // ------------------- Data-driven Subscription Test -------------------
@@ -33,21 +44,15 @@ public class SubscriptionTest extends BaseTest {
 
             SubscriptionPage subPage = new SubscriptionPage(getDriver());
 
-            // Enter email
             subPage.enterEmail(email);
             getTest().info("Entered Email: " + email);
 
-            // Click Subscribe
             subPage.clickSubscribe();
             getTest().info("Clicked Subscribe button");
 
-            // ------------------- Validation -------------------
-            if (email.isEmpty()) {
-                getTest().pass("Blank email triggered browser validation: " + expectedMessage);
-            } else if (!email.contains("@")) {
-                getTest().pass("Invalid email triggered browser validation: " + expectedMessage);
+            if (email.isEmpty() || !email.contains("@")) {
+                getTest().pass("Invalid/Blank email triggered browser validation: " + expectedMessage);
             } else {
-                // wait and get success message
                 String actualMessage = subPage.getSuccessMessage();
                 getTest().info("Actual subscription message: " + actualMessage);
 
@@ -75,40 +80,74 @@ public class SubscriptionTest extends BaseTest {
         }
     }
 
+    // ------------------- UI Tests for all pages -------------------
 
-    // ------------------- UI Tests -------------------
-
-    @Test(groups = {"ui", "Regression"})
-    public void verifySubscriptionSectionVisible() {
-        getDriver().get("https://automationexercise.com/");
-        SubscriptionPage subPage = new SubscriptionPage(getDriver());
-        assert subPage.isSubscriptionSectionVisible() : "Subscription section not visible!";
-        getTest().pass("Subscription section is visible");
+    @Test(dataProvider = "pagesToTest", groups = {"ui", "Regression"})
+    public void verifySubscriptionSectionVisible(String pageUrl) {
+        try {
+            getDriver().get(pageUrl);
+            SubscriptionPage subPage = new SubscriptionPage(getDriver());
+            assert subPage.isSubscriptionSectionVisible() : "Subscription section not visible on " + pageUrl;
+            getTest().pass("Subscription section is visible on " + pageUrl);
+        } catch (AssertionError e) {
+            try {
+                String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "SubscriptionSection_" + pageUrl.hashCode());
+                getTest().fail("Subscription section not visible on " + pageUrl)
+                        .addScreenCaptureFromPath(screenshotPath);
+            } catch (IOException ignored) {}
+            throw e;
+        }
     }
 
-
-    @Test(groups = {"ui", "Regression"})
-    public void verifyEmailFieldEnabled() {
-        getDriver().get("https://automationexercise.com/");
-        SubscriptionPage subPage = new SubscriptionPage(getDriver());
-        assert subPage.isEmailFieldEnabled() : "Subscription email field not enabled!";
-        getTest().pass("Subscription email field is enabled");
+    @Test(dataProvider = "pagesToTest", groups = {"ui", "Regression"})
+    public void verifyEmailFieldEnabled(String pageUrl) {
+        try {
+            getDriver().get(pageUrl);
+            SubscriptionPage subPage = new SubscriptionPage(getDriver());
+            assert subPage.isEmailFieldEnabled() : "Email field not enabled on " + pageUrl;
+            getTest().pass("Email field is enabled on " + pageUrl);
+        } catch (AssertionError e) {
+            try {
+                String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "EmailField_" + pageUrl.hashCode());
+                getTest().fail("Email field not enabled on " + pageUrl)
+                        .addScreenCaptureFromPath(screenshotPath);
+            } catch (IOException ignored) {}
+            throw e;
+        }
     }
 
-    @Test(groups = {"ui", "Regression"})
-    public void verifyEmailPlaceholder() {
-        getDriver().get("https://automationexercise.com/");
-        SubscriptionPage subPage = new SubscriptionPage(getDriver());
-        String placeholder = subPage.getEmailFieldPlaceholder();
-        assert placeholder.equalsIgnoreCase("Your email address") : "Placeholder mismatch!";
-        getTest().pass("Subscription email placeholder text is correct");
+    @Test(dataProvider = "pagesToTest", groups = {"ui", "Regression"})
+    public void verifyEmailPlaceholder(String pageUrl) {
+        try {
+            getDriver().get(pageUrl);
+            SubscriptionPage subPage = new SubscriptionPage(getDriver());
+            String placeholder = subPage.getEmailFieldPlaceholder();
+            assert placeholder.equalsIgnoreCase("Your email address") : "Placeholder mismatch on " + pageUrl;
+            getTest().pass("Email placeholder is correct on " + pageUrl);
+        } catch (AssertionError e) {
+            try {
+                String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "EmailPlaceholder_" + pageUrl.hashCode());
+                getTest().fail("Placeholder mismatch on " + pageUrl)
+                        .addScreenCaptureFromPath(screenshotPath);
+            } catch (IOException ignored) {}
+            throw e;
+        }
     }
 
-    @Test(groups = {"ui", "Regression"})
-    public void verifySubscribeButtonEnabled() {
-        getDriver().get("https://automationexercise.com/");
-        SubscriptionPage subPage = new SubscriptionPage(getDriver());
-        assert subPage.isSubscribeButtonEnabled() : "Subscribe button not enabled!";
-        getTest().pass("Subscribe button is enabled");
+    @Test(dataProvider = "pagesToTest", groups = {"ui", "Regression"})
+    public void verifySubscribeButtonEnabled(String pageUrl) {
+        try {
+            getDriver().get(pageUrl);
+            SubscriptionPage subPage = new SubscriptionPage(getDriver());
+            assert subPage.isSubscribeButtonEnabled() : "Subscribe button not enabled on " + pageUrl;
+            getTest().pass("Subscribe button is enabled on " + pageUrl);
+        } catch (AssertionError e) {
+            try {
+                String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "SubscribeButton_" + pageUrl.hashCode());
+                getTest().fail("Subscribe button not enabled on " + pageUrl)
+                        .addScreenCaptureFromPath(screenshotPath);
+            } catch (IOException ignored) {}
+            throw e;
+        }
     }
 }

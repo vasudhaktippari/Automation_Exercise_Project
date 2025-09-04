@@ -261,6 +261,81 @@ public class ContactUsTest extends BaseTest {
 
         getDriver().navigate().back();
     }
+ // ------------------- Data Provider for File Upload -------------------
+    @DataProvider(name = "fileUploadData")
+    public Object[][] getFileUploadData() {
+        String basePath = System.getProperty("user.dir") + "\\src\\test\\resources\\Testdata\\";
+        return new Object[][] {
+            { basePath + "sample_file.txt" },
+            { basePath + "sample_image.jpg" },
+            { basePath + "sample_pdf.pdf" }
+        };
+    }
+
+    @Test(dataProvider = "fileUploadData", groups = {"functional", "ui", "Regression"})
+    public void verifyFileUploadWithDifferentTypes(String filePath) {
+        try {
+            getDriver().get("https://automationexercise.com/contact_us");
+            getTest().info("Opened Contact Us page");
+
+            ContactUsPage contactPage = new ContactUsPage(getDriver());
+
+            // Fill mandatory fields
+            contactPage.fillForm("Test User", "testuser@example.com", "File Upload Test",
+                    "Testing file upload with: " + filePath);
+            getTest().info("Filled all mandatory fields");
+
+            // File upload
+            WebElement fileUploadField = getDriver().findElement(By.name("upload_file"));
+            fileUploadField.sendKeys(filePath);
+            getTest().info("Uploaded file: " + filePath);
+
+            // Submit the form
+            contactPage.submitForm();
+            getTest().info("Clicked Submit button");
+
+            // Handle confirmation alert if it appears
+            try {
+                WebDriverWait alertWait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
+                alertWait.until(ExpectedConditions.alertIsPresent());
+                Alert confirmAlert = getDriver().switchTo().alert();
+                getTest().info("Confirmation alert appeared: " + confirmAlert.getText());
+                confirmAlert.accept();
+                getTest().info("Alert accepted successfully");
+            } catch (Exception e) {
+                getTest().info("No confirmation alert appeared");
+            }
+
+            // Wait for success message
+            WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
+            By successBanner = By.cssSelector(".status.alert-success, .status.alert");
+            WebElement banner = wait.until(ExpectedConditions.visibilityOfElementLocated(successBanner));
+            String actualMessage = banner.getText().trim();
+
+            // Validate
+            if (actualMessage.toLowerCase().contains("success") || actualMessage.toLowerCase().contains("sent")) {
+                getTest().pass("File uploaded successfully: " + filePath + " | Message: " + actualMessage);
+            } else {
+                String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(),
+                        "FileUploadFailure_" + filePath.substring(filePath.lastIndexOf("/") + 1));
+                getTest().fail("File upload failed or success message not found. File: " + filePath + " | Message: "
+                        + actualMessage).addScreenCaptureFromPath(screenshotPath);
+                assert false : "File upload failed for: " + filePath;
+            }
+
+        } catch (Exception e) {
+            try {
+                String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(),
+                        "Exception_FileUpload_" + filePath.substring(filePath.lastIndexOf("/") + 1));
+                getTest().fail("Test failed with exception for file: " + filePath + " | Exception: " + e.getMessage())
+                        .addScreenCaptureFromPath(screenshotPath);
+            } catch (IOException ioEx) {
+                getTest().fail("Failed to capture screenshot: " + ioEx.getMessage());
+            }
+            throw new RuntimeException(e);
+        }
+    }
+
 
     @Test(groups = {"ui", "Regression"})
     public void verifyTestCasesButton() {
