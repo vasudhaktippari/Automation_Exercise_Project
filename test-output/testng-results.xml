@@ -1,26 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="7" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-04T15:37:11 IST" name="Default suite" finished-at="2025-09-04T15:37:35 IST" duration-ms="24160">
+  <suite started-at="2025-09-04T14:36:35 IST" name="Default suite" finished-at="2025-09-04T14:38:58 IST" duration-ms="143381">
     <groups>
       <group name="functional">
-        <method signature="SubscriptionTest.testSubscriptionForm(java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" name="testSubscriptionForm" class="com.automationexercise.tests.SubscriptionTest"/>
+        <method signature="HomePageTest.verifyHomePageTitle()[pri:1, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyHomePageTitle" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyNavigationFromHomePage()[pri:3, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyNavigationFromHomePage" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifySliderNavigation()[pri:4, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifySliderNavigation" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyCategoryItemsVisibleAndClickable()[pri:5, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyCategoryItemsVisibleAndClickable" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyFeaturesItemsVisibleAndScreenshot()[pri:6, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyFeaturesItemsVisibleAndScreenshot" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyBrandsSectionVisibleAndScreenshot()[pri:7, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyBrandsSectionVisibleAndScreenshot" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyRecommendedItemsVisibleAndScreenshot()[pri:8, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyRecommendedItemsVisibleAndScreenshot" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyBlueTopCardInfoAndImageDisplayed()[pri:9, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyBlueTopCardInfoAndImageDisplayed" class="com.automationexercise.tests.HomePageTest"/>
       </group> <!-- functional -->
+      <group name="ui">
+        <method signature="HomePageTest.verifyHomePageTitle()[pri:1, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyHomePageTitle" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyLogoIsDisplayed()[pri:2, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyLogoIsDisplayed" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyNavigationFromHomePage()[pri:3, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyNavigationFromHomePage" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifySliderNavigation()[pri:4, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifySliderNavigation" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyCategoryItemsVisibleAndClickable()[pri:5, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyCategoryItemsVisibleAndClickable" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyFeaturesItemsVisibleAndScreenshot()[pri:6, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyFeaturesItemsVisibleAndScreenshot" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyBrandsSectionVisibleAndScreenshot()[pri:7, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyBrandsSectionVisibleAndScreenshot" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyRecommendedItemsVisibleAndScreenshot()[pri:8, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyRecommendedItemsVisibleAndScreenshot" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyBlueTopCardInfoAndImageDisplayed()[pri:9, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyBlueTopCardInfoAndImageDisplayed" class="com.automationexercise.tests.HomePageTest"/>
+      </group> <!-- ui -->
       <group name="Regression">
-        <method signature="SubscriptionTest.testSubscriptionForm(java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" name="testSubscriptionForm" class="com.automationexercise.tests.SubscriptionTest"/>
+        <method signature="HomePageTest.verifyHomePageTitle()[pri:1, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyHomePageTitle" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyLogoIsDisplayed()[pri:2, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyLogoIsDisplayed" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyNavigationFromHomePage()[pri:3, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyNavigationFromHomePage" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifySliderNavigation()[pri:4, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifySliderNavigation" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyCategoryItemsVisibleAndClickable()[pri:5, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyCategoryItemsVisibleAndClickable" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyFeaturesItemsVisibleAndScreenshot()[pri:6, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyFeaturesItemsVisibleAndScreenshot" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyBrandsSectionVisibleAndScreenshot()[pri:7, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyBrandsSectionVisibleAndScreenshot" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyRecommendedItemsVisibleAndScreenshot()[pri:8, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyRecommendedItemsVisibleAndScreenshot" class="com.automationexercise.tests.HomePageTest"/>
       </group> <!-- Regression -->
-      <group name="Data-driven">
-        <method signature="SubscriptionTest.testSubscriptionForm(java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" name="testSubscriptionForm" class="com.automationexercise.tests.SubscriptionTest"/>
-      </group> <!-- Data-driven -->
+      <group name="smoke">
+        <method signature="HomePageTest.verifyHomePageTitle()[pri:1, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyHomePageTitle" class="com.automationexercise.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyLogoIsDisplayed()[pri:2, instance:com.automationexercise.tests.HomePageTest@acdb094]" name="verifyLogoIsDisplayed" class="com.automationexercise.tests.HomePageTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-09-04T15:37:11 IST" name="Default test" finished-at="2025-09-04T15:37:35 IST" duration-ms="24160">
-      <class name="com.automationexercise.tests.SubscriptionTest">
-        <test-method is-config="true" signature="setupReport()[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" started-at="2025-09-04T15:37:11 IST" name="setupReport" finished-at="2025-09-04T15:37:11 IST" duration-ms="285" status="PASS">
+    <test started-at="2025-09-04T14:36:35 IST" name="Default test" finished-at="2025-09-04T14:38:58 IST" duration-ms="143381">
+      <class name="com.automationexercise.tests.HomePageTest">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:36:34 IST" name="setupReport" finished-at="2025-09-04T14:36:35 IST" duration-ms="369" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupReport -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" started-at="2025-09-04T15:37:12 IST" name="setup" finished-at="2025-09-04T15:37:15 IST" duration-ms="2517" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:36:35 IST" name="setup" finished-at="2025-09-04T14:36:38 IST" duration-ms="3476" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,46 +60,34 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[public void com.automationexercise.tests.SubscriptionTest.testSubscriptionForm(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifyHomePageTitle() throws java.lang.Exception]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@565d7d2f]]>
+                <![CDATA[[Ljava.lang.Object;@2abedbbd]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testSubscriptionForm(java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" started-at="2025-09-04T15:37:15 IST" name="testSubscriptionForm" data-provider="subscriptionData" finished-at="2025-09-04T15:37:21 IST" duration-ms="5916" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[valid@example.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[You have been successfully subscribed!]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifyHomePageTitle()[pri:1, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:36:38 IST" name="verifyHomePageTitle" finished-at="2025-09-04T14:36:44 IST" duration-ms="6098" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSubscriptionForm -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" started-at="2025-09-04T15:37:21 IST" name="teardown" finished-at="2025-09-04T15:37:21 IST" duration-ms="498" status="PASS">
+        </test-method> <!-- verifyHomePageTitle -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:36:44 IST" name="teardown" finished-at="2025-09-04T14:36:45 IST" duration-ms="251" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testSubscriptionForm status=SUCCESS method=SubscriptionTest.testSubscriptionForm(java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a] output={null}]]]>
+                <![CDATA[[TestResult name=verifyHomePageTitle status=SUCCESS method=HomePageTest.verifyHomePageTitle()[pri:1, instance:com.automationexercise.tests.HomePageTest@acdb094] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" started-at="2025-09-04T15:37:21 IST" name="setup" finished-at="2025-09-04T15:37:22 IST" duration-ms="1395" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:36:45 IST" name="setup" finished-at="2025-09-04T14:36:45 IST" duration-ms="843" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,46 +101,34 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[public void com.automationexercise.tests.SubscriptionTest.testSubscriptionForm(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifyLogoIsDisplayed() throws java.lang.Exception]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@6aea99e7]]>
+                <![CDATA[[Ljava.lang.Object;@2c56eba5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testSubscriptionForm(java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" started-at="2025-09-04T15:37:22 IST" name="testSubscriptionForm" data-provider="subscriptionData" finished-at="2025-09-04T15:37:27 IST" duration-ms="4480" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Please fill out this field]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifyLogoIsDisplayed()[pri:2, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:36:45 IST" name="verifyLogoIsDisplayed" finished-at="2025-09-04T14:36:50 IST" duration-ms="5004" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSubscriptionForm -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" started-at="2025-09-04T15:37:27 IST" name="teardown" finished-at="2025-09-04T15:37:28 IST" duration-ms="1065" status="PASS">
+        </test-method> <!-- verifyLogoIsDisplayed -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:36:50 IST" name="teardown" finished-at="2025-09-04T14:36:51 IST" duration-ms="245" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testSubscriptionForm status=SUCCESS method=SubscriptionTest.testSubscriptionForm(java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLogoIsDisplayed status=SUCCESS method=HomePageTest.verifyLogoIsDisplayed()[pri:2, instance:com.automationexercise.tests.HomePageTest@acdb094] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" started-at="2025-09-04T15:37:28 IST" name="setup" finished-at="2025-09-04T15:37:30 IST" duration-ms="1748" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:36:51 IST" name="setup" finished-at="2025-09-04T14:36:51 IST" duration-ms="872" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -140,50 +142,284 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[public void com.automationexercise.tests.SubscriptionTest.testSubscriptionForm(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifyNavigationFromHomePage() throws java.lang.Exception]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[[Ljava.lang.Object;@1c6a0103]]>
+                <![CDATA[[Ljava.lang.Object;@6231f77a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testSubscriptionForm(java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" started-at="2025-09-04T15:37:30 IST" name="testSubscriptionForm" data-provider="subscriptionData" finished-at="2025-09-04T15:37:35 IST" duration-ms="4941" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[invalidemail]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Please include an '@' in the email address]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifyNavigationFromHomePage()[pri:3, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:36:51 IST" name="verifyNavigationFromHomePage" finished-at="2025-09-04T14:37:14 IST" duration-ms="22256" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSubscriptionForm -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" started-at="2025-09-04T15:37:35 IST" name="teardown" finished-at="2025-09-04T15:37:35 IST" duration-ms="422" status="PASS">
+        </test-method> <!-- verifyNavigationFromHomePage -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:37:14 IST" name="teardown" finished-at="2025-09-04T14:37:14 IST" duration-ms="339" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testSubscriptionForm status=SUCCESS method=SubscriptionTest.testSubscriptionForm(java.lang.String,java.lang.String)[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a] output={null}]]]>
+                <![CDATA[[TestResult name=verifyNavigationFromHomePage status=SUCCESS method=HomePageTest.verifyNavigationFromHomePage()[pri:3, instance:com.automationexercise.tests.HomePageTest@acdb094] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.automationexercise.tests.SubscriptionTest@25e2ab5a]" started-at="2025-09-04T15:37:35 IST" name="flushReport" finished-at="2025-09-04T15:37:36 IST" duration-ms="449" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:37:14 IST" name="setup" finished-at="2025-09-04T14:37:15 IST" duration-ms="881" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifySliderNavigation() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@290c266c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifySliderNavigation()[pri:4, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:37:15 IST" name="verifySliderNavigation" finished-at="2025-09-04T14:37:23 IST" duration-ms="7522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySliderNavigation -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:37:23 IST" name="teardown" finished-at="2025-09-04T14:37:23 IST" duration-ms="244" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySliderNavigation status=SUCCESS method=HomePageTest.verifySliderNavigation()[pri:4, instance:com.automationexercise.tests.HomePageTest@acdb094] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:37:23 IST" name="setup" finished-at="2025-09-04T14:37:24 IST" duration-ms="839" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifyCategoryItemsVisibleAndClickable() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@75b363c3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyCategoryItemsVisibleAndClickable()[pri:5, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:37:24 IST" name="verifyCategoryItemsVisibleAndClickable" finished-at="2025-09-04T14:38:02 IST" duration-ms="38129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCategoryItemsVisibleAndClickable -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:02 IST" name="teardown" finished-at="2025-09-04T14:38:02 IST" duration-ms="343" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyCategoryItemsVisibleAndClickable status=SUCCESS method=HomePageTest.verifyCategoryItemsVisibleAndClickable()[pri:5, instance:com.automationexercise.tests.HomePageTest@acdb094] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:02 IST" name="setup" finished-at="2025-09-04T14:38:03 IST" duration-ms="819" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifyFeaturesItemsVisibleAndScreenshot() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@6ea3a513]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyFeaturesItemsVisibleAndScreenshot()[pri:6, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:03 IST" name="verifyFeaturesItemsVisibleAndScreenshot" finished-at="2025-09-04T14:38:12 IST" duration-ms="8711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFeaturesItemsVisibleAndScreenshot -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:12 IST" name="teardown" finished-at="2025-09-04T14:38:12 IST" duration-ms="271" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyFeaturesItemsVisibleAndScreenshot status=SUCCESS method=HomePageTest.verifyFeaturesItemsVisibleAndScreenshot()[pri:6, instance:com.automationexercise.tests.HomePageTest@acdb094] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:12 IST" name="setup" finished-at="2025-09-04T14:38:13 IST" duration-ms="852" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifyBrandsSectionVisibleAndScreenshot() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@3c4059a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyBrandsSectionVisibleAndScreenshot()[pri:7, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:13 IST" name="verifyBrandsSectionVisibleAndScreenshot" finished-at="2025-09-04T14:38:32 IST" duration-ms="19696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBrandsSectionVisibleAndScreenshot -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:32 IST" name="teardown" finished-at="2025-09-04T14:38:33 IST" duration-ms="241" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyBrandsSectionVisibleAndScreenshot status=SUCCESS method=HomePageTest.verifyBrandsSectionVisibleAndScreenshot()[pri:7, instance:com.automationexercise.tests.HomePageTest@acdb094] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:33 IST" name="setup" finished-at="2025-09-04T14:38:33 IST" duration-ms="824" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifyRecommendedItemsVisibleAndScreenshot() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@4b336cc8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRecommendedItemsVisibleAndScreenshot()[pri:8, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:33 IST" name="verifyRecommendedItemsVisibleAndScreenshot" finished-at="2025-09-04T14:38:39 IST" duration-ms="5636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRecommendedItemsVisibleAndScreenshot -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:39 IST" name="teardown" finished-at="2025-09-04T14:38:39 IST" duration-ms="222" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyRecommendedItemsVisibleAndScreenshot status=SUCCESS method=HomePageTest.verifyRecommendedItemsVisibleAndScreenshot()[pri:8, instance:com.automationexercise.tests.HomePageTest@acdb094] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:39 IST" name="setup" finished-at="2025-09-04T14:38:40 IST" duration-ms="847" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void com.automationexercise.tests.HomePageTest.verifyBlueTopCardInfoAndImageDisplayed() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@2570b316]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyBlueTopCardInfoAndImageDisplayed()[pri:9, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:40 IST" name="verifyBlueTopCardInfoAndImageDisplayed" finished-at="2025-09-04T14:38:58 IST" duration-ms="17512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBlueTopCardInfoAndImageDisplayed -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:58 IST" name="teardown" finished-at="2025-09-04T14:38:58 IST" duration-ms="314" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyBlueTopCardInfoAndImageDisplayed status=SUCCESS method=HomePageTest.verifyBlueTopCardInfoAndImageDisplayed()[pri:9, instance:com.automationexercise.tests.HomePageTest@acdb094] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.automationexercise.tests.HomePageTest@acdb094]" started-at="2025-09-04T14:38:58 IST" name="flushReport" finished-at="2025-09-04T14:38:59 IST" duration-ms="576" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
-      </class> <!-- com.automationexercise.tests.SubscriptionTest -->
+      </class> <!-- com.automationexercise.tests.HomePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
