@@ -65,6 +65,15 @@ public class HomePage {
     By recommendedContainer = By.cssSelector(".recommended_items");
     By recommendedActiveRow = By.cssSelector(".recommended_items .carousel-inner .item.active");
     By recommendedCards     = By.cssSelector(".recommended_items .carousel-inner .item.active .col-sm-4");
+    
+ // ===== Feature Card Locators =====
+    private By featureCardRoots = By.cssSelector(".features_items .col-sm-4");
+    private By cardInfo         = By.cssSelector(".single-products .productinfo");
+    private By cardPrice        = By.cssSelector("h2");  // e.g. "Rs. 500"
+    private By cardName         = By.cssSelector("p");   // e.g. "Blue Top"
+    private By cardAddToCart    = By.cssSelector("a.add-to-cart");
+    private By cardViewProduct  = By.xpath(".//a[normalize-space()='View Product']");
+    private By cardImage        = By.cssSelector(".single-products .productinfo img");
 
     // ==============================
     //            Constructor
@@ -326,6 +335,66 @@ public class HomePage {
             return null;
         }
     }
+    
+ 
+ 
+
+    // ===== Feature Card Locator Helper Methods =====
+    private WebElement findFeatureCardByName(String productName) {
+        waitForFeaturesVisible();
+        for (WebElement col : driver.findElements(featureCardRoots)) {
+            WebElement info = col.findElement(cardInfo);
+            String name = info.findElement(cardName).getText().trim();
+            if (name.equalsIgnoreCase(productName)) {
+                return col;
+            }
+        }
+        throw new org.openqa.selenium.NoSuchElementException("Feature card not found: " + productName);
+    }
+
+    private void scrollCardIntoCenter(WebElement card) {
+        ((org.openqa.selenium.JavascriptExecutor) driver)
+            .executeScript("arguments[0].scrollIntoView({block:'center'});", card);
+    }
+
+    // ----- Get text values -----
+    public String getFeaturePriceText(String productName) {
+        WebElement card = findFeatureCardByName(productName);
+        scrollCardIntoCenter(card);
+        return card.findElement(cardPrice).getText().trim();
+    }
+
+    public String getFeatureNameText(String productName) {
+        WebElement card = findFeatureCardByName(productName);
+        scrollCardIntoCenter(card);
+        return card.findElement(cardName).getText().trim();
+    }
+
+    // ----- Visibility checks -----
+    public boolean isFeatureImageDisplayed(String productName) {
+        WebElement card = findFeatureCardByName(productName);
+        scrollCardIntoCenter(card);
+        return card.findElement(cardImage).isDisplayed();
+    }
+
+    public boolean isFeatureAddToCartDisplayed(String productName) {
+        WebElement card = findFeatureCardByName(productName);
+        scrollCardIntoCenter(card);
+        return card.findElement(cardAddToCart).isDisplayed();
+    }
+
+    public boolean isFeatureViewProductDisplayed(String productName) {
+        WebElement card = findFeatureCardByName(productName);
+        scrollCardIntoCenter(card);
+        return card.findElement(cardViewProduct).isDisplayed();
+    }
+
+    // ----- Full page screenshot -----
+    public String captureFullPage(String shotName) throws java.io.IOException {
+        return com.automationexercise.utilities.ScreenshotUtilities.captureScreen(driver, shotName);
+    }
+
+    
 
     // ==============================
     //     Screenshot helpers
@@ -349,4 +418,7 @@ public class HomePage {
             return null;
         }
     }
+    
+    
+    
 }

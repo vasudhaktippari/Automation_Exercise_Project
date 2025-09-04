@@ -55,19 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<<<<<<< Updated upstream
-<td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 04 12:05:22 IST 2025</td>
+<td>Started on:</td><td>Thu Sep 04 14:36:35 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>98 seconds (98317 ms)</td>
-=======
-<td>Tests passed/Failed/Skipped:</td><td>20/1/0</td>
-</tr><tr>
-<td>Started on:</td><td>Thu Sep 04 13:46:03 IST 2025</td>
-</tr>
-<tr><td>Total time:</td><td>123 seconds (123245 ms)</td>
->>>>>>> Stashed changes
+<tr><td>Total time:</td><td>143 seconds (143381 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,137 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.testContactUsForm()'><b>testContactUsForm</b><br>Test class: com.automationexercise.tests.ContactUsTest<br>Parameters: John@123#, validemail@example.com, Invalid Name TC, Testing invalid characters., INVALID_NAME</td>
-<td><div><pre>java.lang.RuntimeException: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Press OK to proceed!}
-  (Session info: chrome=139.0.7258.155): Press OK to proceed!
-Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3496273cac7e1458ed98f07766615382, findElement {value=.status.alert-success, .status.alert, .error, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\91951\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58243}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58243/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3496273cac7e1458ed98f07766615382
-	at com.automationexercise.tests.ContactUsTest.testContactUsForm(ContactUsTest.java:138)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Press OK to proceed!}
-  (Session info: chrome=139.0.7258.155): Press OK to proceed!
-Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3496273cac7e1458ed98f07766615382, findElement {value=.status.alert-success, .status.alert, .error, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\91951\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58243}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58243/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3496273cac7e1458ed98f07766615382
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at com.automationexercise.tests.ContactUsTest.testContactUsForm(ContactUsTest.java:64)
-	... 26 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1747367695", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1747367695'><pre>java.lang.RuntimeException: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Press OK to proceed!}
-  (Session info: chrome=139.0.7258.155): Press OK to proceed!
-Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3496273cac7e1458ed98f07766615382, findElement {value=.status.alert-success, .status.alert, .error, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\91951\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58243}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58243/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3496273cac7e1458ed98f07766615382
-	at com.automationexercise.tests.ContactUsTest.testContactUsForm(ContactUsTest.java:138)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Press OK to proceed!}
-  (Session info: chrome=139.0.7258.155): Press OK to proceed!
-Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3496273cac7e1458ed98f07766615382, findElement {value=.status.alert-success, .status.alert, .error, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\91951\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58243}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58243/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3496273cac7e1458ed98f07766615382
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at com.automationexercise.tests.ContactUsTest.testContactUsForm(ContactUsTest.java:64)
-	... 26 more
-</pre></div></td>
-<td>3</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -215,147 +76,50 @@ Session ID: 3496273cac7e1458ed98f07766615382
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<<<<<<< Updated upstream
-<td title='com.automationexercise.tests.HomePageTest.verifyLogoIsDisplayed()'><b>verifyLogoIsDisplayed</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
+<td title='com.automationexercise.tests.HomePageTest.verifyCategoryItemsVisibleAndClickable()'><b>verifyCategoryItemsVisibleAndClickable</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
 <td></td>
-<td>3</td>
-<td>com.automationexercise.tests.HomePageTest@57ea113a</td></tr>
-<tr>
-<td title='com.automationexercise.tests.HomePageTest.verifyBrandsSectionVisibleAndScreenshot()'><b>verifyBrandsSectionVisibleAndScreenshot</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
-<td></td>
-<td>5</td>
-<td>com.automationexercise.tests.HomePageTest@57ea113a</td></tr>
-<tr>
-<td title='com.automationexercise.tests.HomePageTest.verifyRecommendedItemsVisibleAndScreenshot()'><b>verifyRecommendedItemsVisibleAndScreenshot</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
-<td></td>
-<td>10</td>
-<td>com.automationexercise.tests.HomePageTest@57ea113a</td></tr>
-<tr>
-<td title='com.automationexercise.tests.HomePageTest.verifyNavigationFromHomePage()'><b>verifyNavigationFromHomePage</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
-<td></td>
-<td>15</td>
-<td>com.automationexercise.tests.HomePageTest@57ea113a</td></tr>
-<tr>
-<td title='com.automationexercise.tests.HomePageTest.verifySliderNavigation()'><b>verifySliderNavigation</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
-<td></td>
-<td>6</td>
-<td>com.automationexercise.tests.HomePageTest@57ea113a</td></tr>
+<td>38</td>
+<td>com.automationexercise.tests.HomePageTest@acdb094</td></tr>
 <tr>
 <td title='com.automationexercise.tests.HomePageTest.verifyFeaturesItemsVisibleAndScreenshot()'><b>verifyFeaturesItemsVisibleAndScreenshot</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
 <td></td>
-<td>5</td>
-<td>com.automationexercise.tests.HomePageTest@57ea113a</td></tr>
+<td>8</td>
+<td>com.automationexercise.tests.HomePageTest@acdb094</td></tr>
+<tr>
+<td title='com.automationexercise.tests.HomePageTest.verifyBrandsSectionVisibleAndScreenshot()'><b>verifyBrandsSectionVisibleAndScreenshot</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
+<td></td>
+<td>19</td>
+<td>com.automationexercise.tests.HomePageTest@acdb094</td></tr>
+<tr>
+<td title='com.automationexercise.tests.HomePageTest.verifySliderNavigation()'><b>verifySliderNavigation</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
+<td></td>
+<td>7</td>
+<td>com.automationexercise.tests.HomePageTest@acdb094</td></tr>
 <tr>
 <td title='com.automationexercise.tests.HomePageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
 <td></td>
-<td>4</td>
-<td>com.automationexercise.tests.HomePageTest@57ea113a</td></tr>
+<td>6</td>
+<td>com.automationexercise.tests.HomePageTest@acdb094</td></tr>
 <tr>
-<td title='com.automationexercise.tests.HomePageTest.verifyCategoryItemsVisibleAndClickable()'><b>verifyCategoryItemsVisibleAndClickable</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
+<td title='com.automationexercise.tests.HomePageTest.verifyBlueTopCardInfoAndImageDisplayed()'><b>verifyBlueTopCardInfoAndImageDisplayed</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
 <td></td>
-<td>36</td>
-<td>com.automationexercise.tests.HomePageTest@57ea113a</td></tr>
-=======
-<td title='com.automationexercise.tests.ContactUsTest.verifyContactUsPageLoadsProperly()'><b>verifyContactUsPageLoadsProperly</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>1</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
+<td>17</td>
+<td>com.automationexercise.tests.HomePageTest@acdb094</td></tr>
 <tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyProductsIcon()'><b>verifyProductsIcon</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
+<td title='com.automationexercise.tests.HomePageTest.verifyLogoIsDisplayed()'><b>verifyLogoIsDisplayed</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
 <td></td>
 <td>5</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
+<td>com.automationexercise.tests.HomePageTest@acdb094</td></tr>
 <tr>
-<td title='com.automationexercise.tests.ContactUsTest.testContactUsForm()'><b>testContactUsForm</b><br>Test class: com.automationexercise.tests.ContactUsTest<br>Parameters: Empty, , No Email, No email provided., Email is required.</td>
+<td title='com.automationexercise.tests.HomePageTest.verifyNavigationFromHomePage()'><b>verifyNavigationFromHomePage</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
 <td></td>
-<td>16</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
+<td>22</td>
+<td>com.automationexercise.tests.HomePageTest@acdb094</td></tr>
 <tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyAPITestingButton()'><b>verifyAPITestingButton</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
+<td title='com.automationexercise.tests.HomePageTest.verifyRecommendedItemsVisibleAndScreenshot()'><b>verifyRecommendedItemsVisibleAndScreenshot</b><br>Test class: com.automationexercise.tests.HomePageTest</td>
 <td></td>
-<td>3</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyLoginSignupIcon()'><b>verifyLoginSignupIcon</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>3</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyHomeIcon()'><b>verifyHomeIcon</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>4</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyCartIcon()'><b>verifyCartIcon</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>4</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyTestCasesButton()'><b>verifyTestCasesButton</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>4</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.testContactUsForm()'><b>testContactUsForm</b><br>Test class: com.automationexercise.tests.ContactUsTest<br>Parameters: Invalid, invalid-email, Test Error, Missing proper email format., Please enter a valid email address.</td>
-<td></td>
-<td>3</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.testContactUsForm()'><b>testContactUsForm</b><br>Test class: com.automationexercise.tests.ContactUsTest<br>Parameters: Long Text, longtext@example.com, Test Long, Lorem ipsum dolor sit amet..., Success! Your details have been submitted successfully.</td>
-<td></td>
-<td>2</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyContactUsPageTitle()'><b>verifyContactUsPageTitle</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>2</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyFeedbackSectionVisible()'><b>verifyFeedbackSectionVisible</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>4</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyAllInputFieldsVisible()'><b>verifyAllInputFieldsVisible</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>1</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyNoteMessageOnContactUsPage()'><b>verifyNoteMessageOnContactUsPage</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>2</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyVideoTutorialsIcon()'><b>verifyVideoTutorialsIcon</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>8</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyLogo()'><b>verifyLogo</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>4</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.testContactUsForm()'><b>testContactUsForm</b><br>Test class: com.automationexercise.tests.ContactUsTest<br>Parameters: Jane Smith, jane@example.com, Feedback, Loved the website!, Success! Your details have been submitted successfully.</td>
-<td></td>
-<td>3</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.testContactUsForm()'><b>testContactUsForm</b><br>Test class: com.automationexercise.tests.ContactUsTest<br>Parameters: John Doe, john@example.com, Test Subject 1, This is a test message., Success! Your details have been submitted successfully.</td>
-<td></td>
-<td>3</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifySubmitButtonEnabled()'><b>verifySubmitButtonEnabled</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>2</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
-<tr>
-<td title='com.automationexercise.tests.ContactUsTest.verifyPlaceholderTexts()'><b>verifyPlaceholderTexts</b><br>Test class: com.automationexercise.tests.ContactUsTest</td>
-<td></td>
-<td>2</td>
-<td>com.automationexercise.tests.ContactUsTest@4233e892</td></tr>
->>>>>>> Stashed changes
+<td>5</td>
+<td>com.automationexercise.tests.HomePageTest@acdb094</td></tr>
 </table><p>
 </body>
 </html>

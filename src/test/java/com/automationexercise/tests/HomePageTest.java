@@ -195,7 +195,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(groups = {"ui","functional","Regression"},priority = 6)
-    public void verifyFeaturesItemsVisibleAndScreenshot() throws Exception {
+    public void verifyFeaturesItemsVisible() throws Exception {
         getTest().info("Opening Home Page");
         getDriver().get("https://automationexercise.com/");
         HomePage home = new HomePage(getDriver());
@@ -225,7 +225,7 @@ public class HomePageTest extends BaseTest {
         getTest().pass("FEATURES ITEMS are visible after scroll; screenshots attached.");
     }
     @Test(groups = {"ui","functional","Regression"},priority = 7)
-    public void verifyBrandsSectionVisibleAndScreenshot() throws Exception {
+    public void verifyBrandsSectionVisible() throws Exception {
         getTest().info("Open Home Page");
         getDriver().get("https://automationexercise.com/");
         HomePage home = new HomePage(getDriver());
@@ -250,7 +250,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(groups = {"ui","functional","Regression"},priority = 8)
-    public void verifyRecommendedItemsVisibleAndScreenshot() throws Exception {
+    public void verifyRecommendedItemsVisible() throws Exception {
         final String BASE_URL = "https://automationexercise.com/";
         getTest().info("Open Home Page");
         getDriver().get(BASE_URL);
@@ -275,6 +275,48 @@ public class HomePageTest extends BaseTest {
 
         getTest().pass("RECOMMENDED ITEMS section is visible; full-page screenshot attached.");
     }
+     
+    @Test(groups = {"ui","functional"}, priority = 9)
+    public void verifyBlueTopCardInfoAndImageDisplayed() throws Exception {
+        final String BASE_URL = "https://automationexercise.com/";
+        final String PRODUCT  = "Blue Top";
+
+        getTest().info("Open Home: " + BASE_URL);
+        getDriver().get(BASE_URL);
+
+        HomePage home = new HomePage(getDriver());
+
+        getTest().info("Scroll to FEATURES and wait for it to be visible");
+        home.scrollFeaturesIntoView();
+        home.waitForFeaturesVisible();
+
+        // fetch displayed values
+        String price = home.getFeaturePriceText(PRODUCT);
+        String name  = home.getFeatureNameText(PRODUCT);
+        boolean imageVisible       = home.isFeatureImageDisplayed(PRODUCT);
+        boolean addToCartVisible   = home.isFeatureAddToCartDisplayed(PRODUCT);
+        boolean viewProductVisible = home.isFeatureViewProductDisplayed(PRODUCT);
+
+        // log actual info
+        getTest().info("Displayed Info -> "
+                     + "Price: " + price
+                     + " | Name: " + name
+                     + " | Image visible: " + imageVisible
+                     + " | Add to Cart visible: " + addToCartVisible
+                     + " | View Product visible: " + viewProductVisible);
+
+        // assertions
+        Assert.assertTrue(imageVisible, "Product image not displayed");
+        Assert.assertTrue(addToCartVisible, "Add to Cart button not displayed");
+        Assert.assertTrue(viewProductVisible, "View Product link not displayed");
+
+        // full-page screenshot only
+        String fullShot = home.captureFullPage("BlueTop_FullPage");
+        getTest().addScreenCaptureFromPath(fullShot);
+
+        getTest().pass("Blue Top card info (image, price, name, add-to-cart, view product) displayed correctly; full-page screenshot attached.");
+    }
+
 
 
 
