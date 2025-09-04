@@ -24,6 +24,18 @@ public class ContactUsPage {
     By successMessage = By.cssSelector("div.status.alert-success");
     By errorMessage = By.cssSelector("div.status.alert-danger");
 
+    // Locators for new UI tests
+    By homeIcon = By.cssSelector("a[href='/'] i.fa-home");
+    By logo = By.cssSelector("div.logo.pull-left img");
+    By testCasesBtn = By.xpath("//a[text()='Test Cases']");
+    By apiTestingBtn = By.xpath("//a[text()='API Testing']");
+    By loginSignupIcon = By.cssSelector("i.fa-user");
+    By productsIcon = By.xpath("//a[text()=' Products']");
+    By videoTutorialsIcon = By.cssSelector("i.fa-video-camera");
+    By cartIcon = By.cssSelector("i.fa-shopping-cart");
+    By noteMessage = By.xpath("//div[text()='Below contact form is for testing purpose.']");
+
+
     // Fill the form
     public void fillForm(String name, String email, String subject, String message) {
         driver.findElement(nameInput).clear();
@@ -77,6 +89,52 @@ public class ContactUsPage {
             return driver.findElement(errorMessage).getText();
         } catch (Exception e) {
             return "";
+        }
+    }
+
+    // ===== Methods for new UI tests =====
+
+    public boolean isHomeIconVisible() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(homeIcon));
+            return driver.findElement(homeIcon).isDisplayed();
+        } catch (Exception e) { return false; }
+    }
+
+    public boolean clickHomeIcon() {
+        try {
+            driver.findElement(homeIcon).click();
+            return true;
+        } catch (Exception e) { return false; }
+    }
+
+    public boolean isLogoVisible() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(logo));
+            return driver.findElement(logo).isDisplayed();
+        } catch (Exception e) { return false; }
+    }
+
+    public boolean clickLogo() {
+        try {
+            driver.findElement(logo).click();
+            return true;
+        } catch (Exception e) { return false; }
+    }
+
+    public boolean isButtonVisibleAndClickable(By locator) {
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(locator));
+            return driver.findElement(locator).isDisplayed();
+        } catch (Exception e) { return false; }
+    }
+
+    public boolean isNoteMessageVisible() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(noteMessage));
+            return driver.findElement(noteMessage).isDisplayed();
+        } catch (Exception e) {
+            return false;
         }
     }
 }

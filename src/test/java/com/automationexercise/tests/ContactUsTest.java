@@ -9,10 +9,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.automationexercise.base.BaseTest;
+import com.automationexercise.pages.ContactUsPage;
 import com.automationexercise.utilities.ExcelUtilities;
 import com.automationexercise.utilities.ScreenshotUtilities;
 
@@ -57,14 +59,12 @@ public class ContactUsTest extends BaseTest {
             // ---------- INVALID NAME CASE ----------
             boolean invalidNameCase = expectedMessage.equalsIgnoreCase("INVALID_NAME");
             if (invalidNameCase) {
-                // Wait for banner (success or error)
                 By bannerLocator = By.cssSelector(".status.alert-success, .status.alert, .error");
                 WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
                 WebElement banner = wait.until(ExpectedConditions.visibilityOfElementLocated(bannerLocator));
                 String actualMessage = banner.getText().trim();
 
                 if (actualMessage.toLowerCase().contains("success") || actualMessage.toLowerCase().contains("sent")) {
-                    // ❌ App wrongly accepted invalid name
                     String screenshotPath = ScreenshotUtilities.captureScreen(getDriver(), "InvalidName_UnexpectedSuccess");
                     getTest().fail("App accepted invalid name! Expected rejection, but got success: " + actualMessage)
                             .addScreenCaptureFromPath(screenshotPath);
@@ -72,11 +72,10 @@ public class ContactUsTest extends BaseTest {
                 } else {
                     getTest().pass("Application correctly rejected invalid name. Message: " + actualMessage);
                 }
-                return; // stop here for invalid name case
+                return;
             }
 
             // ---------- INVALID / BLANK EMAIL ----------
-            String expLower = expectedMessage == null ? "" : expectedMessage.toLowerCase();
             if (email.trim().isEmpty() || !email.contains("@")) {
                 JavascriptExecutor js = (JavascriptExecutor) getDriver();
                 String validationMessage = (String) js.executeScript("return arguments[0].validationMessage;", emailField);
@@ -140,7 +139,7 @@ public class ContactUsTest extends BaseTest {
         }
     }
 
-    // ------------------- UI Tests -------------------
+    // ------------------- Existing UI Tests -------------------
     @Test(groups = {"ui", "Regression","smoke"})
     public void verifyContactUsPageTitle() {
         getDriver().get("https://automationexercise.com/contact_us");
@@ -209,5 +208,119 @@ public class ContactUsTest extends BaseTest {
         assert messageField.getAttribute("placeholder").equalsIgnoreCase("Your message here") : "Message placeholder mismatch";
 
         getTest().pass("All placeholder texts are correct");
+    }
+
+    // ------------------- New UI Tests -------------------
+
+    @Test(groups = {"ui", "Regression"})
+    public void verifyHomeIcon() {
+        getDriver().get("https://automationexercise.com/contact_us");
+        ContactUsPage contactPage = new ContactUsPage(getDriver());
+        assert contactPage.isHomeIconVisible() : "Home icon is not visible";
+        getTest().pass("Home icon is visible");
+
+        boolean clicked = contactPage.clickHomeIcon();
+        assert clicked : "Home icon is not clickable";
+        getTest().pass("Home icon is clickable");
+
+        String url = getDriver().getCurrentUrl();
+        assert url.equals("https://automationexercise.com/") : "Home icon did not navigate to homepage";
+        getTest().pass("Home icon navigates correctly to homepage");
+    }
+
+    @Test(groups = {"ui", "Regression"})
+    public void verifyLogo() {
+        getDriver().get("https://automationexercise.com/contact_us");
+        ContactUsPage contactPage = new ContactUsPage(getDriver());
+        assert contactPage.isLogoVisible() : "Automation Exercise logo is not visible";
+        getTest().pass("Automation Exercise logo is visible");
+
+        boolean clicked = contactPage.clickLogo();
+        assert clicked : "Logo is not clickable";
+        getTest().pass("Automation Exercise logo is clickable");
+
+        String url = getDriver().getCurrentUrl();
+        assert url.equals("https://automationexercise.com/") : "Logo did not redirect to homepage";
+        getTest().pass("Automation Exercise logo hyperlink works");
+    }
+
+    private void verifyButtonVisibleClickableAndRedirect(By locator, String expectedUrl, String name) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        WebElement btn = getDriver().findElement(locator);
+
+        assert btn.isDisplayed() : name + " is not visible";
+        getTest().pass(name + " is visible");
+
+        btn.click();
+        getTest().info(name + " clicked");
+
+        String url = getDriver().getCurrentUrl();
+        assert url.contains(expectedUrl) : name + " did not redirect properly. Current URL: " + url;
+        getTest().pass(name + " redirects correctly to " + expectedUrl);
+
+        getDriver().navigate().back();
+    }
+
+    @Test(groups = {"ui", "Regression"})
+    public void verifyTestCasesButton() {
+        getDriver().get("https://automationexercise.com/contact_us");
+        verifyButtonVisibleClickableAndRedirect(By.xpath("//a[text()=' Test Cases']"), "test_cases", "Test Cases button");
+    }
+
+
+    @Test(groups = {"ui", "Regression"})
+    public void verifyAPITestingButton() {
+        getDriver().get("https://automationexercise.com/contact_us");
+        By apiButton = By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[6]/a");
+        verifyButtonVisibleClickableAndRedirect(apiButton, "api_list", "API Testing button");
+    }
+
+
+    @Test(groups = {"ui", "Regression"})
+    public void verifyLoginSignupIcon() {
+        getDriver().get("https://automationexercise.com/contact_us");
+        By loginIcon = By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a");
+        verifyButtonVisibleClickableAndRedirect(loginIcon, "login", "Login/Signup icon");
+    }
+
+    @Test(groups = {"ui", "Regression"})
+    public void verifyProductsIcon() {
+        getDriver().get("https://automationexercise.com/contact_us");
+        verifyButtonVisibleClickableAndRedirect(By.xpath("//a[text()=' Products']"), "products", "Products icon");
+    }
+
+
+    @Test(groups = {"ui", "Regression"})
+    public void verifyVideoTutorialsIcon() {
+        getDriver().get("https://automationexercise.com/contact_us");
+
+        // Correct locator for the link wrapping the icon
+        By videoTutorialsLink = By.xpath("//a[contains(@href,'youtube.com/c/AutomationExercise')]");
+
+        verifyButtonVisibleClickableAndRedirect(
+            videoTutorialsLink,
+            "https://www.youtube.com/c/AutomationExercise",
+            "Video Tutorials icon"
+        );
+    }
+
+
+
+
+    @Test(groups = {"ui", "Regression"})
+    public void verifyCartIcon() {
+        getDriver().get("https://automationexercise.com/contact_us");
+        verifyButtonVisibleClickableAndRedirect(By.cssSelector("i.fa-shopping-cart"), "view_cart", "Cart icon");
+    }
+
+    @Test(groups = {"ui", "Regression"})
+    public void verifyNoteMessageOnContactUsPage() {
+        getDriver().get("https://automationexercise.com/contact_us");
+        ContactUsPage contactPage = new ContactUsPage(getDriver());
+
+        assert contactPage.isNoteMessageVisible() : 
+            "Note message is not visible on Contact Us page";
+        getTest().pass("Note message is visible on Contact Us page");
     }
 }

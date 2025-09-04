@@ -3,15 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automationexercise.tests.HomePageTest">
+      <class name="com.automationexercise.tests.ContactUsTest">
         <methods>
           <include name="setupReport"/>
           <include name="teardown"/>
           <include name="setup"/>
           <include name="flushReport"/>
+<<<<<<< Updated upstream
           <include name="clickEachBrand_OpenItems_TakeScreenshot"/>
+=======
+          <include name="testContactUsForm" invocation-numbers="5"/>
+>>>>>>> Stashed changes
         </methods>
-      </class> <!-- com.automationexercise.tests.HomePageTest -->
+      </class> <!-- com.automationexercise.tests.ContactUsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
