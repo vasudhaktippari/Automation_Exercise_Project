@@ -10,29 +10,28 @@
         <include name="ui"/>
         <include name="Regression"/>
         <include name="Data-Driven"/>
+        <include name="negative"/>
       </run>
     </groups>
     <classes>
+      <class name="com.automationexercise.tests.TC_ECOM_Tests">
+        <methods>
+          <include name="setupReport"/>
+          <include name="TC_ECOM_TestCase_001"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="flushReport"/>
+        </methods>
+      </class> <!-- com.automationexercise.tests.TC_ECOM_Tests -->
       <class name="com.automationexercise.tests.ContactUsTest">
         <methods>
           <include name="setupReport"/>
           <include name="teardown"/>
           <include name="setup"/>
           <include name="flushReport"/>
-          <include name="testContactUsForm" invocation-numbers="2 3"/>
+          <include name="testContactUsForm" invocation-numbers="5"/>
         </methods>
       </class> <!-- com.automationexercise.tests.ContactUsTest -->
-      <class name="com.automationexercise.tests.LoginTest">
-        <methods>
-          <include name="setupReport"/>
-          <include name="verifyLogout"/>
-          <include name="registerUserFromExcel"/>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="flushReport"/>
-          <include name="verifyLogin"/>
-        </methods>
-      </class> <!-- com.automationexercise.tests.LoginTest -->
     </classes>
   </test> <!-- chrome - Smoke+Functional(failed) -->
 </suite> <!-- Failed suite [Suite] -->
