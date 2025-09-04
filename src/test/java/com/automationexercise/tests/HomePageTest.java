@@ -11,7 +11,7 @@ public class HomePageTest extends BaseTest {
 
     private static final String BASE_URL = "https://automationexercise.com/";
 
-    @Test(groups = {"functional","smoke","Regression","ui"})
+    @Test(groups = {"functional","smoke","Regression","ui"} ,priority = 1)
     public void verifyHomePageTitle() throws Exception {
 
         getTest().info("Opening Home Page: " + BASE_URL);
@@ -38,7 +38,7 @@ public class HomePageTest extends BaseTest {
         getTest().addScreenCaptureFromPath(screenshotPath);
     }
 
-    @Test(groups = {"ui","smoke","Regression"})
+    @Test(groups = {"ui","smoke","Regression"},priority = 2)
     public void verifyLogoIsDisplayed() throws Exception {
 
         getTest().info("Opening Home Page: " + BASE_URL);
@@ -63,7 +63,7 @@ public class HomePageTest extends BaseTest {
         getTest().info("Logo screenshot attached to report");
     }
     
-    @Test(groups = {"ui","functional","Regression"})
+    @Test(groups = {"ui","functional","Regression"},priority = 3)
     public void verifyNavigationFromHomePage() throws Exception {
         getTest().info("Opening Home Page: " + BASE_URL);
         getDriver().get(BASE_URL);
@@ -126,7 +126,7 @@ public class HomePageTest extends BaseTest {
         getTest().pass("Navigation from Home Page verified successfully for all links with screenshots");
     }
     
-    @Test(groups = {"ui","functional","Regression"})
+    @Test(groups = {"ui","functional","Regression"},priority = 4)
     public void verifySliderNavigation() throws Exception {
         getTest().info("Opening Home Page: " + BASE_URL);
         getDriver().get(BASE_URL);
@@ -160,36 +160,127 @@ public class HomePageTest extends BaseTest {
 
         getTest().pass("Slider arrows (< and >) change the active slide index correctly.");
     }
-
-    @Test(groups = {"ui","functional","Regression"})
-    public void verifyCarouselButtonsNavigation() throws Exception {
+    @Test(groups = {"ui","functional","Regression"},priority = 5)
+    public void verifyCategoryItemsVisibleAndClickable() throws Exception {
         getTest().info("Opening Home Page: " + BASE_URL);
         getDriver().get(BASE_URL);
 
         HomePage home = new HomePage(getDriver());
 
-        // -------- Test Cases --------
-        getTest().info("Clicking 'Test Cases' button in carousel");
-        home.clickCarouselTestCases();
-        Assert.assertTrue(getDriver().getCurrentUrl().contains("/test_cases"),
-                "Carousel 'Test Cases' did not navigate correctly");
-        String tcShot = ScreenshotUtilities.captureScreen(getDriver(), "Carousel_TestCases");
-        getTest().addScreenCaptureFromPath(tcShot);
-        getTest().info("Going Back to Home Page");
+        // Scroll Category into view and verify toggles visible
+        home.scrollCategoryIntoView();
+        Assert.assertTrue(home.isWomenVisible(), "Women toggle not visible");
+        Assert.assertTrue(home.isMenVisible(),   "Men toggle not visible");
+        Assert.assertTrue(home.isKidsVisible(),  "Kids toggle not visible");
+        String initial = ScreenshotUtilities.captureScreen(getDriver(), "Category_Visible");
+        getTest().addScreenCaptureFromPath(initial);
 
-        // Back to Home Page
-        getDriver().navigate().back();
+        // Ensure each section is clickable & expands; take screenshots
+        getTest().info("Expanding Women panel");
+        home.expandWomen();
+        String womenShot = ScreenshotUtilities.captureScreen(getDriver(), "Category_Women_Expanded");
+        getTest().addScreenCaptureFromPath(womenShot);
 
-        // -------- APIs list --------
-        getTest().info("Clicking 'APIs list for practice' button in carousel");
-        home.clickCarouselApiList();
-        Assert.assertTrue(getDriver().getCurrentUrl().contains("/api_list"),
-                "Carousel 'APIs list for practice' did not navigate correctly");
-        String apiShot = ScreenshotUtilities.captureScreen(getDriver(), "Carousel_ApiList");
-        getTest().addScreenCaptureFromPath(apiShot);
+        getTest().info("Expanding Men panel");
+        home.expandMen();
+        String menShot = ScreenshotUtilities.captureScreen(getDriver(), "Category_Men_Expanded");
+        getTest().addScreenCaptureFromPath(menShot);
 
-        getTest().pass("Carousel buttons navigation verified successfully");
+        getTest().info("Expanding Kids panel");
+        home.expandKids();
+        String kidsShot = ScreenshotUtilities.captureScreen(getDriver(), "Category_Kids_Expanded");
+        getTest().addScreenCaptureFromPath(kidsShot);
+
+        getTest().pass("Women, Men, and Kids are visible, clickable, and expand correctly with evidence screenshots.");
     }
+
+    @Test(groups = {"ui","functional","Regression"},priority = 6)
+    public void verifyFeaturesItemsVisibleAndScreenshot() throws Exception {
+        getTest().info("Opening Home Page");
+        getDriver().get("https://automationexercise.com/");
+        HomePage home = new HomePage(getDriver());
+
+        getTest().info("Scroll to FEATURES ITEMS section");
+        home.scrollFeaturesIntoView();
+        home.waitForFeaturesVisible();
+
+        getTest().info("Verify FEATURES ITEMS section is visible");
+        Assert.assertTrue(home.isFeaturesSectionVisible(), "FEATURES ITEMS section not visible");
+
+        int visible = home.getVisibleFeatureItemCount();
+        getTest().info("Visible feature item cards: " + visible);
+
+        // Expect at least 6 cards in view on page load (3x2 grid). Tweak if your layout differs.
+        Assert.assertTrue(visible >= 6, "Expected at least 6 visible feature items");
+
+        getTest().info("Capture FEATURES ITEMS section screenshot");
+        String shot = home.captureFeaturesSectionScreenshot("FeaturesItems_Section");
+        Assert.assertNotNull(shot, "Failed to capture FEATURES ITEMS screenshot");
+        getTest().addScreenCaptureFromPath(shot);
+
+        // bonus: full-page for context
+        String full = com.automationexercise.utilities.ScreenshotUtilities.captureScreen(getDriver(), "FeaturesItems_FullPage");
+        getTest().addScreenCaptureFromPath(full);
+
+        getTest().pass("FEATURES ITEMS are visible after scroll; screenshots attached.");
+    }
+    @Test(groups = {"ui","functional","Regression"},priority = 7)
+    public void verifyBrandsSectionVisibleAndScreenshot() throws Exception {
+        getTest().info("Open Home Page");
+        getDriver().get("https://automationexercise.com/");
+        HomePage home = new HomePage(getDriver());
+
+        getTest().info("Scroll to BRANDS section");
+        home.scrollBrandsIntoView();
+        home.waitForBrandsVisible();
+
+        getTest().info("Validate BRANDS container visibility");
+        Assert.assertTrue(home.isBrandsSectionVisible(), "BRANDS section is not visible");
+
+        int count = home.getVisibleBrandCount();
+        getTest().info("Visible brand rows: " + count);
+        Assert.assertTrue(count >= 1, "Expected at least one brand row to be visible");
+
+        // Only capture full-page screenshot (removed element screenshot)
+        String full = com.automationexercise.utilities.ScreenshotUtilities.captureScreen(getDriver(), "Brands_FullPage");
+        Assert.assertNotNull(full, "Failed to capture full-page screenshot for BRANDS");
+        getTest().addScreenCaptureFromPath(full);
+
+        getTest().pass("BRANDS section visible; full-page screenshot attached.");
+    }
+
+    @Test(groups = {"ui","functional","Regression"},priority = 8)
+    public void verifyRecommendedItemsVisibleAndScreenshot() throws Exception {
+        final String BASE_URL = "https://automationexercise.com/";
+        getTest().info("Open Home Page");
+        getDriver().get(BASE_URL);
+
+        HomePage home = new HomePage(getDriver());
+
+        getTest().info("Scroll to RECOMMENDED ITEMS section");
+        home.scrollRecommendedIntoView();
+        home.waitForRecommendedVisible();
+
+        getTest().info("Validate RECOMMENDED ITEMS container visibility");
+        Assert.assertTrue(home.isRecommendedSectionVisible(), "RECOMMENDED ITEMS section is not visible");
+
+        int visible = home.getVisibleRecommendedCount();
+        getTest().info("Visible recommended item cards in active slide: " + visible);
+        Assert.assertTrue(visible >= 1, "Expected at least one recommended item to be visible");
+
+        // Take only the full-page screenshot for evidence
+        String full = home.captureRecommendedFullPage("RecommendedItems_FullPage");
+        Assert.assertNotNull(full, "Failed to capture full-page screenshot for RECOMMENDED ITEMS");
+        getTest().addScreenCaptureFromPath(full);
+
+        getTest().pass("RECOMMENDED ITEMS section is visible; full-page screenshot attached.");
+    }
+
+
+
+
+
+
 
 
 

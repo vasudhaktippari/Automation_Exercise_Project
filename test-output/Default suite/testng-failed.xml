@@ -9,7 +9,7 @@
           <include name="teardown"/>
           <include name="setup"/>
           <include name="flushReport"/>
-          <include name="verifyCarouselButtonsNavigation"/>
+          <include name="clickEachBrand_OpenItems_TakeScreenshot"/>
         </methods>
       </class> <!-- com.automationexercise.tests.HomePageTest -->
     </classes>
