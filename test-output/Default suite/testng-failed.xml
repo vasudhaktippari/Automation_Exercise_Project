@@ -3,15 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automationexercise.tests.LoginTest">
+      <class name="com.automationexercise.tests.PaymentPageTest">
         <methods>
           <include name="setupReport"/>
           <include name="teardown"/>
           <include name="setup"/>
           <include name="flushReport"/>
-          <include name="verifyLogin"/>
+          <include name="goToPaymentPage"/>
+          <include name="testNameOnCardValidation"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.automationexercise.tests.LoginTest -->
+      </class> <!-- com.automationexercise.tests.PaymentPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

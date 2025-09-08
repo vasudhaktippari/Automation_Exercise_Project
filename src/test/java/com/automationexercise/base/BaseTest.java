@@ -33,6 +33,9 @@ import com.automationexercise.utilities.ScreenshotUtilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
+	protected WebDriver driver;
+    protected static ExtentReports extent1;   // Shared report for suite
+    protected ExtentTest test;     
 
     // ===== Extent (1 per suite) =====
     protected static ExtentReports extent;
@@ -49,16 +52,16 @@ public class BaseTest {
 
     @BeforeSuite(alwaysRun = true)
     public void setupReport() {
-        extent = ExtentManager.getInstance("AutomationExercise_TestSuite");
-        if (extent == null) {
+        extent1 = ExtentManager.getInstance("AutomationExercise_TestSuite");
+        if (extent1 == null) {
             throw new IllegalStateException("ExtentReports was not initialized. Check ExtentManager.getInstance()");
         }
     }
 
     @AfterSuite(alwaysRun = true)
     public void flushReport() {
-        if (extent != null) {
-            extent.flush();
+        if (extent1 != null) {
+            extent1.flush();
             System.out.println("Extent HTML: " + ExtentManager.getLastReportPath());
         }
     }
@@ -94,7 +97,7 @@ public class BaseTest {
             testName = "[" + groups[0].trim() + "] " + baseName;
         }
 
-        ExtentTest et = extent.createTest("[" + targetBrowser + (isHeadless ? " (headless)" : "") + "] " + testName);
+        ExtentTest et = extent1.createTest("[" + targetBrowser + (isHeadless ? " (headless)" : "") + "] " + testName);
 
         // Map TestNG groups -> Extent categories
         for (String g : groups) {

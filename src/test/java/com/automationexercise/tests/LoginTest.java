@@ -41,9 +41,7 @@ public class LoginTest extends BaseTest {
     }
     
     
-   
-
-    
+  
  
     
     //Verify a user sign/up 
