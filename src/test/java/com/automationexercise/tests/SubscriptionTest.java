@@ -36,7 +36,7 @@ public class SubscriptionTest extends BaseTest {
     }
 
     // ------------------- Data-driven Subscription Test -------------------
-    @Test(dataProvider = "subscriptionData", groups = {"functional", "Regression", "Data-driven"})
+    @Test(dataProvider = "subscriptionData", groups = {"functional", "Regression", "Data-Driven"})
     public void testSubscriptionForm(String email, String expectedMessage) {
         try {
             getDriver().get("https://automationexercise.com/");
@@ -80,7 +80,7 @@ public class SubscriptionTest extends BaseTest {
         }
     }
 
-    // ------------------- UI Tests for all pages -------------------
+    
 
     @Test(dataProvider = "pagesToTest", groups = {"ui", "Regression"})
     public void verifySubscriptionSectionVisible(String pageUrl) {

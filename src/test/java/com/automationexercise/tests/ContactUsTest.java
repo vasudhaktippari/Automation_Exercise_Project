@@ -27,7 +27,7 @@ public class ContactUsTest extends BaseTest {
     }
 
     // ------------------- Data-driven Contact Us Form -------------------
-    @Test(dataProvider = "contactUsData", groups = {"functional", "Regression", "Data-driven"})
+    @Test(dataProvider = "contactUsData", groups = {"functional", "Regression", "Data-Driven"})
     public void testContactUsForm(String name, String email, String subject, String message, String expectedMessage) {
         try {
             getDriver().get("https://automationexercise.com/contact_us");
@@ -139,7 +139,7 @@ public class ContactUsTest extends BaseTest {
         }
     }
 
-    // ------------------- Existing UI Tests -------------------
+    
     @Test(groups = {"ui", "Regression","smoke"})
     public void verifyContactUsPageTitle() {
         getDriver().get("https://automationexercise.com/contact_us");
@@ -210,7 +210,7 @@ public class ContactUsTest extends BaseTest {
         getTest().pass("All placeholder texts are correct");
     }
 
-    // ------------------- New UI Tests -------------------
+   
 
     @Test(groups = {"ui", "Regression"})
     public void verifyHomeIcon() {
@@ -272,7 +272,7 @@ public class ContactUsTest extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "fileUploadData", groups = {"functional", "ui", "Regression"})
+    @Test(dataProvider = "fileUploadData", groups = {"functional", "ui", "Regression","Data-Driven"})
     public void verifyFileUploadWithDifferentTypes(String filePath) {
         try {
             getDriver().get("https://automationexercise.com/contact_us");

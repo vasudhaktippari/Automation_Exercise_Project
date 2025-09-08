@@ -92,7 +92,7 @@ public class ContactUsPage {
         }
     }
 
-    // ===== Methods for new UI tests =====
+    
 
     public boolean isHomeIconVisible() {
         try {
