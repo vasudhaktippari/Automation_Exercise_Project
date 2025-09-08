@@ -275,4 +275,53 @@ public class AccountInformationPage {
     private static void sleep(long ms) {
         try { Thread.sleep(ms); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
     }
+    
+    
+    /** HTML5 validity helpers for First Name */
+    public boolean isFirstNameValid() {
+        try {
+            WebElement el = driver.findElement(FIRST_NAME_FIELD);
+            return (Boolean) ((JavascriptExecutor) driver)
+                    .executeScript("return arguments[0].checkValidity();", el);
+        } catch (Exception e) {
+            return true; // be conservative; test will catch failures after submit
+        }
+    }
+
+    public String getFirstNameValidationMessage() {
+        try {
+            WebElement el = driver.findElement(FIRST_NAME_FIELD);
+            return (String) ((JavascriptExecutor) driver)
+                    .executeScript("return arguments[0].validationMessage;", el);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    /** Blur the First Name field to trigger client-side validation */
+    public AccountInformationPage blurFirstName() {
+        try {
+            driver.findElement(LAST_NAME_FIELD).click(); // simple blur target
+        } catch (Exception ignored) {}
+        return this;
+    }
+    
+ // Generic HTML5 validity helpers
+    public boolean checkValidity(By locator) {
+        try {
+            WebElement el = driver.findElement(locator);
+            return (Boolean) ((JavascriptExecutor) driver)
+                    .executeScript("return arguments[0].checkValidity();", el);
+        } catch (Exception e) { return true; } // fall back to E2E assertion
+    }
+
+    public String validationMessage(By locator) {
+        try {
+            WebElement el = driver.findElement(locator);
+            return (String) ((JavascriptExecutor) driver)
+                    .executeScript("return arguments[0].validationMessage;", el);
+        } catch (Exception e) { return null; }
+    }
+
+
 }

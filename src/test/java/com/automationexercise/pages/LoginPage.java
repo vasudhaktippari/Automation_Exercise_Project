@@ -3,6 +3,7 @@ package com.automationexercise.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 public class LoginPage {
     WebDriver driver;
@@ -195,6 +196,15 @@ public class LoginPage {
         driver.findElement(signupButton).click();
         return this;
     }
+    public String getSignUpNameValidationMessage() {
+        try {
+            WebElement nameField = driver.findElement(By.id("name")); // adjust locator if different
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            return (String) js.executeScript("return arguments[0].validationMessage;", nameField);
+        } catch (Exception e) {
+            return null;
+        }
+    }
 
     /** Check HTML5 validity of the email field (works for type="email") */
     public boolean isSignUpEmailValid() {
@@ -224,5 +234,7 @@ public class LoginPage {
             return null;
         }
     }
+   
+  
 
 }

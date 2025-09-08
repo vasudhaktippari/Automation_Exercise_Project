@@ -489,6 +489,260 @@ public class LoginTest extends BaseTest {
             getTest().addScreenCaptureFromPath(path);
         }
     }
+    
+    @Test(groups = {"negative","functional","Regression"}, priority = 13)
+    public void verifyRegistrationRejectsWeakPassword() throws Exception {
+        final String ssLabel = "verifyRegistrationRejectsWeakPassword";
+        try {
+            LoginPage loginPage = new LoginPage(getDriver()).open();
+            getTest().info("Login page opened (weak password validation test)");
+
+            // Sign up with unique email
+            String email = "weakpwd_" + System.currentTimeMillis() + "@example.com";
+            getTest().info("Submitting sign-up with weak password scenario: " + email);
+            loginPage.signUp("WeakPwdUser", email);
+
+            AccountInformationPage accountPage = new AccountInformationPage(getDriver());
+            Assert.assertTrue(accountPage.isAccountInfoPageDisplayed(),
+                    "Account Info page not displayed for weak password test");
+
+            // Use an invalid password (too short, e.g. "abc")
+            String weakPassword = "abc";
+            getTest().info("Trying to set weak password: " + weakPassword);
+
+            accountPage
+                    .selectTitleMr()
+                    .setPassword(weakPassword) // password shorter than 8 chars
+                    .setDOB("1", "January", "2000")
+                    .setFirstName("Weak")
+                    .setLastName("Password")
+                    .setAddress1("123 Short St")
+                    .setCountry("Canada")
+                    .setState("ON")
+                    .setCity("Toronto")
+                    .setZipcode("M1A1A1")
+                    .setMobile("1234567890")
+                    .submitCreateAccount();
+
+            // After submission, expect either error or account NOT created
+            boolean accountCreated = accountPage.isAccountCreatedMessageVisible();
+            getTest().info("Was account created with weak password? " + accountCreated);
+
+            Assert.assertFalse(accountCreated,
+                    "Account should NOT be created with weak/short password, but it was!");
+
+            getTest().pass("Weak password correctly rejected during registration");
+        } catch (Throwable t) {
+            getTest().fail(t);
+            throw t;
+        } finally {
+            String path = ScreenshotUtilities.captureScreen(getDriver(),
+                    ssLabel + "_" + System.currentTimeMillis());
+            getTest().addScreenCaptureFromPath(path);
+        }
+    }
+
+    @Test(groups = {"negative","ui","functional"}, priority = 15)
+    public void verifyNameFieldRejectsOnlyNumericInput() throws Exception {
+        final String ssLabel = "verifyNameFieldRejectsOnlyNumericInput";
+        try {
+            LoginPage loginPage = new LoginPage(getDriver()).open();
+            getTest().info("Login page opened (numeric-only name test)");
+
+            Assert.assertTrue(loginPage.isSignUpSectionDisplayed(), "Sign Up section not displayed");
+
+            // Invalid numeric-only name
+            String invalidName = "12345";
+            String email = "numericname_" + System.currentTimeMillis() + "@example.com";
+            getTest().info("Submitting sign-up with numeric-only name: " + invalidName);
+
+            loginPage
+                    .typeSignUpName(invalidName)
+                    .typeSignUpEmail(email)
+                    .clickSignUp();
+
+            // Should NOT proceed to Account Info page
+            boolean navigated = loginPage.isAccountInfoPageDisplayed();
+            getTest().info("Did we navigate to Account Info page? " + navigated);
+
+            Assert.assertFalse(navigated,
+                    "Signup accepted numeric-only name, but it should have been rejected!");
+
+            // Optional: capture browser's HTML5 validation message
+            String validationMsg = loginPage.getSignUpNameValidationMessage();
+            getTest().info("Validation message (if any): " + validationMsg);
+
+            Assert.assertNotNull(validationMsg, "Expected a validation message for numeric-only name");
+            Assert.assertFalse(validationMsg.isBlank(), "Expected non-empty validation message for numeric-only name");
+
+            getTest().pass("Numeric-only name correctly rejected during signup");
+        } catch (Throwable t) {
+            getTest().fail(t);
+            throw t;
+        } finally {
+            String path = ScreenshotUtilities.captureScreen(getDriver(),
+                    ssLabel + "_" + System.currentTimeMillis());
+            getTest().addScreenCaptureFromPath(path);
+        }
+    }
+
+    @Test(
+    	    dataProvider = "firstNameAlphaSpaceData",
+    	    groups = {"ui","functional","negative","Data-Driven"},
+    	    priority = 16
+    	)
+    	public void verifyFirstNameAcceptsOnlyAlphabetsAndSpaces(String firstName, boolean shouldBeValid) throws Exception {
+    	    final String ssLabel = "verifyFirstNameAlphaSpaces_" + firstName.replaceAll("\\s+", "_");
+    	    try {
+    	        // Navigate to Account Information page
+    	        LoginPage loginPage = new LoginPage(getDriver()).open();
+    	        Assert.assertTrue(loginPage.isSignUpSectionDisplayed(), "Sign Up section not visible");
+
+    	        String email = "fnrule_" + System.currentTimeMillis() + "@example.com";
+    	        loginPage.signUp("TempUser", email);
+
+    	        AccountInformationPage account = new AccountInformationPage(getDriver());
+    	        Assert.assertTrue(account.isAccountInfoPageDisplayed(), "Account Info page not displayed");
+
+    	        // Fill required minimal valid data, except First Name (which we test)
+    	        account.selectTitleMr()
+    	               .setPassword("Test1234")                // 8+ chars with letters+digits (valid)
+    	               .setDOB("1", "January", "2000")
+    	               .toggleNewsletter(false)
+    	               .toggleOffers(false)
+    	               .setFirstName(firstName)               // <-- field under test
+    	               .blurFirstName()                       // trigger client validation
+    	               .setLastName("Tester")
+    	               .setCompany("ACME")
+    	               .setAddress1("123 Test Street")
+    	               .setCountry("Canada")
+    	               .setState("ON")
+    	               .setCity("Toronto")
+    	               .setZipcode("M1A1A1")
+    	               .setMobile("1234567890");
+
+    	        // Check HTML5 validity if present
+    	        boolean html5Valid = account.isFirstNameValid();
+    	        String validationMsg = account.getFirstNameValidationMessage();
+
+    	        getTest().info("Input='" + firstName + "', expectedValid=" + shouldBeValid +
+    	                       ", html5Valid=" + html5Valid +
+    	                       ", validationMsg=" + validationMsg);
+
+    	        // If the page exposes HTML5 validation, assert directly on it
+    	        if (validationMsg != null || !html5Valid) {
+    	            if (shouldBeValid) {
+    	                Assert.assertTrue(html5Valid,
+    	                        "Expected FIRST NAME to be valid (alphabets/spaces), but browser reports invalid: " + validationMsg);
+    	            } else {
+    	                Assert.assertFalse(html5Valid,
+    	                        "Expected FIRST NAME to be invalid, but browser reports valid");
+    	                Assert.assertNotNull(validationMsg, "Expected a validation message for invalid first name");
+    	                Assert.assertFalse(validationMsg.isBlank(), "Expected a non-empty validation message");
+    	            }
+    	        }
+
+    	        // Submit and assert the flow result as a safety net
+    	        account.submitCreateAccount();
+    	        boolean created = account.isAccountCreatedMessageVisible();
+
+    	        if (shouldBeValid) {
+    	            Assert.assertTrue(created,
+    	                    "First Name with alphabets/spaces should allow account creation, but it was blocked.");
+    	            account.clickContinueAfterCreated();
+    	            Assert.assertTrue(account.isLoggedInHeaderVisible(),
+    	                    "Logged-in header not visible after successful creation.");
+    	        } else {
+    	            Assert.assertFalse(created,
+    	                    "Account was created with invalid FIRST NAME ('" + firstName + "'), expected rejection.");
+    	        }
+
+    	        getTest().pass("First Name rule validated for input: '" + firstName + "'");
+    	    } catch (Throwable t) {
+    	        getTest().fail(t);
+    	        throw t;
+    	    } finally {
+    	        String path = ScreenshotUtilities.captureScreen(getDriver(), ssLabel + "_" + System.currentTimeMillis());
+    	        getTest().addScreenCaptureFromPath(path);
+    	    }
+    	}
+    @DataProvider(name = "firstNameAlphaSpaceData")
+    public Object[][] firstNameAlphaSpaceData() {
+        return new Object[][]{
+            // valid cases
+            {"12345",         false},
+            {"J@ne",          false},
+            {"Mary Jane",     true},  // hyphen not allowed by the rule
+            {"   ",           false}
+        };
+    }
+    @Test(
+    	    dataProvider = "registrationRequiredFields",
+    	    groups = {"negative","functional","ui","Data-Driven"},
+    	    priority = 21
+    	)
+    	public void verifyRegistrationRejectsWhenRequiredFieldMissing(
+    	        String name, String email, String password,
+    	        String day, String month, String year,
+    	        String firstName, String lastName,
+    	        String address1, String country, String state,
+    	        String city, String zipcode, String mobile
+    	) throws Exception {
+    	    final String ssLabel = "verifyRegistrationRejectsRequiredFields";
+    	    try {
+    	        // Ensure unique email when sheet uses {{unique}}
+    	        if (email != null && email.contains("{{unique}}")) {
+    	            email = email.replace("{{unique}}", String.valueOf(System.currentTimeMillis()));
+    	        }
+
+    	        // 1) Go to signup
+    	        LoginPage loginPage = new LoginPage(getDriver()).open();
+    	        Assert.assertTrue(loginPage.isSignUpSectionDisplayed(), "Sign Up section not visible");
+    	        loginPage.signUp(name == null || name.isBlank() ? "TempUser" : name, email);
+
+    	        // 2) On Account Info page, fill what we have from the row
+    	        AccountInformationPage acc = new AccountInformationPage(getDriver());
+    	        Assert.assertTrue(acc.isAccountInfoPageDisplayed(), "Account Info page not displayed");
+
+    	        if (password != null) acc.setPassword(password);
+    	        if (day != null && month != null && year != null) acc.setDOB(day, month, year);
+    	        if (firstName != null) acc.setFirstName(firstName);
+    	        if (lastName != null) acc.setLastName(lastName);
+    	        if (address1 != null) acc.setAddress1(address1);
+    	        if (country != null) acc.setCountry(country);
+    	        if (state != null) acc.setState(state);
+    	        if (city != null) acc.setCity(city);
+    	        if (zipcode != null) acc.setZipcode(zipcode);
+    	        if (mobile != null) acc.setMobile(mobile);
+
+    	        // 3) Try to submit
+    	        acc.submitCreateAccount();
+
+    	        // 4) End-to-end assertion: account must NOT be created
+    	        boolean created = acc.isAccountCreatedMessageVisible();
+    	        Assert.assertFalse(created, "Account was created despite a missing required field in this dataset.");
+
+    	        // 5) (Optional) HTML5 spot checks for common required fields if your page uses 'required'
+    	        // Uncomment if you want per-field messages:
+    	        // Assert.assertFalse(acc.checkValidity(AccountInformationPage.FIRST_NAME_FIELD), "First name unexpectedly valid");
+    	        // String msg = acc.validationMessage(AccountInformationPage.FIRST_NAME_FIELD);
+    	        // getTest().info("First name validation message: " + msg);
+
+    	        getTest().pass("Registration correctly rejected for dataset (email=" + email + ")");
+    	    } catch (Throwable t) {
+    	        getTest().fail(t);
+    	        throw t;
+    	    } finally {
+    	        String path = ScreenshotUtilities.captureScreen(getDriver(), ssLabel + "_" + System.currentTimeMillis());
+    	        getTest().addScreenCaptureFromPath(path);
+    	    }
+    	}
+    @DataProvider(name = "registrationRequiredFields")
+    public Object[][] registrationRequiredFields() throws IOException {
+        // Columns: name | email | password | day | month | year | firstName | lastName | address1 | country | state | city | zipcode | mobile
+        return ExcelUtilities.getData("RegistrationRequiredFields");
+    }
+
 
 
     /** Helper: interpret boolean-like strings from Excel */
@@ -515,5 +769,6 @@ public class LoginTest extends BaseTest {
         // Example sheet name: "InvalidLoginData"
         return ExcelUtilities.getData("InvalidLoginData");
     }
+    
 
 }

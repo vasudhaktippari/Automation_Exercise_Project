@@ -316,6 +316,40 @@ public class HomePageTest extends BaseTest {
 
         getTest().pass("Blue Top card info (image, price, name, add-to-cart, view product) displayed correctly; full-page screenshot attached.");
     }
+    @Test(groups = {"ui","functional","Regression"}, priority = 10)
+    public void verifyScrollToTopButtonFunctionality() throws Exception {
+        final String BASE_URL = "https://automationexercise.com/";
+
+        getTest().info("Opening Home Page: " + BASE_URL);
+        getDriver().get(BASE_URL);
+
+        HomePage home = new HomePage(getDriver());
+
+        // Scroll down to Recommended section so the button appears
+        getTest().info("Scrolling to bottom to trigger scroll-up button visibility");
+        home.scrollRecommendedIntoView();
+        Thread.sleep(2000); // small pause to allow button rendering
+
+        boolean isScrollBtnVisible = home.isScrollToTopVisible();
+        getTest().info("Scroll-to-top button visible: " + isScrollBtnVisible);
+        Assert.assertTrue(isScrollBtnVisible, "Scroll-to-top button not visible after scrolling down");
+
+        // Click the scroll-to-top button
+        getTest().info("Clicking on scroll-to-top button");
+        home.clickScrollToTop();
+
+        // Wait and verify that user is scrolled to top (logo visible again)
+        home.waitForLogoVisible();
+        boolean isLogoVisible = home.isLogoDisplayed();
+        getTest().info("Logo visible after clicking scroll-to-top: " + isLogoVisible);
+
+        Assert.assertTrue(isLogoVisible, "Scroll-to-top button did not return page to top");
+
+        String shot = ScreenshotUtilities.captureScreen(getDriver(), "ScrollToTop_AfterClick");
+        getTest().addScreenCaptureFromPath(shot);
+
+        getTest().pass("Scroll-to-top button functionality verified successfully.");
+    }
 
 
 

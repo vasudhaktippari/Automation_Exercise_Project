@@ -67,13 +67,17 @@ public class HomePage {
     By recommendedCards     = By.cssSelector(".recommended_items .carousel-inner .item.active .col-sm-4");
     
  // ===== Feature Card Locators =====
-    private By featureCardRoots = By.cssSelector(".features_items .col-sm-4");
-    private By cardInfo         = By.cssSelector(".single-products .productinfo");
-    private By cardPrice        = By.cssSelector("h2");  // e.g. "Rs. 500"
-    private By cardName         = By.cssSelector("p");   // e.g. "Blue Top"
-    private By cardAddToCart    = By.cssSelector("a.add-to-cart");
-    private By cardViewProduct  = By.xpath(".//a[normalize-space()='View Product']");
-    private By cardImage        = By.cssSelector(".single-products .productinfo img");
+     By featureCardRoots = By.cssSelector(".features_items .col-sm-4");
+     By cardInfo         = By.cssSelector(".single-products .productinfo");
+     By cardPrice        = By.cssSelector("h2");  // e.g. "Rs. 500"
+     By cardName         = By.cssSelector("p");   // e.g. "Blue Top"
+     By cardAddToCart    = By.cssSelector("a.add-to-cart");
+     By cardViewProduct  = By.xpath(".//a[normalize-space()='View Product']");
+     By cardImage        = By.cssSelector(".single-products .productinfo img");
+     
+  // Scroll-to-top button locator
+     By scrollToTopBtn = By.cssSelector("a#scrollUp");
+
 
     // ==============================
     //            Constructor
@@ -395,6 +399,27 @@ public class HomePage {
     }
 
     
+ // Check scrollup button visibility and funtion
+    public boolean isScrollToTopVisible() {
+        try {
+            return driver.findElement(scrollToTopBtn).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    // Click the button
+    public void clickScrollToTop() {
+        WebElement btn = new WebDriverWait(driver, java.time.Duration.ofSeconds(5))
+                .until(org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable(scrollToTopBtn));
+        btn.click();
+    }
+
+    // Wait for logo visible after scrolling up
+    public void waitForLogoVisible() {
+        new WebDriverWait(driver, java.time.Duration.ofSeconds(10))
+            .until(org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated(logo));
+    }
 
     // ==============================
     //     Screenshot helpers
