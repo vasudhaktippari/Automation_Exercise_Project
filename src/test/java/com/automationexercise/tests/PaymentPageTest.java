@@ -8,7 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.io.IOException;
-import java.time.Duration;
 
 public class PaymentPageTest extends BaseTest {
 
@@ -87,7 +86,12 @@ public class PaymentPageTest extends BaseTest {
 
     // ---- Field validations on the payment page ----
 
-    @Test(dataProvider = "PaymentData", priority = 1)
+    @Test(
+        dataProvider = "PaymentData",
+        priority = 1,
+        groups = {"smoke", "functional", "ui", "Data-Driven", "Regression"},
+        description = "Validate 'Name on Card' accepts alphabetic input"
+    )
     public void testNameOnCardValidation(String name, String cardNo, String cvc, String month, String year) throws Exception {
         paymentPage.enterNameOnCard(name);
         String shot = ScreenshotUtilities.captureScreen(getDriver(), "NameCheck_" + name);
@@ -95,7 +99,12 @@ public class PaymentPageTest extends BaseTest {
         Assert.assertTrue(paymentPage.isNameAlphabetic(name), "❌ Invalid name: " + name);
     }
 
-    @Test(dataProvider = "PaymentData", priority = 2)
+    @Test(
+        dataProvider = "PaymentData",
+        priority = 2,
+        groups = {"functional", "ui", "Data-Driven", "Regression", "negative"},
+        description = "Validate card number is numeric"
+    )
     public void testCardNumberValidation(String name, String cardNo, String cvc, String month, String year) throws Exception {
         paymentPage.enterCardNumber(cardNo);
         String shot = ScreenshotUtilities.captureScreen(getDriver(), "CardNumberCheck_" + cardNo);
@@ -103,7 +112,12 @@ public class PaymentPageTest extends BaseTest {
         Assert.assertTrue(paymentPage.isCardNumberNumeric(cardNo), "❌ Invalid card: " + cardNo);
     }
 
-    @Test(dataProvider = "PaymentData", priority = 3)
+    @Test(
+        dataProvider = "PaymentData",
+        priority = 3,
+        groups = {"functional", "ui", "Data-Driven", "Regression", "negative"},
+        description = "Validate CVC is numeric"
+    )
     public void testCvcNumericValidation(String name, String cardNo, String cvc, String month, String year) throws Exception {
         paymentPage.enterCVC(cvc);
         String shot = ScreenshotUtilities.captureScreen(getDriver(), "CVCCheck_" + cvc);
@@ -111,12 +125,22 @@ public class PaymentPageTest extends BaseTest {
         Assert.assertTrue(paymentPage.isCvcNumeric(cvc), "❌ Invalid CVC: " + cvc);
     }
 
-    @Test(dataProvider = "PaymentData", priority = 4)
+    @Test(
+        dataProvider = "PaymentData",
+        priority = 4,
+        groups = {"functional", "Data-Driven", "Regression", "negative"},
+        description = "Validate CVC length is 3 digits"
+    )
     public void testCvcThreeDigitValidation(String name, String cardNo, String cvc, String month, String year) {
         Assert.assertTrue(paymentPage.isCvcThreeDigits(cvc), "❌ CVC not 3 digits: " + cvc);
     }
 
-    @Test(dataProvider = "PaymentData", priority = 5)
+    @Test(
+        dataProvider = "PaymentData",
+        priority = 5,
+        groups = {"functional", "ui", "Data-Driven", "Regression"},
+        description = "Validate expiry month/year"
+    )
     public void testExpiryValidation(String name, String cardNo, String cvc, String month, String year) throws Exception {
         paymentPage.enterExpiry(month, year);
         String shot = ScreenshotUtilities.captureScreen(getDriver(), "ExpiryCheck_" + month + "_" + year);
@@ -124,7 +148,12 @@ public class PaymentPageTest extends BaseTest {
         Assert.assertTrue(paymentPage.isExpiryValid(month, year), "❌ Invalid expiry: " + month + "/" + year);
     }
 
-    @Test(dataProvider = "PaymentData", priority = 6)
+    @Test(
+        dataProvider = "PaymentData",
+        priority = 6,
+        groups = {"functional", "ui", "Data-Driven", "Regression"},
+        description = "Place order and download invoice when inputs are valid"
+    )
     public void testPlaceOrderAndDownloadInvoice(String name, String cardNo, String cvc, String month, String year) throws Exception {
         if (paymentPage.isNameAlphabetic(name) &&
             paymentPage.isCardNumberNumeric(cardNo) &&
