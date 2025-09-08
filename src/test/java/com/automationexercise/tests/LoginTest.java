@@ -255,15 +255,6 @@ public class LoginTest extends BaseTest {
             getTest().addScreenCaptureFromPath(path);
         }
     }
-<<<<<<< HEAD
-    
-    
-  
- 
-    
-    //Verify a user sign/up 
-    @Test(groups = {"smoke","functional"},priority = 3)
-=======
 
     // Verify Sign Up button clickable
     @Test(groups = {"smoke","ui"}, priority = 3)
@@ -305,7 +296,6 @@ public class LoginTest extends BaseTest {
 
     // Verify user registration with random email
     @Test(groups = {"smoke","functional","Regression"}, priority = 4)
->>>>>>> 0a6df1f363092f53e021b80fd9ef2b15b40e0818
     public void verifyUserRegistration() throws Exception {
         final String ssLabel = "verifyUserRegistration";
         try {
