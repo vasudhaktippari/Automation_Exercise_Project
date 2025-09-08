@@ -27,6 +27,8 @@
       <class name="com.automationexercise.tests.TC_ECOM_Tests"/>
       <class name="com.automationexercise.tests.TC_VideoTutorialsTest"/>
       <class name="com.automationexercise.tests.SubscriptionTest"/>
+       <class name="com.automationexercise.tests.PaymentPageTest"/>
+      <class name="com.automationexercise.tests.CartPageTest"/>
       
     </classes>
     
