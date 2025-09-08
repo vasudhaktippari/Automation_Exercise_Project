@@ -26,7 +26,7 @@ public class CartPageTest extends BaseTest {
         return new Object[][] { allData[0] }; // pick first row
     }
 
-    @Test(groups = {"UI"}, priority = 1)
+    @Test(groups = {"ui"}, priority = 1)
     public void VeriryCartPageDisplyed() throws Exception {
         getDriver().get("https://automationexercise.com/");
         getTest().info("Opened AutomationExercise homepage");
@@ -35,7 +35,7 @@ public class CartPageTest extends BaseTest {
         getTest().pass("Cart page is displayed");
     }
 
-    @Test(groups = {"UI"}, priority = 2)
+    @Test(groups = {"ui"}, priority = 2)
     public void VeriryHomePageDisplyed() throws Exception {
         getDriver().get("https://automationexercise.com/view_cart");
         getTest().info("Opened AutomationExercise Cartpage");
@@ -44,7 +44,7 @@ public class CartPageTest extends BaseTest {
         getTest().pass("Home page is displayed");
     }
 
-    @Test(groups = {"UI"}, priority = 3)
+    @Test(groups = {"ui"}, priority = 3)
     public void VeriryProductPageDisplyed() throws Exception {
         getDriver().get("https://automationexercise.com/view_cart");
         getTest().info("Opened AutomationExercise Cartpage");
@@ -53,7 +53,7 @@ public class CartPageTest extends BaseTest {
         getTest().pass("Product page is displayed");
     }
 
-    @Test(groups = {"UI"}, priority = 4)
+    @Test(groups = {"ui"}, priority = 4)
     public void VeriryLoginPageDisplyed() throws Exception {
         getDriver().get("https://automationexercise.com/view_cart");
         getTest().info("Opened AutomationExercise Cartpage");
@@ -62,7 +62,7 @@ public class CartPageTest extends BaseTest {
         getTest().pass("Login page is displayed");
     }
 
-    @Test(groups = {"UI"}, priority = 5)
+    @Test(groups = {"ui"}, priority = 5)
     public void VeriryApiPageDisplyed() throws Exception {
         getDriver().get("https://automationexercise.com/view_cart");
         getTest().info("Opened AutomationExercise Cartpage");
@@ -71,7 +71,7 @@ public class CartPageTest extends BaseTest {
         getTest().pass("API List page is displayed");
     }
 
-    @Test(groups = {"UI"}, priority = 6)
+    @Test(groups = {"ui"}, priority = 6)
     public void VeriryTestCasePageDisplyed() throws Exception {
         getDriver().get("https://automationexercise.com/view_cart");
         getTest().info("Opened AutomationExercise Cartpage");
@@ -80,7 +80,7 @@ public class CartPageTest extends BaseTest {
         getTest().pass("TestCase page is displayed");
     }
 
-    @Test(groups = {"UI"}, priority = 7)
+    @Test(groups = {"ui"}, priority = 7)
     public void VeriryContctUsPageDisplyed() throws Exception {
         getDriver().get("https://automationexercise.com/view_cart");
         getTest().info("Opened AutomationExercise Cartpage");
@@ -89,7 +89,7 @@ public class CartPageTest extends BaseTest {
         getTest().pass("ContactUs page is displayed");
     }
 
-    @Test(groups = {"UI"}, priority = 8)
+    @Test(groups = {"ui"}, priority = 8)
     public void VeriryVedioTutorialPageDisplyed() throws Exception {
         getDriver().get("https://automationexercise.com/view_cart");
         getTest().info("Opened AutomationExercise Cartpage");
@@ -98,7 +98,7 @@ public class CartPageTest extends BaseTest {
         getTest().pass("Video tutorial header clicked");
     }
 
-    @Test(groups = {"functional","UI"}, priority = 9)
+    @Test(groups = {"functional","ui"}, priority = 9)
     public void verifyLogoIsDisplayed() throws Exception {
         getDriver().get("https://automationexercise.com/view_cart");
         HomePage homePage = new HomePage(getDriver());
@@ -111,7 +111,7 @@ public class CartPageTest extends BaseTest {
         getTest().addScreenCaptureFromPath(logoShot);
     }
 
-    @Test(groups = {"functional","UI"}, priority = 10)
+    @Test(groups = {"functional","ui"}, priority = 10)
     public void ClickOnLogo() throws Exception {
         getDriver().get("https://automationexercise.com/view_cart");
         CartPage cartPage = new CartPage(getDriver());
@@ -124,7 +124,7 @@ public class CartPageTest extends BaseTest {
     }
 
     // Scroll verification
-    @Test(dataProvider = "SingleCartData", groups = {"functional","UI"}, priority = 11)
+    @Test(dataProvider = "SingleCartData", groups = {"functional","ui"}, priority = 11)
     public void verifyScroll(Object... row) throws Exception {
         String productId   = row[2].toString().trim();
         String productName = row[3].toString().trim();
@@ -249,7 +249,7 @@ public class CartPageTest extends BaseTest {
         getTest().addScreenCaptureFromPath(shot);
     }
 
-    @Test(groups = {"functional","UI"}, priority = 15)
+    @Test(groups = {"functional","ui"}, priority = 15)
     public void clickHere() throws Exception{
         CartPage cartPage = new CartPage(getDriver());
 
@@ -261,7 +261,7 @@ public class CartPageTest extends BaseTest {
         getTest().addScreenCaptureFromPath(shot);
     }
 
-    @Test(dataProvider = "SingleCartData", groups = {"functional","Regression","Smoke"}, priority = 16)
+    @Test(dataProvider = "SingleCartData", groups = {"functional","Regression","smoke"}, priority = 16)
     public void clikOnCkeckoutWithouLogin(Object... row) throws Exception {
         CartPage cartPage = new CartPage(getDriver());
         String productId   = row[2].toString().trim();
@@ -287,7 +287,7 @@ public class CartPageTest extends BaseTest {
         getTest().addScreenCaptureFromPath(shot);
     }
 
-    @Test(dataProvider = "SingleCartData", groups = {"functional","UI"}, priority = 17)
+    @Test(dataProvider = "SingleCartData", groups = {"functional","ui"}, priority = 17)
     public void clikOnCkeckoutDisplaysLogin(Object... row) throws Exception {
         CartPage cartPage = new CartPage(getDriver());
         String productId   = row[2].toString().trim();
@@ -320,7 +320,7 @@ public class CartPageTest extends BaseTest {
         getTest().info("User is asked to register before CheckOut");
     }
 
-    @Test(dataProvider = "SingleCartData", groups = {"functional","Regression","Smoke","UI"}, priority = 18)
+    @Test(dataProvider = "SingleCartData", groups = {"functional","Regression","smoke","ui"}, priority = 18)
     public void ProceedToCheckOut(Object... row) throws Exception {
         CartPage cartPage = new CartPage(getDriver());
 
@@ -390,7 +390,7 @@ public class CartPageTest extends BaseTest {
         getTest().addScreenCaptureFromPath(placeOrderShot);
     }
 
-    @Test(groups = {"functional","Regression","UI"}, priority = 20)
+    @Test(groups = {"functional","Regression","ui"}, priority = 20)
     public void ClickOnArrowAndPlaceOrderBtn() throws Exception {
         getDriver().get("https://automationexercise.com/");
         getTest().info("Opened AutomationExercise homepage");
@@ -412,7 +412,7 @@ public class CartPageTest extends BaseTest {
         getTest().addScreenCaptureFromPath(shot);
     }
 
-    @Test(groups = {"UI"}, priority = 21)
+    @Test(groups = {"ui"}, priority = 21)
     public void VerifyAddressIsDisplayed() throws Exception {
         getDriver().get("https://automationexercise.com/");
         getTest().info("Opened AutomationExercise homepage");
@@ -432,3 +432,4 @@ public class CartPageTest extends BaseTest {
         getTest().info("Checkout page displayed successfully and contains Address field");
     }
 }
+
