@@ -135,16 +135,40 @@ public class BaseTest {
             }
             case "firefox": {
                 WebDriverManager.firefoxdriver().setup();
+
                 FirefoxOptions options = new FirefoxOptions();
-                if (headless) options.addArguments("-headless");
                 options.setAcceptInsecureCerts(true);
                 options.addPreference("dom.webnotifications.enabled", false);
                 options.addPreference("signon.rememberSignons", false);
                 options.addPreference("browser.download.useDownloadDir", true);
+
+                if (headless) {
+                    // In headless mode, maximize() does nothing → set explicit size
+                    options.addArguments("-headless");
+                    options.addArguments("--width=1920");
+                    options.addArguments("--height=1080");
+                }
+
                 WebDriver d = new FirefoxDriver(options);
-                d.manage().window().maximize();
+
+                if (!headless) {
+                    try {
+                        d.manage().window().maximize();
+                        // Fallback in case maximize is ignored
+                        org.openqa.selenium.Dimension s = d.manage().window().getSize();
+                        if (s.getWidth() < 1200 || s.getHeight() < 800) {
+                            d.manage().window().setPosition(new org.openqa.selenium.Point(0, 0));
+                            d.manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
+                        }
+                    } catch (Exception e) {
+                        d.manage().window().setPosition(new org.openqa.selenium.Point(0, 0));
+                        d.manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
+                    }
+                }
+
                 return d;
             }
+
             case "chrome":
             default: {
                 WebDriverManager.chromedriver().setup();

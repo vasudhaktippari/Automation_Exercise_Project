@@ -2,22 +2,20 @@ package com.automationexercise.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-//=== Add these imports ===
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import java.time.Duration;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 public class LoginPage {
     WebDriver driver;
 
-    // Locators login tc01
+    // Locators login verificaion
     By emailField    = By.xpath("//input[@data-qa='login-email']");
     By passwordField = By.xpath("//input[@data-qa='login-password']");
     By loginButton   = By.xpath("//button[@data-qa='login-button']");
     By loggedInUser  = By.xpath("//i[@class='fa fa-user']/..");  // success locator (shows username in header)
     By errorMessage  = By.xpath("//p[contains(text(),'Your email or password is incorrect!')]"); // error locator
     
-   // Locators login
+   // Locators signup section
     
     By signupHeader     = By.xpath("//h2[text()='New User Signup!']");
     By signupNameField  = By.xpath("//input[@data-qa='signup-name']");
@@ -26,8 +24,14 @@ public class LoginPage {
     
     
 
-    // locators logout tc02
+    // locator logout button
     By logoutbtn     = By.xpath("//a[@href='/logout']");
+    
+    // Header: "Login to your account"
+    By loginHeader = By.xpath("//h2[normalize-space()='Login to your account']");
+    
+     // Header: "New User Signup!"
+    By newUserSignupHeader = By.xpath("//h2[normalize-space()='New User Signup!']");
 
     // Page constants
     String LOGIN_URL   = "https://automationexercise.com/login";
@@ -43,7 +47,32 @@ public class LoginPage {
         driver.get(LOGIN_URL);
         return this;
     }
+    
+    
+    // Header: "Login to your account"
 
+    public boolean isLoginHeaderVisible() {
+        try {
+            return driver.findElement(loginHeader).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    // Header: "New User Signup!"
+
+    
+    public boolean isNewUserSignupHeaderVisible() {
+        try {
+            return driver.findElement(newUserSignupHeader).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    
+    
+    
     public boolean isLoginPageDisplayed() {
         try {
             return driver.getTitle().equalsIgnoreCase(LOGIN_TITLE);
@@ -51,6 +80,27 @@ public class LoginPage {
             return false;
         }
     }
+    
+ // Check if Login button is visible and enabled
+    public boolean isLoginButtonVisibleAndClickable() {
+        try {
+            return driver.findElement(loginButton).isDisplayed() &&
+                   driver.findElement(loginButton).isEnabled();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    // Check if Sign Up button is visible and enabled
+    public boolean isSignUpButtonVisibleAndClickable() {
+        try {
+            return driver.findElement(signupButton).isDisplayed() &&
+                   driver.findElement(signupButton).isEnabled();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 
     // === Actions ===
     public void login(String email, String password) {
@@ -110,7 +160,7 @@ public class LoginPage {
         }
     }
     
- // === Action: Sign Up (basic) ===
+ // === Action: Sign Up ===
     public void signUp(String name, String email) {
         driver.findElement(signupNameField).clear();
         driver.findElement(signupNameField).sendKeys(name);
@@ -129,6 +179,62 @@ public class LoginPage {
         }
     }
     
-    
+    // ===== New helpers for Sign Up (granular actions) =====
+    public LoginPage typeSignUpName(String name) {
+        driver.findElement(signupNameField).clear();
+        driver.findElement(signupNameField).sendKeys(name);
+        return this;
+    }
+
+    public LoginPage typeSignUpEmail(String email) {
+        driver.findElement(signupEmailField).clear();
+        driver.findElement(signupEmailField).sendKeys(email);
+        return this;
+    }
+
+    public LoginPage clickSignUp() {
+        driver.findElement(signupButton).click();
+        return this;
+    }
+    public String getSignUpNameValidationMessage() {
+        try {
+            WebElement nameField = driver.findElement(By.id("name")); // adjust locator if different
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            return (String) js.executeScript("return arguments[0].validationMessage;", nameField);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    /** Check HTML5 validity of the email field (works for type="email") */
+    public boolean isSignUpEmailValid() {
+        try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            Object valid = js.executeScript(
+                "return arguments[0].checkValidity();",
+                driver.findElement(signupEmailField)
+            );
+            return valid instanceof Boolean && (Boolean) valid;
+        } catch (Exception e) {
+            // If JS isn't available, be conservative
+            return true;
+        }
+    }
+
+    /** Get the browser-native validation bubble text for the email field */
+    public String getSignUpEmailValidationMessage() {
+        try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            Object msg = js.executeScript(
+                "return arguments[0].validationMessage;",
+                driver.findElement(signupEmailField)
+            );
+            return msg == null ? null : msg.toString();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+   
+  
 
 }

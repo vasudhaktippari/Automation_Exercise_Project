@@ -4,9 +4,6 @@ import com.automationexercise.base.BaseTest;
 import com.automationexercise.pages.PaymentPage;
 import com.automationexercise.utilities.ExcelUtilities;
 import com.automationexercise.utilities.ScreenshotUtilities;
-
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
