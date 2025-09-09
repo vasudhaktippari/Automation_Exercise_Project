@@ -33,9 +33,6 @@ import com.automationexercise.utilities.ScreenshotUtilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
-	protected WebDriver driver;
-    protected static ExtentReports extent1;   // Shared report for suite
-    protected ExtentTest test;     
 
     // ===== Extent (1 per suite) =====
     protected static ExtentReports extent;
@@ -45,23 +42,23 @@ public class BaseTest {
     private static final ThreadLocal<WebDriver> TL_DRIVER = new ThreadLocal<>();
 
     // Toggle: prefix first group in test name, e.g., "[smoke] verifyHomePageTitle"
-    private static final boolean PREFIX_GROUP_IN_NAME = true;
+    private static final boolean PREFIX_GROUP_IN_NAME = false;
 
     protected WebDriver getDriver() { return TL_DRIVER.get(); }
     protected ExtentTest getTest()  { return TL_TEST.get();  }
 
     @BeforeSuite(alwaysRun = true)
     public void setupReport() {
-        extent1 = ExtentManager.getInstance("AutomationExercise_TestSuite");
-        if (extent1 == null) {
+        extent = ExtentManager.getInstance("AutomationExercise_TestSuite");
+        if (extent == null) {
             throw new IllegalStateException("ExtentReports was not initialized. Check ExtentManager.getInstance()");
         }
     }
 
     @AfterSuite(alwaysRun = true)
     public void flushReport() {
-        if (extent1 != null) {
-            extent1.flush();
+        if (extent != null) {
+            extent.flush();
             System.out.println("Extent HTML: " + ExtentManager.getLastReportPath());
         }
     }
@@ -97,7 +94,7 @@ public class BaseTest {
             testName = "[" + groups[0].trim() + "] " + baseName;
         }
 
-        ExtentTest et = extent1.createTest("[" + targetBrowser + (isHeadless ? " (headless)" : "") + "] " + testName);
+        ExtentTest et = extent.createTest("[" + targetBrowser + (isHeadless ? " (headless)" : "") + "] " + testName);
 
         // Map TestNG groups -> Extent categories
         for (String g : groups) {
