@@ -22,7 +22,7 @@ public class LoginTest extends BaseTest {
         groups = {"negative","functional","Regression","Data-Driven"},
         priority = 10
     )
-    public void verifyLoginWithInvalidCredentialsFromExcel(
+    public void verifyLoginWithInvalidCredentials(
             String email,
             String password,
             String expectedError // optional column; assert if provided
@@ -437,31 +437,61 @@ public class LoginTest extends BaseTest {
 
     // Verify login
     @Test(dataProvider = "logindata",
-          groups = {"smoke","functional","Regression"},
-          priority = 8)
-    public void verifyLogin(String username, String password) throws IOException {
-        final String ssLabel = "verifyLogin";
-        try {
-            LoginPage loginPage = new LoginPage(getDriver()).open();
-            getTest().info("Login page opened (verify login)"); // added info
-            getTest().info("Submitting login for username='" + username + "'"); // added info
-            loginPage.login(username, password);
+            groups = {"smoke","functional","Regression"},
+            priority = 8)
+  public void verifyLogin(String username, String password) throws IOException {
+      final String ssLabel = "verifyLogin";
+      try {
+          // Log the start of the test
+          getTest().info("Starting verifyLogin test for user: " + username);
+          getTest().info("Navigating to Login Page: " + LoginPage.LOGIN_URL);
+          
+          // Open the login page
+          LoginPage loginPage = new LoginPage(getDriver()).open();
+          getTest().info("Login page opened successfully.");
 
-            if (loginPage.isLoginSuccessful()) {
-                getTest().pass("Login successful for: " + username);
-            } else {
-                String error = loginPage.getErrorMessage();
-                getTest().fail("Login failed for: " + username + " | " + error);
-                Assert.fail("Login failed for: " + username + " | " + error);
-            }
-        } catch (Throwable t) {
-            getTest().fail(t);
-            throw t;
-        } finally {
-            String path = ScreenshotUtilities.captureScreen(getDriver(), ssLabel + "_" + System.currentTimeMillis());
-            getTest().addScreenCaptureFromPath(path);
-        }
-    }
+          // Log the username being used for login
+          getTest().info("Attempting to log in with username: " + username);
+
+          // Verify if the login header is visible
+          if (!loginPage.isLoginHeaderVisible()) {
+              getTest().fail("Login header is not visible on the page.");
+              Assert.fail("Login header not visible.");
+          } else {
+              getTest().info("Login header is visible.");
+          }
+
+          // Log the attempt to submit login credentials
+          getTest().info("Submitting login credentials for username='" + username + "'");
+
+          // Perform the login action
+          loginPage.login(username, password);
+
+          // Wait briefly for login to complete or check other conditions
+          getTest().info("Waiting for login validation...");
+
+          // Check if login was successful
+          if (loginPage.isLoginSuccessful()) {
+              getTest().pass("Login successful for user: " + username);
+          } else {
+              // Fetch the error message if login fails
+              String error = loginPage.getErrorMessage();
+              getTest().fail("Login failed for user: " + username + " | Error: " + error);
+              Assert.fail("Login failed for user: " + username + " | Error: " + error);
+          }
+      } catch (Throwable t) {
+          // Log the exception details if the test fails
+          getTest().fail("Test failed due to exception: " + t.getMessage());
+          getTest().fail(t);  // Log the full stack trace
+          throw t;  // Re-throw the exception to indicate failure
+      } finally {
+          // Capture and log the screenshot after the test execution
+          String path = ScreenshotUtilities.captureScreen(getDriver(), ssLabel + "_" + System.currentTimeMillis());
+          getTest().info("Screenshot captured at: " + path);
+          getTest().addScreenCaptureFromPath(path);  // Attach the screenshot to the test report
+      }
+  }
+
 
     // Verify logout
     @Test(dataProvider = "logindata",
