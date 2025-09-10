@@ -34,8 +34,8 @@ public class LoginPage {
     By newUserSignupHeader = By.xpath("//h2[normalize-space()='New User Signup!']");
 
     // Page constants
-    String LOGIN_URL   = "https://automationexercise.com/login";
-    String LOGIN_TITLE = "Automation Exercise - Signup / Login";
+   public static final String LOGIN_URL   = "https://automationexercise.com/login";
+   public static final String LOGIN_TITLE = "Automation Exercise - Signup / Login";
 
     // Constructor
     public LoginPage(WebDriver driver) {
