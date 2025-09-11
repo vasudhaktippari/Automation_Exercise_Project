@@ -15,46 +15,24 @@ It includes Page Object–based automation scripts and TestNG test cases for end
 - │    └─ test/                 
 - │    ├─ java/         
 - │    │  └─ com/automationexercise/
-- │    │  ├─ base/ # WebDriver setup/teardown, 
-- │    │  ├─ pages/ # Page Object classes
-- │    │  ├─ tests/ # TestNG test classes
-- │    │  └─ utilities/ # Helpers: waits, readers, common utils
+- │    │  ├─ base/                                                     # WebDriver setup/teardown, 
+- │    │  ├─ pages/                                                    # Page Object classes
+- │    │  ├─ tests/                                                    # TestNG test classes
+- │    │  └─ utilities/                                                # Helpers: waits, readers, common utils
 - │    └─ resources/           
 - │    ├─ Reports/ # Dated execution reports
 - │    │ ├─ 20250910/       
 - │    │ └─ 20250911/
-- │    ├─ Screenshots/ # Failure/evidence screenshots
-- │    └─ Testdata/ # Test data & sample assets
-- │    ├─ dynamicdata.xlsx
+- │    ├─ Screenshots/                                                 # Failure/evidence screenshots
+- │    └─ Testdata/                                                    # Test data & sample assets
+- │    ├─ dynamicdata.xlsx                                                 
 - │    ├─ sample_file.txt
 - │    ├─ sample_image.jpg
 - │    └─ sample_pdf.pdf
-- │
-
-		 
-Automation_project_A1/
--   ├─ pom.xml # Maven build & dependencies
-    ├─ testng.xml # Test suite configuration
-├─ src/
-│ └─ test/
-│ ├─ java/
-│ │ └─ com/automationexercise/
-│ │ ├─ base/ # WebDriver setup/teardown, hooks, listeners
-│ │ ├─ pages/ # Page Object classes
-│ │ ├─ tests/ # TestNG test classes
-│ │ └─ utilities/ # Helpers: waits, readers, common utils
-│ └─ resources/
-│ ├─ Reports/ # Dated execution reports
-│ │ ├─ 20250910/
-│ │ └─ 20250911/
-│ ├─ Screenshots/ # Failure/evidence screenshots
-│ └─ Testdata/ # Test data & sample assets
-│ ├─ dynamicdata.xlsx
-│ ├─ sample_file.txt
-│ ├─ sample_image.jpg
-│ └─ sample_pdf.pdf
-├─ target/ # Maven build artifacts (compiled classes, surefire reports)
-└─ test-output/ # TestNG default HTML reports
+- ├─ target/                                                            # Maven build artifacts (compiled classes, surefire reports)
+- └─ test-output/                                                       # TestNG default HTML reports
+- ├─ pom.xml                                                            # Maven build & dependencies
+- ├─ testng.xml                                                         # Test suite configuration
 
 
 
