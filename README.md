@@ -62,9 +62,7 @@ It includes Page Object–based automation scripts and TestNG test cases for end
     ```bash
     mvn test
 
-## Notes
-- Do not delete files from the repository. Only add/update code and test cases.
-- Reports and screenshots will be generated automatically in the respective folders.
+
  
 ## Contributors
 -   Akash Mangond 
