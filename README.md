@@ -69,9 +69,11 @@ It includes Page Object–based automation scripts and TestNG test cases for end
 
 This setup will allow you to run your automation tests automatically through Jenkins every time there is a new commit or based on a scheduled trigger.
 
-##Report Photos
+### Report Photos:
 <img width="1910" height="888" alt="image" src="https://github.com/user-attachments/assets/7a184485-987a-46c6-861a-f65a5b201ef4" />
 <img width="1894" height="907" alt="image" src="https://github.com/user-attachments/assets/799da1b8-9db7-4272-90a8-c78d13feed91" />
+
+### Jenkins Build Progress Graph:
 <img width="625" height="250" alt="download" src="https://github.com/user-attachments/assets/e3b54e48-ec17-48d5-b884-9071d425306b" />
 
 
