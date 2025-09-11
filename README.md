@@ -37,7 +37,7 @@ It includes Page Object–based automation scripts and TestNG test cases for end
 
 
 ## Prerequisites
-- Java 8+  
+- Java 17+  
 - Maven 3.6+  
 - Eclipse IDE or any Java IDE  
 - Selenium/WebDriver dependencies (as needed)
