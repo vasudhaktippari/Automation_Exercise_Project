@@ -1,10 +1,14 @@
-Automation Project A1
-Overview
+# Automation Testing of Ecommerce WEB Application Project
 
-This is a Maven-based UI test automation project using Java 17 + TestNG and the Page Object Model (POM).
-It includes test scripts, reusable page objects/utilities, test data, dated reports, and screenshots.
+## Overview
+This is a *Maven-based E-commerce test automation project* using **Java, Selenium WebDriver, and TestNG**.
+It includes Page Object–based automation scripts and TestNG test cases for end-to-end flows.
+**Reports** (TestNG/Extent) and **screenshots** are generated automatically after each run.
 
-Project Structure
+
+
+## Project Structure
+
 Automation_project_A1/
 ├─ pom.xml                         # Maven build & dependencies
 ├─ testng.xml                      # Test suite configuration
@@ -29,45 +33,41 @@ Automation_project_A1/
 ├─ target/                         # Maven build artifacts (compiled classes, surefire reports)
 └─ test-output/                    # TestNG default HTML reports
 
-Prerequisites
 
-Java 17
-
-Maven 3.8+
-
-A modern browser (e.g., Chrome/Edge) and matching WebDriver (or WebDriverManager)
-
-IDE (IntelliJ IDEA / Eclipse) – optional but recommended
-
-Setup
-# From the project root
-mvn -v               # verify Maven is installed
-java -version        # verify Java 17 is active
-mvn clean            # clean previous builds
-
-How to Run
-# Run the suite defined in testng.xml
-mvn clean test -DsuiteXmlFile=testng.xml
+## Prerequisites
+- Java 17+  
+- Maven 3.6+  
+- Eclipse IDE or any Java IDE  
+- Selenium/WebDriver dependencies (as needed)
 
 
-Examples:
+## Setup Instructions
+1. Clone the repository:
+   ```bash
+   git clone <repo-link>
+  
 
-# Run a single TestNG class by fully qualified name
-mvn -Dtest=com.automationexercise.tests.LoginTest test
+2.	Import the project in Eclipse:
+	•	File → Open Projects from File System…
+	•	Select the cloned folder and click Finish.
+3.	Build the project using Maven:
 
-# Run tests with a TestNG group (if groups are configured)
-mvn clean test -Dgroups=smoke
+    ``` bash
+    mvn clean install
 
-Reports & Artifacts
+4.	Run the automation tests:
 
-TestNG HTML reports: test-output/
+    ```bash
+    mvn test
 
-Custom/extent reports (dated): src/test/resources/Reports/
+## Notes
+- Do not delete files from the repository. Only add/update code and test cases.
+- Reports and screenshots will be generated automatically in the respective folders.
+ 
+## Contributors
+-Akash Mangond 
+-Benakeshwar G K
+-Nayeem Laheji 
+-Nischith S Gowda 
+-Vasudha K Tippari
 
-Screenshots: src/test/resources/Screenshots/
-
-Notes
-
-Follow the POM pattern: keep locators & page actions in pages/, test logic in tests/, and common code in utilities/.
-
-Keep test data in src/test/resources/Testdata/ to simplify CI/CD packaging.
