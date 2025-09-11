@@ -8,9 +8,33 @@ It includes Page Object–based automation scripts and TestNG test cases for end
 ---
 
 ## Project Structure
+
+
+- EcomProject/
+- ├── src/                  
+- │    └─ test/                 
+- │    ├─ java/         
+- │    │  └─ com/automationexercise/
+- │    │  ├─ base/ # WebDriver setup/teardown, 
+- │    │  ├─ pages/ # Page Object classes
+- │    │  ├─ tests/ # TestNG test classes
+- │    │  └─ utilities/ # Helpers: waits, readers, common utils
+- │    └─ resources/           
+- │    ├─ Reports/ # Dated execution reports
+- │    │ ├─ 20250910/       
+- │    │ └─ 20250911/
+- │    ├─ Screenshots/ # Failure/evidence screenshots
+- │    └─ Testdata/ # Test data & sample assets
+- │    ├─ dynamicdata.xlsx
+- │    ├─ sample_file.txt
+- │    ├─ sample_image.jpg
+- │    └─ sample_pdf.pdf
+- │
+
+		 
 Automation_project_A1/
-├─ pom.xml # Maven build & dependencies
-├─ testng.xml # Test suite configuration
+-   ├─ pom.xml # Maven build & dependencies
+    ├─ testng.xml # Test suite configuration
 ├─ src/
 │ └─ test/
 │ ├─ java/
@@ -65,7 +89,8 @@ Automation_project_A1/
 - Reports and screenshots will be generated automatically in the respective folders.
  
 ## Contributors
--   Priyanka (Team Lead)
--	Kaviyanjali M
--	Keerthana V S
--	Asha R
+-   Akash Mangond 
+-	Benakeshwar G K
+-	Nayeem Laheji
+-	Nischith S Gowda
+-	Vasudha K Tippari
