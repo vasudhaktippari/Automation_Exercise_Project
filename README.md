@@ -10,7 +10,7 @@ It includes Page Object–based automation scripts and TestNG test cases for end
 ## Project Structure
 
 
-- EcomProject/
+- Automation Exercise/
 - ├── src/                  
 - │    └─ test/                 
 - │    ├─ java/         
