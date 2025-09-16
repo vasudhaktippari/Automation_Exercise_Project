@@ -1,1 +1,1 @@
-# Automation Exercise Projec
+# Automation Exercise Project
