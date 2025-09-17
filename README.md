@@ -1,3 +1,15 @@
+Automation Project A1
+Overview
+# Automation Testing of Ecommerce WEB Application Project
+
+This is a Maven-based UI test automation project using Java 17 + TestNG and the Page Object Model (POM).
+It includes test scripts, reusable page objects/utilities, test data, dated reports, and screenshots.
+## Overview
+This is a *Maven-based E-commerce test automation project* using **Java, Selenium WebDriver, and TestNG**.
+It includes Page Object–based automation scripts and TestNG test cases for end-to-end flows.
+**Reports** (TestNG/Extent) and **screenshots** are generated automatically after each run.
+
+
 ## Project Structure
 
 
