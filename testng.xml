@@ -29,6 +29,8 @@
       <class name="com.automationexercise.tests.SubscriptionTest"/>
       <class name="com.automationexercise.tests.PaymentPageTest"/>
       <class name="com.automationexercise.tests.CartPageTest"/>
+      <class name="com.automationexercise.tests.ProductPageTest"/>
+
     </classes>
     
 
