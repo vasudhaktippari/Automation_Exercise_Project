@@ -509,5 +509,4 @@ public class ProductPageTest extends BaseTest {
         getTest().addScreenCaptureFromPath(ScreenshotUtilities.captureScreen(getDriver(), "SubscriptionInvalid_Atb"));
     }
 
-   
 }
