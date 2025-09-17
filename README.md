@@ -1,4 +1,3 @@
-Automation Project A1
 Overview
 # Automation Testing of Ecommerce WEB Application Project
 
