@@ -546,11 +546,11 @@ public class LoginTest extends BaseTest {
                     .setDOB("1", "January", "2000")
                     .setFirstName("Weak")
                     .setLastName("Password")
-                    .setAddress1("123 Short St")
-                    .setCountry("Canada")
-                    .setState("ON")
-                    .setCity("Toronto")
-                    .setZipcode("M1A1A1")
+                    .setAddress1("Queens road")
+                    .setCountry("India")
+                    .setState("Karnataka")
+                    .setCity("Bengaluru")
+                    .setZipcode("560097")
                     .setMobile("1234567890")
                     .submitCreateAccount();
 
