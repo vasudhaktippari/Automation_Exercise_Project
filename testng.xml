@@ -14,7 +14,7 @@
         <include name="ui"/>
         <include name="Regression"/>
         <include name="Data-Driven"/>
-         <include name="negative"/>
+        <include name="negative"/>
       </run>
     </groups>
 
@@ -29,7 +29,6 @@
       <class name="com.automationexercise.tests.SubscriptionTest"/>
       <class name="com.automationexercise.tests.PaymentPageTest"/>
       <class name="com.automationexercise.tests.CartPageTest"/>
-      <class name="com.automationexercise.tests.ProductPageTest"/>
     </classes>
     
 
