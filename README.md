@@ -1,4 +1,4 @@
-Overview
+
 # Automation Testing of Ecommerce WEB Application Project
 
 This is a Maven-based UI test automation project using Java 17 + TestNG and the Page Object Model (POM).
